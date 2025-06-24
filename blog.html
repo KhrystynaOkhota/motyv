@@ -1,0 +1,553 @@
+<html lang="uk" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <title>Motyv</title>
+    <meta name="description" content=""/>
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/app.css"/>
+
+
+</head>
+<body>
+
+
+<header class="header js-header bg"><!-- на свіх сторінках, крім головної, в header додається клас bg-->
+    <div class=" container">
+
+        <div class="d-flex d-lg-none align-middle align-justify"><a href="index.html"
+                                                                    class="logo__wrap d-block d-lg-none">
+            <img src="assets/img/logo.svg" alt="Motyv" class="logo">
+        </a>
+
+            <div class="controls d-flex align-middle align-right">
+
+                <div class="btn-search js-open-search">
+                    <i class="icon-search"></i>
+                </div>
+                <div class="btn-cart">
+                    <i class="icon-card"></i>Кошик (0)
+                </div>
+            </div>
+            <div class="burger__wrap h-burger d-block d-lg-none">
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="header__inner ">
+            <div class="header__main d-flex align-justify align-middle">
+                <ul class="menu">
+                    <li class="menu-item ">
+                        <a href="category.html">Магазин</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="category.html"> Колекції</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="category.html">Парні образи</a>
+                    </li>
+
+                    <li class="menu-item menu-item-has-children">
+                        <a href="category.html">Сервіси</a>
+
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="">Таблиця розмірів</a></li>
+                            <li class="menu-item"><a href="">Оплата і доставка</a></li>
+                            <li class="menu-item"><a href="">Обмін та повернення</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="catalog.html">Блог</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="catalog.html">Контакти</a>
+                    </li>
+                </ul>
+
+                <ul class="lang">
+                    <li class="lang-item"><a href="">EN</a></li>
+                    <li class="lang-item current-lang"><a href="">UA</a></li>
+
+                </ul>
+
+                <div class="contact d-flex align-middle">
+                    <div class="contact-item d-flex align-middle">
+                        <div class="title">Онлайн-замовлень</div>
+                        <a href="tel:0672662110"> (067) 266-21-10</a>
+                    </div>
+
+                    <div class="contact-item d-flex align-middle">
+                        <div class="title">Дзвінки у шоурум</div>
+                        <a href="tel:0966688572">(096) 668-85-72</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="header__bottom d-flex --relative align-justify align-middle">
+
+                <a href="index.html" class="logo__wrap d-none d-lg-flex">
+                    <img src="assets/img/logo.svg" alt="Motyv" class="logo">
+                </a>
+                <ul class="menu">
+                    <li class="menu-item ">
+                        <a href="category.html">Жінкам</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="category.html"> Чоловікам</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="category.html">Дітям</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="category.html">Аксесуари</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="catalog.html">Сертифікати</a>
+                    </li>
+                </ul>
+
+                <div class="controls d-none d-lg-flex align-middle align-right">
+
+                    <div class="btn-search js-open-search">
+                        <i class="icon-search"></i>Пошук
+                    </div>
+                    <div class="btn-cart">
+                        <i class="icon-card"></i>Кошик (0)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="h-search">
+        <div class="container">
+            <form action="" class="h-search-form">
+
+                <input name="s" type="text" class="" placeholder="Пошук">
+                <button class="">
+                    <i class="icon-search"></i>
+                </button>
+                <!--<button class="btn-close js-close-search small-pointer"></button>-->
+            </form>
+        </div>
+        <div class="h-search-results">
+            <div class="container search-result-container">
+
+            </div>
+            <hr style="display: none;">
+            <div class="container h-search-result" style="display: none;">
+                <div>
+                    <a href="https://medias.com.ua//?s=" class="btn-link btn-link_white autocomplete-product-btn"><b>Переглянути
+                        всі (0)</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h-overlay"></div>
+</header>
+
+<div class="body-padding"></div>
+
+<main class="main">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16">
+                <div class="kama_breadcrumbs">
+                    <span>
+                        <a href="">
+                            <span>Головна</span>
+                        </a>
+                    </span>
+                    <span class="kb_sep"><i>/</i></span>
+                    <span class="kb_title"> Блог</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="s-blog ">
+        <div class="container overlap">
+            <div class="row m-row mb-45 align-middle">
+                <div class="col-xl-3 col-lg-3 col-md-5 col-sm-16 col-xs-16 column">
+                    <div class="heading heading-font text-regular h2">
+                        Блог
+                    </div>
+
+                </div>
+                <div class="col-xl-13 col-lg-13 col-md-11 col-sm-16 col-xs-16 column">
+
+                    <div class="event-filter">
+                        <ul class="menu">
+                            <li class="menu-item selected"><a href="" class="text-bold">Стиль</a></li>
+                            <li class="menu-item"><a href="" class="text-bold"> Новини бренду</a></li>
+                            <li class="menu-item "><a href="" class="text-bold">Догляд</a>
+                            </li>
+                            <li class="menu-item"><a href="" class="text-bold">Новини бренду</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row s-blog__wrap">
+                <a href="blog-inner.html" class="event__item">
+                    <div class="event__img-wrap">
+                        <img src="assets/img/blog-3.png" alt=""
+                             class="event__img">
+                    </div>
+                    <div class="event__info">
+                        <div class="event__date --relative text-light">21 квітня, 2025</div>
+
+                        <div class="event__title  text-bold">
+                            Льон та бавовна: натуральний комфорт для вашої
+                        </div>
+
+                    </div>
+                </a>
+                <a href="blog-inner.html" class="event__item">
+                    <div class="event__img-wrap">
+                        <img src="assets/img/blog-3.png" alt=""
+                             class="event__img">
+                    </div>
+                    <div class="event__info">
+                        <div class="event__date --relative text-light">21 квітня, 2025</div>
+
+                        <div class="event__title  text-bold">
+                            Льон та бавовна: натуральний комфорт для вашої
+                        </div>
+
+                    </div>
+                </a>
+                <a href="blog-inner.html" class="event__item">
+                    <div class="event__img-wrap">
+                        <img src="assets/img/blog-3.png" alt=""
+                             class="event__img">
+                    </div>
+                    <div class="event__info">
+                        <div class="event__date --relative text-light">21 квітня, 2025</div>
+
+                        <div class="event__title  text-bold">
+                            Льон та бавовна: натуральний комфорт для вашої
+                        </div>
+
+                    </div>
+                </a>
+                <a href="blog-inner.html" class="event__item">
+                    <div class="event__img-wrap">
+                        <img src="assets/img/blog-3.png" alt=""
+                             class="event__img">
+                    </div>
+                    <div class="event__info">
+                        <div class="event__date --relative text-light">21 квітня, 2025</div>
+
+                        <div class="event__title  text-bold">
+                            Льон та бавовна: натуральний комфорт для вашої
+                        </div>
+
+                    </div>
+                </a>
+                <a href="blog-inner.html" class="event__item">
+                    <div class="event__img-wrap">
+                        <img src="assets/img/blog-3.png" alt=""
+                             class="event__img">
+                    </div>
+                    <div class="event__info">
+                        <div class="event__date --relative text-light">21 квітня, 2025</div>
+
+                        <div class="event__title  text-bold">
+                            Льон та бавовна: натуральний комфорт для вашої
+                        </div>
+
+                    </div>
+                </a>
+                <a href="blog-inner.html" class="event__item">
+                    <div class="event__img-wrap">
+                        <img src="assets/img/blog-3.png" alt=""
+                             class="event__img">
+                    </div>
+                    <div class="event__info">
+                        <div class="event__date --relative text-light">21 квітня, 2025</div>
+
+                        <div class="event__title  text-bold">
+                            Льон та бавовна: натуральний комфорт для вашої
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+            <div class="row align-center">
+                <div class="col-xl-16 col-lg-16 col-md-16 col-sm-126 col-xs-16">
+
+                    <nav class="navigation pagination">
+                        <div class="nav-links d-flex">
+                            <a class="start page-numbers">
+                                <img src="assets/img/start.svg" alt="">
+                            </a>
+
+                            <a class="prev page-numbers">
+                                <img src="assets/img/prev.svg" alt="">
+                            </a>
+                            <a class="page-numbers">1</a>
+                            <span class="page-numbers current">2</span>
+                            <a class="page-numbers">3</a>
+                            <span class="page-numbers dots">…</span>
+                            <a class="page-numbers">7</a>
+                            <a class="next page-numbers">
+                                <img src="assets/img/next.svg" alt="">
+                            </a>
+
+                            <a class="end page-numbers">
+                                <img src="assets/img/end.svg" alt="">
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div class="marquee" style="--marquee-el: 14;">
+    <div class="marquee-content">
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer__inner overlap">
+        <div class="footer__top overlap">
+            <div class="container">
+                <div class="row m-row ">
+                    <div class="col-xl-4 col-lg-4 col-md-16 col-sm-16 col-xs-16 column">
+                        <a href="index.html" class="logo__link">
+                            <img src="assets/img/logo.svg" alt="" class="logo">
+                        </a>
+                        <div class="logo__description">
+                            "MOTYV" - це наші корені, наше теперішнє, це люди, які люблять себе і свою працю.
+                        </div>
+
+                        <ul class="social d-flex align-middle">
+                            <li class="social-item">
+                                <a href="" class="d-flex align-center align-middle">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="" class="d-flex align-center align-middle">
+                                    <i class="icon-telegram"></i>
+                                </a>
+                            </li>
+                            <li class="social-item ">
+                                <a href="" class="d-flex align-center align-middle">
+                                    <i class="icon-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="" class="d-flex align-center align-middle">
+                                    <i class="icon-viber"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="" class="d-flex align-center align-middle">
+                                    <i class="icon-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-xs-8 column ">
+
+                        <div class="footer-info__wrap">
+                            <div class="menu__title text-semibold footer-info__heading">Категорії</div>
+                            <div class="footer-info">
+                                <ul class="menu">
+                                    <li class="menu-item">
+                                        <a href="">Жінкам</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href=""> Чоловікам</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Дітям</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Аксесуари</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Сертифікати</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-xs-8 column ">
+
+                        <div class="footer-info__wrap">
+                            <div class="menu__title text-semibold footer-info__heading">Меню</div>
+
+                            <div class="footer-info">
+                                <ul class="menu">
+                                    <li class="menu-item  current-menu-item">
+                                        <a href=""> Магазин</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href=""> Колекції</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Парні образи</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Блог</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-8 col-sm-8 col-xs-8 column ">
+
+                        <div class="footer-info__wrap">
+                            <div class="menu__title text-semibold footer-info__heading">Сервіси</div>
+
+                            <div class="footer-info">
+                                <ul class="menu">
+                                    <li class="menu-item  current-menu-item">
+                                        <a href=""> Таблиця розмірів</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href=""> Оплата і доставка</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Обмін та повернення</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Контакти</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-8 col-sm-8 col-xs-8  column">
+                        <div class="footer-info__wrap">
+                            <div class="menu__title text-semibold footer-info__heading"> Зв’яжіться з нами</div>
+                            <div class="footer-info">
+                                <ul class="contact">
+                                    <li class="contact-item">
+
+                                        <a href="tel: +380672662110" class="contact__text">(067) 266-21-10</a>
+                                        <a href="tel: +380966688572" class="contact__text">(096) 668-85-72</a>
+                                    </li>
+                                    <li class="contact-item">
+                                        <a href="mailto:piccoloclothes@gmail.com"
+                                           class="contact__text">piccoloclothes@gmail.com</a>
+                                    </li>
+                                    <li class="contact-item">
+                                        <a href="" class="contact__text">Україна, м. Львів вул. Чорновола 101</a>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom overlap">
+            <div class="container">
+                <div class="row m-row ">
+                    <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column d-flex align-justify align-middle">
+
+                        <ul class="footer-links copyright">
+                            <li>© 2025 Усі права захищено</li>
+                        </ul>
+
+                        <ul class="footer-links">
+                            <li>
+                                <a href="">
+                                    Договір оферта
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Політика конфіденційності
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="develop d-flex align-middle align-left">
+                            <div class="develop__text">Розробка:</div>
+                            <a href="https://webtune.com.ua/" target="_blank" rel="nofollow" class="develop__link">
+                                WebTune.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script src="./assets/js/jquery-3.7.0.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/js_app.min.js"></script>
+
+
+</body>
+</html>

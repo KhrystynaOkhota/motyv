@@ -2,7 +2,6 @@
 @import "../abstracts/variables";
 
 
-
 .banner {
   position: relative;
   z-index: 1;
@@ -13,27 +12,23 @@
     position: relative;
     overflow: hidden;
     width: 10000px;
-    height: 100vh;
+    height: calc(100vh - 124px);
+    top: 124px;
 
     @media (max-width: $breakpoint-md) {
-      padding: 103px 0 118px 0;
+      padding: 185px 0 135px 0;
       height: 470px;
     }
   }
 
   &__content {
-    position: absolute;
-    bottom: 46px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    max-width: 840px;
-    z-index: 1;
-    @media (max-width: $breakpoint-md) {
-      text-align: center;
-      bottom: 20px;
-      width: 90%;
-    }
+    width: 100%;
+    max-width: 1296px;
+    margin: auto;
+    padding: 0 10px;
+    z-index: 7;
+    position: relative;
+    color: $white-color;
 
     & .btn-primary {
 
@@ -56,13 +51,20 @@
   }
 
   &__title {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
-    text-align: center;
-    text-transform: uppercase;
     color: $whiteColor;
-    margin-bottom: 10px;
+    margin-bottom: 38px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__description {
+    font-size: 40px;
+    margin-bottom: 38px;
+    @media (max-width: $breakpoint-md) {
+      font-size: 25px;
+      margin-bottom: 13px;
+    }
   }
 
 
@@ -134,9 +136,9 @@
 
     &-controls {
       position: absolute;
-      bottom: 130px;
-      left: 50%;
-      transform: translateX(-50%);
+      bottom: 54px;
+      left: 0;
+
       z-index: 3;
       color: $whiteColor;
       @media (max-width: $breakpoint-md) {
@@ -211,30 +213,27 @@
   }
 
   .custom-fraction-wrap {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 18px;
-    color: $whiteColor;
+    padding: 0 10px;
+    line-height: 1;
 
     div {
-      width: 20px;
+      //width: 20px;
 
       &.custom-current {
         text-align: right;
+        font-size: 25px;
       }
 
       &.custom-total {
         text-align: left;
+        font-size: 16px;
       }
     }
 
     & span {
-      display: block;
-      width: 1px;
-      margin: 0 7px;
-      height: 21px;
-      background-color: #fff;
-      position: relative;
+      font-size: 16px;
+      color: $white-color;
+      padding: 0 4px;
     }
   }
 }
@@ -247,7 +246,6 @@
 .swiper-container.swiper-initialized {
   opacity: 1;
 }
-
 
 
 .s-recommended-product {

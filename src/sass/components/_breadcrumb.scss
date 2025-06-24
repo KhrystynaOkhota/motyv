@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   background-color: transparent;
-  padding: 14px 0 16px 0;
+  padding: 12px 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
@@ -19,7 +19,6 @@
   flex-direction: row;
   margin: 0;
 
-  border-bottom: 1px solid rgba(227, 227, 227, 1);
 
   width: 100%;
 
@@ -29,13 +28,13 @@
 
   position: relative;
   @include transition(.4);
-  overflow: auto;
+
   @media (max-width: $breakpoint-md) {
     padding: 12px 0;
   }
 
   & a {
-    color: rgba(68, 105, 61, 1);
+    color: rgba(75, 101, 83, 1);
     @include fontSize(14, 16);
     position: relative;
     line-height: normal;
@@ -46,12 +45,12 @@
   }
 
   .breadcrumb_last {
-    color: #000;
+    color: rgba(175, 166, 159, 1);
   }
 
   & .kb {
     &_title {
-      color: rgba(156, 156, 156, 1);
+      color: rgba(175, 166, 159, 1);
       @include fontSize(14, 16);
     }
 
@@ -59,7 +58,7 @@
 
       & i {
         @include fontSize(12, 14);
-        color: rgba(156, 156, 156, 1);
+        color: rgba(175, 166, 159, 1);
       }
 
 
@@ -76,5 +75,19 @@
     }
 
 
+  }
+
+  &:after {
+    content: '';
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05) inset;
+    @media (min-width: 1300px) {
+      left: calc(-1 * (100vw - 1280px) / 2);
+    }
   }
 }

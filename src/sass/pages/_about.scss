@@ -1,7 +1,70 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.s-about {
+  padding: 50px 0 100px 0;
 
+  & .heading {
+    margin-bottom: 20px;
+
+  }
+
+  & .description {
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 27px;
+    }
+  }
+
+  & .video-full {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 66%;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 22px;
+    }
+
+    &::before {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .2);
+    }
+
+    & video {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      content-visibility: auto;
+    }
+
+    & .btn-play {
+      position: absolute;
+      bottom: 54px;
+      right: 54px;
+      width: 43px;
+      height: 47px;
+      @media (max-width: $breakpoint-md) {
+        width: 27px;
+        height: 30px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      &.hide {
+        opacity: 0;
+      }
+    }
+  }
+}
 
 .s-intro {
   padding: 90px 0;
@@ -82,3 +145,11 @@
   }
 }
 
+.s-photo {
+  & .swiper-pagination {
+    margin-top: 0;
+    @media (max-width: $breakpoint-xl) {
+      display: none;
+    }
+  }
+}
