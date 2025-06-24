@@ -1,0 +1,80 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.kama_breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: transparent;
+  padding: 14px 0 16px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #B0B0B0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+
+  border-bottom: 1px solid rgba(227, 227, 227, 1);
+
+  width: 100%;
+
+
+  z-index: 2;
+  white-space: nowrap;
+
+  position: relative;
+  @include transition(.4);
+  overflow: auto;
+  @media (max-width: $breakpoint-md) {
+    padding: 12px 0;
+  }
+
+  & a {
+    color: rgba(68, 105, 61, 1);
+    @include fontSize(14, 16);
+    position: relative;
+    line-height: normal;
+
+    &:hover {
+
+    }
+  }
+
+  .breadcrumb_last {
+    color: #000;
+  }
+
+  & .kb {
+    &_title {
+      color: rgba(156, 156, 156, 1);
+      @include fontSize(14, 16);
+    }
+
+    &_sep {
+
+      & i {
+        @include fontSize(12, 14);
+        color: rgba(156, 156, 156, 1);
+      }
+
+
+      margin: 0 7px;
+      @media (max-width: $breakpoint-md) {
+        margin: 0 5px;
+      }
+
+      &:has(+ .kb_title) {
+        & i {
+          color: rgba(156, 156, 156, 1);
+        }
+      }
+    }
+
+
+  }
+}

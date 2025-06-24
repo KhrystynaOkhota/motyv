@@ -1,0 +1,553 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.event {
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &-wrap {
+      border-radius: 10px;
+      overflow: hidden;
+      padding-bottom: 69%;
+      position: relative;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__date {
+    font-size: 17px;
+
+    color: #797979;
+    margin-bottom: 9px;
+    padding-left: 39px;
+    @media (max-width: $breakpoint-xl) {
+      padding-left: 29px;
+      font-size: 14px;
+    }
+
+    &:before {
+      content: '';
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(206, 193, 182, 1);
+      @media (max-width: $breakpoint-xl) {
+        width: 20px;
+        height: 20px
+      }
+    }
+  }
+
+  &__title {
+    color: rgba(75, 101, 83, 1);
+    font-size: 20px;
+    @media (max-width: $breakpoint-xl) {
+      font-size: 14px;
+    }
+  }
+}
+
+.s-recommended-news {
+  padding: 92px 0;
+  @media (max-width: $breakpoint-xl) {
+
+    padding: 43px 0 50px 0;
+    & .heading {
+      text-align: center;
+    }
+  }
+
+  & .btn-transparent {
+    & .btn__icon {
+      background: $white-color;
+
+      & i {
+        color: $accent-color;
+      }
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 25px;
+    }
+  }
+
+  &.--decor {
+    border-bottom: 1px solid rgba(227, 227, 227, 1);
+  }
+
+
+}
+
+.s-blog {
+  padding: 44px 0 150px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 25px 0 100px 0;
+  }
+
+  & .arrow {
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    top: 0;
+    font-size: 20px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+    @media (max-width: $breakpoint-lg) {
+      display: block;
+    }
+
+    &.left {
+      // можна додати стилі для лівої кнопки
+      left: -25px;
+    }
+
+    &.right {
+      // можна додати стилі для правої кнопки
+      right: -25px;
+    }
+  }
+
+  & .event {
+    &-filter {
+      background: $white-color;
+      border-radius: 10px;
+      margin-bottom: 50px;
+      padding: 5px;
+
+      display: flex;
+      align-items: center;
+      position: relative;
+
+
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      white-space: nowrap;
+      flex: 1;
+
+      // Приховуємо скроллбар
+      scrollbar-width: none; // Firefox
+      -ms-overflow-style: none; // IE 10+
+      @media (max-width: $breakpoint-lg) {
+        border-radius: 0;
+      }
+
+      &::-webkit-scrollbar {
+        display: none; // Chrome, Safari, Opera
+      }
+
+      &__wrap {
+        @media (max-width: $breakpoint-lg) {
+          width: calc(100% - 20px);
+          margin-left: 10px;
+          position: relative;
+        }
+      }
+
+      & .menu {
+        display: inline-flex;
+        gap: 41px;
+
+        &-item {
+          flex: 0 0 auto;
+          white-space: nowrap;
+          padding: 7px 20px;
+          border-radius: 10px;
+
+          & a {
+            color: rgba(61, 63, 61, 1);
+            font-size: 20px;
+            @media (max-width: $breakpoint-lg) {
+              display: inline-block;
+              max-width: 150px;
+              font-size: 15px;
+            }
+          }
+
+
+          &.selected {
+            background: rgba(239, 243, 241, 1);
+          }
+        }
+      }
+    }
+
+    &__item {
+      position: relative;
+
+      &:after {
+        @media (max-width: $breakpoint-lg) {
+          content: '';
+          width: 100%;
+          height: 1px;
+          background: rgba(227, 227, 227, 1);
+          position: absolute;
+          bottom: -18px;
+        }
+      }
+    }
+  }
+
+  &__wrap {
+    gap: 42px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
+    padding-bottom: 35px;
+
+
+    @media (max-width: $breakpoint-xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $breakpoint-md) {
+      gap: 30px 15px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $breakpoint-sm) {
+      padding-bottom: 48px;
+      gap: 38px 15px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  & .btn-show-more {
+    border-color: $accent-color;
+    margin-top: 30px;
+
+    & .btn {
+      &__text {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+.s-post {
+  padding: 44px 0 0 0;
+
+  & .heading {
+    color: rgba(17, 26, 23, 1);
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  & .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &__wrap {
+      padding-bottom: 53%;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  & .date {
+    &__title, &__value {
+      @include fontSize(16, 20);
+    }
+
+    &__title {
+      color: rgba(61, 63, 61, 1);
+    }
+
+    &__value {
+      color: rgba(121, 121, 121, 1);
+    }
+  }
+
+  & .share {
+    @media (max-width: $breakpoint-md) {
+      margin-top: 19px;
+    }
+
+    &__title {
+      color: rgba(61, 63, 61, 1);
+      @include fontSize(16, 20);
+      margin-right: 20px;
+      @media (max-width: $breakpoint-md) {
+        margin-right: 10px;
+
+      }
+
+    }
+
+    & .social {
+      &__item {
+        @include transition(.5);
+
+        width: 40px;
+        height: 40px;
+        color: $white-color;
+        @media (max-width: $breakpoint-md) {
+          width: 30px;
+          height: 30px;
+          & i {
+            font-size: 15px;
+          }
+        }
+
+        &:hover {
+          background: #0B84EE;
+
+          & i {
+            color: $white-color;
+          }
+        }
+
+        &.facebook {
+          background: rgba(11, 132, 238, 1);
+        }
+
+        &.telegram {
+          background: rgba(39, 166, 229, 1);
+        }
+
+        &.viber {
+          background: rgba(124, 80, 154, 1);
+        }
+
+        &:not(&:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  & .line {
+    margin-top: 21px;
+    background: rgba(0, 0, 0, 0.1);
+    height: 1px;
+    width: 100%;
+  }
+}
+
+.s-post-content {
+  padding: 14px 0 100px 0;
+  @media (max-width: $breakpoint-md) {
+    padding-bottom: 50px;
+  }
+
+  .video-full {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 54%;
+    margin-bottom: 40px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 22px;
+    }
+
+    &::before {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .2);
+    }
+
+    & video {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      content-visibility: auto;
+    }
+
+    & .btn-play {
+      position: absolute;
+      bottom: 54px;
+      right: 54px;
+      width: 43px;
+      height: 47px;
+      @media (max-width: $breakpoint-md) {
+        width: 27px;
+        height: 30px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      &.hide {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+/*
+.blog {
+  &__item {
+    position: relative;
+  }
+
+  &__info {
+    &-heading {
+      font-size: 17px;
+      color: $accent-color;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &-wrap {
+      padding-bottom: 70%;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+      margin-bottom: 13px;
+    }
+  }
+}
+
+.s-article-banner {
+  margin-bottom: 23px;
+
+  .kama_breadcrumbs {
+    padding: 24px 0 12px 0;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+
+    a {
+      color: #FDD66D;
+    }
+
+    & .kb_sep i {
+      background: #FDD66D;
+    }
+
+    & .kb_title {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  & .content {
+    padding: 250px 0 230px 0;
+
+    & .title {
+      color: rgba(255, 255, 255, 1);
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+.s-article {
+  margin: 44px 0;
+  @media (max-width: $breakpoint-md) {
+    margin: 40px;
+  }
+
+  &__action {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    @media (max-width: $breakpoint-md) {
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      padding-left: 12px;
+    }
+  }
+
+  &__title {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 32px;
+      &.heading.decor:after {
+        height: 35px;
+        top: 1px;
+        transform: none;
+      }
+    }
+  }
+
+  &__date {
+    margin-right: 8px;
+    padding: 19px 20px;
+    border: 1px solid #242424;
+    border-radius: 100px;
+    color: #1B1B1B;
+  }
+
+  &__share {
+    border-radius: 100px;
+    padding: 20px;
+    background-color: #A59389;
+    color: #fff;
+
+    & i {
+      padding-right: 20px;
+      font-size: 18px;
+      color: #fff;
+
+      &:after {
+        content: '';
+        width: 1px;
+        height: 9px;
+        background-color: rgba(255, 255, 255, .2);
+        border-radius: 9px;
+      }
+    }
+  }
+
+  &__desc {
+
+    @media (min-width: $breakpoint-md) {
+
+    }
+  }
+}
+
+.s-similar-articles {
+  & .heading {
+    margin-bottom: 33px;
+  }
+
+  & .btn-transparent {
+    margin-top: 60px;
+  }
+
+
+  & .swiper-button-next, .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+
+*/
+

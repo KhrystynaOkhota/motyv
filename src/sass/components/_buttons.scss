@@ -1,0 +1,133 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.btn {
+  position: relative;
+  box-shadow: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+
+  font-size: 18px;
+  line-height: 100%;
+  //padding: 15px 32px;
+  border: 1px solid $accent-color;
+  text-align: center;
+  display: inline-block;
+  font-weight: 500;
+  border-radius: 7px;
+  @include transition(.3);
+  padding: 15px 54px 15px 10px;
+  min-width: 223px;
+
+  &__icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    background: $white-color;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    & i {
+      @include transition(.4);
+
+      font-size: 17px;
+      color: #44693D;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    font-family: 'FuturaPT', sans-serif;
+    font-weight: 400;
+  }
+
+  &:hover {
+    & .btn__icon {
+      & i {
+        transform: rotate(45deg);
+      }
+
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.size-2 {
+    min-width: 263px;
+  }
+
+  &-primary {
+    background: $accent-color;
+    color: $white-color;
+    @include transition(.5);
+
+    &.style-2 {
+      padding: 7px 20px 6px 20px;
+      font-size: 17px;
+      display: inline-flex;
+      align-items: center;
+      min-width: 243px;
+
+      & i {
+        font-size: 35px;
+        padding-right: 20px;
+      }
+    }
+
+
+  }
+
+  &-white {
+    background: $white-color;
+    border-color: $white-color;
+
+    & .btn {
+      &__icon {
+        background: $accent-color;
+
+        & i {
+          color: $white-color;
+        }
+      }
+
+      &__text {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &-transparent {
+    background: transparent;
+    border-color: $accent-color;
+
+    & .btn {
+      &__icon {
+        background: $accent-color;
+
+        & i {
+          color: $white-color;
+        }
+      }
+
+      &__text {
+        color:$accent-color;
+      }
+    }
+
+    &__white{
+      border-color: $white-color;
+      & .btn {
+        &__text {
+          color:$white-color;
+        }
+      }
+    }
+  }
+}
+
+

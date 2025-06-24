@@ -1,0 +1,91 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.pagination {
+  width: 100%;
+  background-color: transparent;
+
+  &-container {
+    //  padding: 100px 0 150px 0;
+    @media (max-width: $breakpoint-lg) {
+      //   padding-bottom: 100px;
+    }
+  }
+
+  & .screen-reader-text {
+    display: none;
+  }
+
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  & .nav-links {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    .page-numbers {
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      font-size: 12px;
+      font-weight: 300;
+      text-align: center;
+      color: rgba(121, 121, 121, 1);
+      width: 30px;
+      height: 30px;
+      background: transparent;
+
+      border-radius: 4px;
+      cursor: pointer;
+      @include transition(.4);
+
+      margin: 0 5px;
+      @media (max-width: $breakpoint-md) {
+        width: 25px;
+        height: 25px;
+       margin: 0 2px;
+      }
+      & i {
+        @include fontSize(12, 14);
+      }
+
+      &.end, &.start, &.next, &.prev {
+        background: rgba(255, 255, 255, 1);
+
+
+      }
+
+      &.current {
+        background: rgba(68, 105, 61, 1);
+        color: $white-color;
+      }
+
+      &:not(.next,.prev ,.end, .start,):hover {
+        background: rgba(68, 105, 61, 1);;
+        color: $white-color;
+      }
+    }
+  }
+}

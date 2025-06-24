@@ -1,0 +1,132 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.s-error, .s-thanks {
+  position: relative;
+  height: auto;
+
+  & .logo__wrap {
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    width: 332px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    @media (max-width: $breakpoint-md) {
+      width: 180px;
+      height: 70px;
+    }
+  }
+
+  & .content {
+    & .heading, & .description {
+      color: #111A17;
+    }
+
+    & .heading {
+      margin-bottom: 35px;
+      @include fontSize(35, 50);
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 30px;
+      }
+
+      &__accent {
+        @include fontSize(60, 150);
+        color: $accent-color;
+        margin-bottom: 30px;
+      }
+    }
+
+    & .description {
+      margin-bottom: 45px;
+      @include fontSize(20, 30);
+    }
+
+    & .btn-primary {
+      padding: 15px 64px 15px 20px;
+    }
+  }
+
+  &__inner {
+    height: 100vh;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    @media (max-width: $breakpoint-md) {
+      height: auto;
+      padding-top: 170px;
+      text-align: center;
+
+    }
+  }
+
+}
+
+
+.s-thanks {
+
+  & .content {
+    & .description {
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  & .img {
+    &__wrap {
+
+      @media (max-width: $breakpoint-md) {
+        // max-width: 285px;
+        margin: 80px auto 0 auto;
+
+      }
+    }
+  }
+}
+
+.s-error {
+
+  & .content {
+    & .number {
+      @include fontSize(160, 250);
+      line-height: 1;
+      margin-bottom: 20px;
+      color: $accent-color;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 0;
+      }
+    }
+
+    & .heading, .description {
+      color: #111A17;
+    }
+
+    & .description {
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 38px;
+      }
+    }
+
+  }
+
+  & .img {
+    &__wrap {
+      position: relative;
+      left: -40px;
+      max-width: 480px;
+      margin: 0 auto;
+      @media (max-width: $breakpoint-md) {
+        max-width: 285px;
+        margin: 40px auto 0 auto;
+        left: auto;
+      }
+    }
+  }
+}

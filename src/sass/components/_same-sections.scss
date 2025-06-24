@@ -1,0 +1,120 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.accent-info {
+  font-family: 'Snellroundhand', serif;
+
+  padding-left: 162px;
+  color: $accent-color;
+
+  @media (max-width: $breakpoint-xl) {
+    padding-left: 100px;
+  }
+  @media (max-width: $breakpoint-md) {
+    padding-left: 70px;
+  }
+
+  & b {
+    font-weight: 900;
+  }
+
+  &:before {
+    content: '';
+    width: 142px;
+    height: 1px;
+    background: $accent-color;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    @media (max-width: $breakpoint-xl) {
+      width: 80px;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 60px;
+      top: 15px;
+    }
+  }
+}
+
+.s-text {
+  &.--bg {
+    padding: 50px 0;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: calc(100% - 100px);
+      height: 100%;
+      background: #FBF7F3;
+      border-radius: 50px;
+      left: 50px;
+      top: 0;
+      position: absolute;
+      @media (max-width: 1405px) {
+        width: 100%;
+        left: 0;
+        border-radius: 0;
+      }
+    }
+  }
+
+  & .img__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;margin-bottom: 40px;
+    @media (max-width: $breakpoint-md) {
+      gap: 10px;
+      grid-template-columns: 1fr;
+    }
+
+    & img {
+      height: 300px;
+      width:100%;
+      border-radius: 20px;
+      overflow: hidden;
+      object-fit: cover;
+
+    }
+  }
+}
+
+.s-download {
+  &__inner {
+    padding: 50px 30px;
+    background: rgba(251, 247, 243, 1);
+    border-radius: 50px;
+  }
+
+
+  & .heading {
+    margin-bottom: 18px;
+  }
+
+  & .description {
+    margin-bottom: 31px;
+  }
+}
+
+.download {
+  padding: 50px 30px;
+  background: rgba(251, 247, 243, 1);
+  border-radius: 50px;
+  @media (max-width: $breakpoint-md) {
+    padding: 30px 20px 40px 20px;
+  }
+
+  & .heading {
+
+    margin-bottom: 18px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 15px;
+    }
+  }
+
+  & .description {
+    margin-bottom: 31px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 15px;
+    }
+  }
+}

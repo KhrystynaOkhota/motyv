@@ -1,0 +1,91 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.tabs-entry, .tabs-title {
+  display: none;
+}
+
+.tabs-entry:nth-child(1) {
+  display: block;
+}
+
+.tabs-toggle {
+ /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;*/
+}
+
+.tabs-menu {
+  position: relative;
+
+  @include transition(.4);
+  cursor: pointer;
+
+  @media (min-width: $breakpoint-md) {
+
+
+    &.active {
+
+    }
+  }
+
+  &-wrapper {
+    margin-bottom: 33px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .tabs-title {
+    cursor: pointer;
+    padding: 19px 40px 19px 19px;
+    font-family: 'TTRamillas', serif;
+    display: block;
+    font-size: 16px;
+    background: rgba(180, 102, 80, 1);
+    color: rgba(255, 255, 255, 1);
+    clip-path: polygon(0 8px, 8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px));
+
+
+    text-align: left;
+
+    &:after{
+
+      content: "\e902";
+      font-family: 'icomoon' !important;
+
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+  }
+  .tabs-title.active + .tabs-toggle {
+    pointer-events: all;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translate(-50%, 10px);
+    transform: translate(-50%, 10px);
+    z-index: 5;
+  }
+  /*.tabs-toggle {
+    position: absolute;
+    display: inline;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    -webkit-transform: translate(-50%, 20px);
+    transform: translate(-50%, 20px);
+    left: 50%;
+    top: 100%;
+    padding: 9px 0;
+    width: 100%;
+    background: #F9F4EE;
+  }*/
+}
+
