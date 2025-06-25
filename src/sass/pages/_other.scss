@@ -3,47 +3,59 @@
 
 
 .s-error, .s-thanks {
+  background: rgba(255, 249, 242, 1);
   position: relative;
   height: auto;
 
-  & .logo__wrap {
+  & .logo {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    margin: 0 auto;
-    display: block;
-    width: 332px;
-    height: 100px;
-    position: absolute;
-    left: 50%;
-    top: 5%;
-    transform: translateX(-50%);
-    @media (max-width: $breakpoint-md) {
-      width: 180px;
-      height: 70px;
+    object-position: center;
+
+    &__wrap {
+
+      display: block;
+
+      width: 241px;
+      height: 47px;
+      top: 47px;
+
+      @media (max-width: $breakpoint-md) {
+        width: 180px;
+        height: 70px;
+      }
     }
   }
 
   & .content {
     & .heading, & .description {
-      color: #111A17;
+      color: rgba(139, 117, 96, 1);
     }
 
     & .heading {
-      margin-bottom: 35px;
-      @include fontSize(35, 50);
+      margin-bottom: 60px;
+      @include fontSize(35, 60);
       @media (max-width: $breakpoint-md) {
         margin-bottom: 30px;
       }
 
       &__accent {
-        @include fontSize(60, 150);
-        color: $accent-color;
-        margin-bottom: 30px;
+        @include fontSize(65, 120);
+        color:rgba(75, 101, 83, 1);
+        margin-bottom: 85px;
+        @media (max-width: $breakpoint-md) {
+          margin-bottom: 30px;
+        }
       }
     }
 
     & .description {
-      margin-bottom: 45px;
+      margin-bottom: 60px;
       @include fontSize(20, 30);
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 40px;
+      }
     }
 
     & .btn-primary {
@@ -78,6 +90,7 @@
       }
     }
   }
+
   & .img {
     &__wrap {
 
@@ -126,6 +139,50 @@
         max-width: 285px;
         margin: 40px auto 0 auto;
         left: auto;
+      }
+    }
+  }
+}
+
+.s-simple {
+  padding: 50px 0 100px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 30px 0 60px 0;
+  }
+
+  & .heading {
+    margin-bottom: 30px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  & .cms-content {
+    & p {
+      font-size: 17px;
+      line-height: 1.5;
+      font-weight: 300;
+
+      & + h3 {
+        margin-top: 25px;
+      }
+    }
+
+    & ul, ol {
+      padding-left: 30px;
+
+      & li {
+        font-size: 17px;
+        line-height: 1.5;
+        font-weight: 300;
+
+        &::marker {
+          font-size: 12px !important;
+        }
+
+        &:not(&:last-child) {
+          margin-bottom: 10px !important;
+        }
       }
     }
   }

@@ -66,6 +66,63 @@
   }
 }
 
+.s-quote {
+  padding-bottom: 70px;
+  margin-bottom: 88px;
+  @media (max-width: $breakpoint-md) {
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+  }
+
+  & .heading {
+    font-size: 30px;
+    line-height: 1.5;
+    color: rgba(139, 117, 96, 1);
+    @media (max-width: $breakpoint-md) {
+      font-size: 20px;
+    }
+  }
+
+  & .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &__wrap {
+      margin-bottom: 68px;
+      padding-bottom: 55%;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 100vw;
+    height: 65%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(246, 244, 242, 1);
+    z-index: 1;
+    @media (max-width: $breakpoint-md) {
+      height: calc(100% - 91px);
+    }
+  }
+
+}
+
+
+.s-history {
+  & .heading {
+    margin-bottom: 30px;
+  }
+}
+
 .s-intro {
   padding: 90px 0;
 
@@ -79,6 +136,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+
   }
 
   & .heading {
@@ -96,7 +154,10 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-top: 35px;
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 400px) {
       grid-template-columns: repeat(1, 1fr);
       gap: 20px;
     }

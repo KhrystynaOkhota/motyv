@@ -58,8 +58,8 @@
   }
 
   &-s {
-    @include fontSize(17, 20);
-    line-height: 1.4;
+    @include fontSize(14, 17);
+    line-height: 1.58;
 
   }
 }
@@ -67,61 +67,80 @@
 .icon-ar-down:before {
   content: "\e900";
 }
+
 .icon-ar-right:before {
   content: "\e901";
 
 }
+
 .icon-arrow-left:before {
   content: "\e902";
 }
+
 .icon-arrow-right:before {
   content: "\e903";
 }
+
 .icon-ar-top:before {
   content: "\e904";
 }
+
 .icon-btn-ar-right:before {
   content: "\e905";
 }
+
 .icon-card:before {
   content: "\e906";
 }
+
 .icon-check:before {
   content: "\e907";
 }
+
 .icon-close:before {
   content: "\e908";
 }
+
 .icon-facebook:before {
   content: "\e909";
 }
+
 .icon-heart:before {
   content: "\e90a";
 }
+
 .icon-instagram:before {
   content: "\e90b";
 }
+
 .icon-mail:before {
   content: "\e90c";
 }
+
 .icon-phone:before {
   content: "\e90d";
 }
+
 .icon-play:before {
   content: "\e90e";
 }
+
 .icon-search:before {
   content: "\e90f";
 }
+
 .icon-telegram:before {
   content: "\e910";
 }
+
 .icon-trash:before {
   content: "\e911";
 }
+
 .icon-viber:before {
   content: "\e913";
 }
+
 .icon-whatsapp:before {
   content: "\e914";
 }
@@ -131,8 +150,9 @@
   &-accent {
     color: $accent-color;
   }
+
   &-font {
-    font-family: 'SentaSans', sans-serif;
+    font-family: 'VinnytsiaSerif', serif;
   }
 }
 
@@ -149,14 +169,14 @@
 }
 
 
-
-
 .h4 {
   @include fontSize(25, 30);
 }
-.h5{
+
+.h5 {
   @include fontSize(20, 25);
 }
+
 .h6 {
   @include fontSize(15, 17);
 }

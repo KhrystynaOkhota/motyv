@@ -3,7 +3,7 @@
 
 
 .editor-style, .cms-content {
-  font-family: 'FuturaPT', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   font-weight: 400;
   line-height: normal;
   color: $primary-color;
@@ -19,8 +19,9 @@
   }
 
   & p {
-    @include fontSize(16, 20);
-    margin-bottom: 20px;
+    @include fontSize(14, 17);
+    line-height: 1.58;
+    margin-bottom: 10px;
 
     & + ul, & + ol {
       margin-top: 15px;

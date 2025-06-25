@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <title>Motyv</title>
+    <meta name="description" content=""/>
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/app.css"/>
+
+
+</head>
+<body>
+
+
+<header class="header js-header bg"><!-- на свіх сторінках, крім головної, в header додається клас bg-->
+    <div class=" container">
+
+        <div class="d-flex d-lg-none align-middle align-justify"><a href="index.html"
+                                                                    class="logo__wrap d-block d-lg-none">
+            <img src="assets/img/logo.svg" alt="Motyv" class="logo">
+        </a>
+
+            <div class="controls d-flex align-middle align-right">
+
+                <div class="btn-search js-open-search">
+                    <i class="icon-search"></i>
+                </div>
+                <div class="btn-cart">
+                    <i class="icon-card"></i>Кошик (0)
+                </div>
+            </div>
+            <div class="burger__wrap h-burger d-block d-lg-none">
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="header__inner ">
+            <div class="header__main d-flex align-justify align-middle">
+                <ul class="menu">
+                    <li class="menu-item ">
+                        <a href="category.html">Магазин</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="category.html"> Колекції</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="category.html">Парні образи</a>
+                    </li>
+
+                    <li class="menu-item menu-item-has-children">
+                        <a href="category.html">Сервіси</a>
+
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="">Таблиця розмірів</a></li>
+                            <li class="menu-item"><a href="">Оплата і доставка</a></li>
+                            <li class="menu-item"><a href="">Обмін та повернення</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="blog.html">Блог</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="catalog.html">Контакти</a>
+                    </li>
+                </ul>
+
+                <ul class="lang">
+                    <li class="lang-item"><a href="">EN</a></li>
+                    <li class="lang-item current-lang"><a href="">UA</a></li>
+
+                </ul>
+
+                <div class="contact d-flex align-middle">
+                    <div class="contact-item d-flex align-middle">
+                        <div class="title">Онлайн-замовлень</div>
+                        <a href="tel:0672662110"> (067) 266-21-10</a>
+                    </div>
+
+                    <div class="contact-item d-flex align-middle">
+                        <div class="title">Дзвінки у шоурум</div>
+                        <a href="tel:0966688572">(096) 668-85-72</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="header__bottom d-flex --relative align-justify align-middle">
+
+                <a href="index.html" class="logo__wrap d-none d-lg-flex">
+                    <img src="assets/img/logo.svg" alt="Motyv" class="logo">
+                </a>
+                <ul class="menu">
+                    <li class="menu-item ">
+                        <a href="category.html">Жінкам</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="category.html"> Чоловікам</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="category.html">Дітям</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="category.html">Аксесуари</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="catalog.html">Сертифікати</a>
+                    </li>
+                </ul>
+
+                <div class="controls d-none d-lg-flex align-middle align-right">
+
+                    <div class="btn-search js-open-search">
+                        <i class="icon-search"></i>Пошук
+                    </div>
+                    <div class="btn-cart">
+                        <i class="icon-card"></i>Кошик (0)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="h-search">
+        <div class="container">
+            <form action="" class="h-search-form">
+
+                <input name="s" type="text" class="" placeholder="Пошук">
+                <button class="">
+                    <i class="icon-search"></i>
+                </button>
+                <!--<button class="btn-close js-close-search small-pointer"></button>-->
+            </form>
+        </div>
+        <div class="h-search-results">
+            <div class="container search-result-container">
+
+            </div>
+            <hr style="display: none;">
+            <div class="container h-search-result" style="display: none;">
+                <div>
+                    <a href="https://medias.com.ua//?s=" class="btn-link btn-link_white autocomplete-product-btn"><b>Переглянути
+                        всі (0)</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h-overlay"></div>
+</header>
+
+<div class="body-padding"></div>
+
+<main class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16">
+                <div class="kama_breadcrumbs">
+                    <span>
+                        <a href="">
+                            <span>Головна</span>
+                        </a>
+                    </span>
+                    <span class="kb_sep"><i>/</i></span>
+                    <span class="kb_title">Політика конфіденційності</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="s-simple">
+        <div class="container">
+            <div class="row m-row">
+                <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
+                    <h1 class="heading heading-font text-regular h2">Політика конфіденційності</h1>
+                    <div class=" cms-content">
+
+                        <h3>1. ТЕРМІНИ І ВИЗНАЧЕННЯ</h3>
+                        <p>“САЙТ”означає сукупність веб-сторінок, що розміщені за
+                            адресою: https://motyv.com/. “КОМПАНІЯ”означає юридичну особу, що зареєстрована та діє
+                            відповідно норм та вимог чинного законодавства України: Фізична-особа підприємець Лимаренко
+                            Ірина Миколаївна, код ЄДРПОУ 3084209865.    “ПЕРСОНАЛЬНІ ДАНІ”означає дані або сукупність
+                            даних
+                            про фізичну особу, за допомогою яких її можна ідентифікувати. “КЛІЄНТ/ВІДВІДУВАЧ САЙТУ”
+                            означає
+                            фізичну особу, яка здійснила резервування або покупку Товарів на Сайті та/або фізична особа,
+                            яка
+                            відвідала хоча б одну веб-сторінку Сайту. “ТОВАР” означає окрему рухому річ, сукупність
+                            рухомих
+                            речей (крім грошових коштів, валютних цінностей, цінних паперів, майнових прав та
+                            обов'язків),
+                            та які є у вільному продажі (не зняті з продажу, не зарезервовані іншими особами та щодо
+                            яких
+                            відсутні інші обмеження) на Сайті. “COOKIE (КУКІ)”означає текстовий файл або файли, що
+                            містять
+                            невеликий обсяг інформації, які надсилаються веб-браузеру і зберігаються на пристрої
+                            користувача. До таких пристроїв можна віднести комп'ютер, мобільний телефон або інший
+                            пристрій,
+                            за допомогою якого користувач відвідує Сайт.</p>
+                        <h3> 2. ПРО КОМПАНІЮ</h3>
+                        <p> 2.1.Фізична-особа підприємець Лимаренко Ірина Миколаївна, (код ЄДРПОУ 3084209865, юридична
+                            адреса: 19800, Черкаська область, Драбівський район, селище міського типу Драбів, вул.
+                            Набережна, буд. 2/12, квартира 50) є адміністратором магазину “FOBERINI".</p>
+                        <p>2.2. Компанія з великою повагою ставиться до конфіденційної (персональної) інформації всіх
+                            без
+                            винятку осіб, які відвідали Сайт, а також тих, хто користується наданими Сайтом сервісами; в
+                            зв'язку з чим, Компанія прагне захищати конфіденційність персональних даних, тим самим
+                            створивши
+                            і забезпечивши максимально комфортні умови використання сервісів Сайту кожному
+                            користувачеві.</p>
+                        <p>2.3. Компанія контролює способи збору Персональних даних і визначає цілі, для яких
+                            персональні
+                            дані використовуються Компанією. Компанія є «контролером даних» для цілей Генерального
+                            регламенту про захист даних ЄС 2016/679 (EU General Data Protection Regulation, далі «GDPR»)
+                            та
+                            іншого європейського законодавства про захист даних, а також «власником персональних даних»
+                            в
+                            розумінні Закону України «Про захист персональних даних» від 01.06.2010 р. № 2297-VI.</p>
+                        <p> 2.4. Компанія обробляє Персональні дані лише в разі, якщо виконано одну з умов, зазначених у
+                            статті 6 GDPR, в тому числі, але не виключно:</p>
+                        <p>2.4.1. Клієнт/відвідувач Сайту надав згоду на обробку Персональних даних;</p>
+                        <p> 2.4.2. Обробка необхідна з метою укладення /виконання договору купівлі - продажу або надання
+                            послуг Клієнту/відвідувачу Сайту;</p>
+                        <p> 2.4.3. Така обробка вимагається законодавством країн, в які/з яких здійснюється поставка
+                            товару
+                            тощо.</p>
+                        <p> 2.5. Зареєструвавшись на Сайті Клієнт/відвідувач Сайту тим самим погоджується на передачу
+                            Компанії своїх персональних даних, їх обробку, зберігання і використання, в тому числі
+                            третіми
+                            особами, відповідно до цієї Політики конфіденційності.</p>
+                        <h3>3. ТИПИ ПЕРСОНАЛЬНИХ ДАНИХ, ЩО ОБРОБЛЯЮТЬСЯ</h3>
+                        <p>3.1. Компанія може збирати та обробляти такі категорії Персональних даних:</p>
+                        <p>3.1.1. Ім'я/прізвище, номер паспорту, інші ідентифікаційні дані.</p>
+                        <p>Наприклад, Компанія може записати ім'я/прізвище, приставку до імені/звання, стать, дату
+                            народження, громадянство, країну проживання та номер паспорта.</p>
+                        <p>3.1.2. Контактні дані та особистий рахунок або реєстраційні дані.</p>
+                        <p>Контактні дані можуть включати адресу, номер телефону та електронну адресу. Коли
+                            Клієнт/відвідувач Сайту створює особистий рахунок або замовляє послугу, Компанія також може
+                            записувати дані його реєстрації та іншу інформацію, яку Клієнт/ відвідувач Сайту ввів в
+                            особистому рахунку або реєстраційній формі.</p>
+                        <p>3.1.3. Інформація про резервування та/або придбання.</p>
+                        <p>Коли Клієнт/ відвідувач Сайту здійснює покупку або резервування у Компанії Товару, Компанія
+                            обробляє інформацію про такі дії. Ця інформація може включати дані Товару, ціни, дату
+                            оплати,резервування. Окрім того, Компанія обробляє інформацію у зв'язку з додатковими
+                            послугами
+                            (такими як доставка, повернення та ін.).</p>
+                        <p> 3.1.4. Участь у програмі лояльності Компанії (за наявності такої програми).</p>
+                        <p>Коли Клієнт / відвідувач Сайту стає членом однієї з програм лояльності, Компанія здійснює
+                            обробку клієнтського номеру, бонусів, типу і рівня клієнтської участі, інші відомості у
+                            зв'язку
+                            з участю у програмі.</p>
+                        <p>3.1.5. Спілкування Компанії з Клієнтом/ відвідувачем Сайту.</p>
+                        <p>Коли Клієнт / відвідувач Сайту надсилає Компанії електронного листа, звертається у чаті або
+                            через соціальну мережу, Компанія реєструє таке спілкування. Також Компанія реєструє
+                            уподобання
+                            Клієнта / відвідувача Сайту стосовно способів спілкування. Наприклад, коли Клієнт /
+                            відвідувач
+                            Сайту відписуються від однієї з розсилок Компанії або обирає, щоб інформація стосовно
+                            резервування (таку як оплата, доставка, участь у програмі лояльності і т.п.) надходила
+                            іншими
+                            каналами (наприклад, WhatsApp, Facebook Messenger та ін.). Коли Клієнт / відвідувач Сайту
+                            телефонує у службу підтримки, Компанія реєструє питання або скаргу в базі даних. Компанія
+                            також
+                            записує телефонні розмови для тренування та запобігання шахрайству.</p>
+                        <p>3.1.6. Інформація, яку збирає Компанія, коли Клієнт / відвідувач Сайту користуватися Сайтом,
+                            іншими цифровими носіями.</p>
+
+                        <ul>
+                            <li>
+                                Коли Клієнт / відвідувач Сайту відвідує Сайт або користуєтеся одним із мобільних
+                                додатків
+                                Компанії (за наявності), можлива реєстрація IP-адреси, типу браузера, операційної
+                                системи,
+                                сайту, через посилання на якому Клієнт / відвідувач Сайту зайшов, поведінку перегляду і
+                                користування додатком. Також Компанія збирає інформацію через кукі-файли та подібні
+                                технології,
+                                коли Клієнт / відвідувач Сайту відвідуєте Сайт або користуватися мобільним додатком
+                                Компанії (за
+                                наявності). Компанія може одержувати автоматичне повідомлення, коли Клієнт / відвідувач
+                                Сайту
+                                відкриває електронні листи від Компанії або натискає на посилання у цих листах.
+                            </li>
+                            <li>
+                                З дозволу Клієнта / відвідувача Сайту Компанія також одержує дані про його
+                                місцезнаходження.
+
+                            </li>
+                            <li>
+                                Також Клієнт / відвідувач Сайту може погодитися надавати Компанії доступ до певних
+                                даних, що
+                                зберігаються на його мобільному телефоні (фотографії та контакти).
+                            </li>
+                        </ul>
+
+                        <p>.1.7.Інформація про соціальні мережі.</p>
+                        <p>Коли Клієнт / відвідувач Сайту надсилає Компанії електронного листа, звертається у чаті або
+                            через соціальну мережу, Компанія реєструє таке спілкування. Також Компанія реєструє
+                            уподобання
+                            Клієнта / відвідувача Сайту стосовно способів спілкування. Наприклад, коли Клієнт /
+                            відвідувач
+                            Сайту відписуєтеся від однієї з розсилок Компанії або обирає, щоб інформація стосовно
+                            резервування (таку як оплата, доставка, участь у програмі лояльності і т.п.) надходила
+                            іншими
+                            каналами (наприклад, WhatsApp, Facebook Messenger та ін.). Коли Клієнт / відвідувач Сайту
+                            телефонує у службу підтримки, Компанія реєструє питання або скаргу в базі даних. Компанія
+                            також
+                            записує телефонні розмови для тренування та запобігання шахрайству.</p>
+                        <p>3.1.8. Дані, якими Клієнт / відвідувач Сайту вирішив поділитися з Компанією.</p>
+
+                        <ul>
+                            <li>
+                                Клієнт / відвідувач Сайту може вирішити поділитися з Компанією даними, наприклад, коли
+                                Клієнт /
+                                відвідувач Сайту залишає для Компанії коментар у Facebook, заповнює анкету клієнта або
+                                подає
+                                заявку на конкурс (акцію або іншу нашу соціальну маркетингову активність).
+                            </li>
+                            <li>
+
+                                Кукі-файли та подібні технології. Коли Клієнт / відвідувач Сайту користується Сайтом
+                                та/або
+                                мобільним додатком (за наявності), Компанія збирає інформацію через кукі-файли та
+                                подібні
+                                технології.
+                            </li>
+                            <li>
+                                Особливі послуги, додатки або події. Для особливих послуг, додатків або подій Компанія
+                                збирає
+                                інші типи даних і використовує ці дані для інших цілей, ніж описані у цій Політиці
+                                конфіденційності. Компанія інформує Клієнта / відвідувача Сайту про це, коли Клієнт /
+                                відвідувач
+                                Сайту підписуєтеся на особливі послуги, події або завантажує додаток (за наявності).
+                            </li>
+                        </ul>
+
+
+                        <p>3.1.9. Компанія НЕ збирає, НЕ обробляє та НЕ зберігає жодні Персональні дані, що стосуються
+                            процедури оплати вартості Товару за допомогою системи інтернет платежів, що встановлена на
+                            Сайті. Компанія не несе жодної відповідальності та не бере на себе жодних зобов'язань щодо
+                            обробки Персональних даних Клієнта при використанні ним системи інтернет платежів.</p>
+                        <h4>4. ЗБІР ТА ВИКОРИСТАННЯ ПЕРСОНАЛЬНИХ ДАНИХ</h4>
+                        <p> 4.1. Володільцем та розпорядником персональних даних користувачів Сайту є ФОП Лимаренко
+                            Ірина
+                            Миколаївна.</p>
+                        <p> 4.2. При використанні користувачем сервісів Сайту Компанією здійснюється обробка даних
+                            користувача, а саме:</p>
+                        <p> 4.2.1. даних, що надаються користувачем як при заповненні реєстраційних форм, так і в
+                            процесі
+                            користування сервісами;</p>
+                        <p>4.2.2.файли cookie;</p>
+                        <p> 4.2.3. ір-адреси;</p>
+                        <p>4.2.4. параметри і налаштувань інтернет-браузерів (User-agent) та ін.</p>
+                        <p>4.2. Компанія збирає тільки ті персональні дані (наприклад, ім'я і прізвище, логін і пароль
+                            доступу, адреса електронної пошти, номер контактного телефону, дата народження, стать і
+                            т.д.),
+                            які свідомо і добровільно надані Клієнтом / відвідувачем Сайту як суб'єктом персональних
+                            даних в
+                            цілях використання сервісів Сайту, що відповідно до вимог законодавства є згодою суб'єкта
+                            персональних даних на обробку своїх персональних даних відповідно до сформульованої в цій
+                            Політиці мети їх обробки. При відвідуванні Сайту фіксуються всі входи до системи. Компанія
+                            обмежується збором мінімального обсягу інформації, необхідного виключно для виконання запиту
+                            суб'єкта персональних даних. У будь-якому випадку, коли запитується не обов'язкова до
+                            надання
+                            інформація, користувача буде повідомлено в момент збору такої інформації. Компанія не збирає
+                            будь-яку інформацію, до обробки якої, законодавством встановлені певні вимоги, як-то
+                            інформація
+                            про расове або етнічне походження, політичні, релігійні або світоглядні переконання,
+                            членство в
+                            політичних партіях та професійних спілках, засудження до кримінального покарання в скоєнні
+                            злочину або засудження до кримінального покарання, а також даних, що стосуються здоров'я,
+                            статевого життя, біометричних або генетичних даних (відповідно до статті 7 Закону України
+                            «Про
+                            захист персональних даних»). Компанія збирає дані про статистику відвідування Сайту.
+                            Відомості
+                            можуть містити інформацію про з'єднання, трафік, браузер користувача, а також про дату, час,
+                            тривалість роботи в мережі Інтернет та знаходження на Сайті.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<div class="marquee" style="--marquee-el: 14;">
+    <div class="marquee-content">
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+        <div class="text-item">
+            Слідкуй за нами
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer__inner overlap">
+        <div class="footer__top overlap">
+            <div class="container">
+                <div class="row m-row ">
+                    <div class="col-xl-4 col-lg-4 col-md-16 col-sm-16 col-xs-16 column">
+                        <a href="index.html" class="logo__link">
+                            <img src="assets/img/logo.svg" alt="" class="logo">
+                        </a>
+                        <div class="logo__description">
+                            "MOTYV" - це наші корені, наше теперішнє, це люди, які люблять себе і свою працю.
+                        </div>
+
+                        <ul class="social d-flex align-middle">
+                            <li class="social-item">
+                                <a href="" class="d-flex align-center align-middle">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="" class="d-flex align-center align-middle">
+                                    <i class="icon-telegram"></i>
+                                </a>
+                            </li>
+                            <li class="social-item ">
+                                <a href="" class="d-flex align-center align-middle">
+                                    <i class="icon-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="" class="d-flex align-center align-middle">
+                                    <i class="icon-viber"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="" class="d-flex align-center align-middle">
+                                    <i class="icon-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-xs-8 column ">
+
+                        <div class="footer-info__wrap">
+                            <div class="menu__title text-semibold footer-info__heading">Категорії</div>
+                            <div class="footer-info">
+                                <ul class="menu">
+                                    <li class="menu-item">
+                                        <a href="">Жінкам</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href=""> Чоловікам</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Дітям</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Аксесуари</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Сертифікати</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-xs-8 column ">
+
+                        <div class="footer-info__wrap">
+                            <div class="menu__title text-semibold footer-info__heading">Меню</div>
+
+                            <div class="footer-info">
+                                <ul class="menu">
+                                    <li class="menu-item  current-menu-item">
+                                        <a href=""> Магазин</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href=""> Колекції</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Парні образи</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Блог</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-8 col-sm-8 col-xs-8 column ">
+
+                        <div class="footer-info__wrap">
+                            <div class="menu__title text-semibold footer-info__heading">Сервіси</div>
+
+                            <div class="footer-info">
+                                <ul class="menu">
+                                    <li class="menu-item  current-menu-item">
+                                        <a href=""> Таблиця розмірів</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href=""> Оплата і доставка</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Обмін та повернення</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="">Контакти</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-8 col-sm-8 col-xs-8  column">
+                        <div class="footer-info__wrap">
+                            <div class="menu__title text-semibold footer-info__heading"> Зв’яжіться з нами</div>
+                            <div class="footer-info">
+                                <ul class="contact">
+                                    <li class="contact-item">
+
+                                        <a href="tel: +380672662110" class="contact__text">(067) 266-21-10</a>
+                                        <a href="tel: +380966688572" class="contact__text">(096) 668-85-72</a>
+                                    </li>
+                                    <li class="contact-item">
+                                        <a href="mailto:piccoloclothes@gmail.com"
+                                           class="contact__text">piccoloclothes@gmail.com</a>
+                                    </li>
+                                    <li class="contact-item">
+                                        <a href="" class="contact__text">Україна, м. Львів вул. Чорновола 101</a>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom overlap">
+            <div class="container">
+                <div class="row m-row ">
+                    <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column d-flex align-justify align-middle">
+
+                        <div class="copyright">© 2025 Усі права захищено</div>
+
+
+                        <ul class="footer-links  d-flex align-middle align-center">
+                            <li>
+                                <a href="offer-contract.html">
+                                    Договір оферта
+                                </a>
+                            </li>
+                            <li>
+                                <a href="privacy-policy.html">
+                                    Політика конфіденційності
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="develop d-flex align-middle align-left">
+                            <div class="develop__text">Розробка:</div>
+                            <a href="https://webtune.com.ua/" target="_blank" rel="nofollow" class="develop__link">
+                                WebTune.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script src="./assets/js/jquery-3.7.0.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/jquery.sumoselect.min.js"></script>
+<script src="assets/js/js_app.min.js"></script>
+
+
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key="
+        type="text/javascript"></script>
+<script async defer>
+
+    function initializeMap() {
+        var element = document.getElementById('map');
+        var options = {
+            zoom: 15,
+            center: {lat: 50.47253296158417, lng: 30.443476447314264},
+            styles: [{"elementType": "geometry", "stylers": [{"color": "#f5f5f5"}]}, {
+                "elementType": "labels.icon",
+                "stylers": [{"visibility": "off"}]
+            }, {
+                "elementType": "labels.text.fill",
+                "stylers": [{"color": "#616161"}]
+            }, {
+                "elementType": "labels.text.stroke",
+                "stylers": [{"color": "#f5f5f5"}]
+            }, {
+                "featureType": "administrative.land_parcel",
+                "elementType": "labels.text.fill",
+                "stylers": [{"color": "#bdbdbd"}]
+            }, {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [{"color": "#eeeeee"}]
+            }, {
+                "featureType": "poi",
+                "elementType": "labels.text.fill",
+                "stylers": [{"color": "#757575"}]
+            }, {
+                "featureType": "poi.park",
+                "elementType": "geometry",
+                "stylers": [{"color": "#e5e5e5"}]
+            }, {
+                "featureType": "poi.park",
+                "elementType": "labels.text.fill",
+                "stylers": [{"color": "#9e9e9e"}]
+            }, {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [{"color": "#ffffff"}]
+            }, {
+                "featureType": "road.arterial",
+                "elementType": "labels.text.fill",
+                "stylers": [{"color": "#757575"}]
+            }, {
+                "featureType": "road.highway",
+                "elementType": "geometry",
+                "stylers": [{"color": "#dadada"}]
+            }, {
+                "featureType": "road.highway",
+                "elementType": "labels.text.fill",
+                "stylers": [{"color": "#616161"}]
+            }, {
+                "featureType": "road.local",
+                "elementType": "labels.text.fill",
+                "stylers": [{"color": "#9e9e9e"}]
+            }, {
+                "featureType": "transit.line",
+                "elementType": "geometry",
+                "stylers": [{"color": "#e5e5e5"}]
+            }, {
+                "featureType": "transit.station",
+                "elementType": "geometry",
+                "stylers": [{"color": "#eeeeee"}]
+            }, {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [{"color": "#c9c9c9"}]
+            }, {"featureType": "water", "elementType": "labels.text.fill", "stylers": [{"color": "#9e9e9e"}]}]
+        };
+        var myMap = new google.maps.Map(element, options);
+        var markers = [{
+            coordinates: {lat: 50.47253296158417, lng: 30.443476447314264},
+            image: "assets/img/placeholder.png",
+            info: "<div class='map-info'><h4>test</h4><div>test</div><a href='tel:354678'>346577ijhgfv</a></div>"
+        },];
+
+        function addMarker(properties) {
+            var marker = new google.maps.Marker({position: properties.coordinates, map: myMap, icon: properties.image});
+            if (properties.image) {
+                marker.setIcon(properties.image);
+            }
+            if (properties.info) {
+                marker.addListener('click', function () {
+                    InfoWindow.open(myMap, marker);
+                });
+                var InfoWindow = new google.maps.InfoWindow({content: properties.info});
+            }
+        }
+
+        for (var i = 0; i < markers.length; i++) {
+            addMarker(markers[i]);
+        }
+    }
+
+
+    $(window).on('load', function () {
+        initializeMap();
+    });
+</script>
+
+
+<script>
+    jQuery(function ($) {
+        const obsCounter = new IntersectionObserver(function (entries, observer) {
+            entries.forEach((entry) => {
+                    if (!entry.isIntersecting)
+                        return;
+                    entry.target.classList.add("|", "animated");
+                    $(entry.target).find(".number__value").each(function () {
+                        $(this).prop("Counter", 0).animate({
+                            Counter: $(this).text(),
+                        }, {
+                            duration: 1500,
+                            easing: "swing",
+                            step: function (now) {
+                                $(this).text(Math.ceil(now));
+                            },
+                        });
+                    });
+                    observer.unobserve(entry.target);
+                }
+            );
+        });
+
+        document.querySelectorAll(".number__item").forEach((block) => {
+            obsCounter.observe(block);
+        });
+
+    });
+
+
+</script>
+
+
+<script>
+    const tabs = document.querySelectorAll(".tab");
+
+    function tabify(tab) {
+        const tabList = tab.querySelector(".tab__list");
+
+        if (tabList) {
+            const tabItems = [...tabList.children];
+            const tabContent = tab.querySelector(".tab__content");
+            const tabContentItems = [...tabContent.children];
+            let tabIndex = 0;
+
+            tabIndex = tabItems.findIndex((item, index) => {
+                return [...item.classList].indexOf("is--active") > -1;
+            });
+
+            tabIndex > -1 ? (tabIndex = tabIndex) : (tabIndex = 0);
+
+            function setTab(index) {
+                tabItems.forEach((x, index) => x.classList.remove("is--active"));
+                tabContentItems.forEach((x, index) => x.classList.remove("is--active"));
+
+                tabItems[index].classList.add("is--active");
+                tabContentItems[index].classList.add("is--active");
+            }
+
+            tabItems.forEach((x, index) =>
+                x.addEventListener("click", () => setTab(index))
+            );
+            setTab(tabIndex);
+            tab.querySelectorAll(".tab").forEach((tabContent) => tabify(tabContent));
+        }
+    }
+
+    tabs.forEach(tabify);
+
+</script>
+
+
+</body>
+</html>
