@@ -7,42 +7,18 @@
   cursor: pointer;
   text-decoration: none;
   border: none;
-
-  font-size: 18px;
+  font-family: 'VinnytsiaSerif', serif;
+  font-size: 20px;
   line-height: 100%;
   //padding: 15px 32px;
-  border: 1px solid $accent-color;
+  border: 1px solid rgba(75, 101, 83, 1);
   text-align: center;
   display: inline-block;
-  font-weight: 500;
-  border-radius: 7px;
+  font-weight: 400;
+  border-radius: 0;
   @include transition(.3);
-  padding: 15px 54px 15px 10px;
-  min-width: 223px;
-
-  &__icon {
-    width: 34px;
-    height: 34px;
-    border-radius: 100%;
-    background: $white-color;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    & i {
-      @include transition(.4);
-
-      font-size: 17px;
-      color: #44693D;
-    }
-  }
-
-  &__text {
-    font-size: 18px;
-    font-family: 'FuturaPT', sans-serif;
-    font-weight: 400;
-  }
+  padding: 20px;
+ // min-width: 223px;
 
   &:hover {
     & .btn__icon {
@@ -103,29 +79,13 @@
 
   &-transparent {
     background: transparent;
-    border-color: $accent-color;
+    border-color: rgba(75, 101, 83, 1);
 
-    & .btn {
-      &__icon {
-        background: $accent-color;
 
-        & i {
-          color: $white-color;
-        }
-      }
-
-      &__text {
-        color:$accent-color;
-      }
-    }
 
     &__white{
       border-color: $white-color;
-      & .btn {
-        &__text {
-          color:$white-color;
-        }
-      }
+
     }
   }
 }

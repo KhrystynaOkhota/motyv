@@ -54,7 +54,10 @@
       background: $white-color;
       position: absolute;
       cursor: pointer;
-
+      @media (max-width: $breakpoint-lg) {
+        width: 25px;
+        height: 25px;
+      }
       & i {
         color: rgba(75, 101, 83, 1);
       }
@@ -66,6 +69,9 @@
 
       & i {
         font-size: 20px;
+        @media (max-width: $breakpoint-lg) {
+          font-size: 13px;
+        }
       }
     }
 
@@ -75,6 +81,9 @@
 
       & i {
         font-size: 26px;
+        @media (max-width: $breakpoint-lg) {
+          font-size: 15px;
+        }
       }
     }
   }
