@@ -25,11 +25,17 @@
     }
   }
 
+  & .location {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
   & .social {
     margin-top: 33px;
     @media (max-width: $breakpoint-md) {
       margin-top: 25px;
     }
+
     &-item {
       &.telegram {
         background: rgba(39, 166, 229, 1);
@@ -93,9 +99,10 @@
       & .title {
         margin-bottom: 26px;
         font-size: 35px;
+        text-align: center;
         @media (max-width: $breakpoint-md) {
           font-size: 30px;
-          text-align: center;
+
           margin-bottom: 20px;
         }
       }
@@ -119,8 +126,9 @@
           font-weight: 400;
           color: rgba(151, 151, 151, 1);
           @media (max-width: $breakpoint-md) {
-           padding: 17px 20px 16px 20px;
+            padding: 17px 20px 16px 20px;
           }
+
           &::-webkit-input-placeholder {
             font-size: 16px;
             line-height: 1;

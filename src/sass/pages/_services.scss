@@ -1,7 +1,7 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-
+/*
 .service {
   display: flex;
   //align-items: flex-start;
@@ -111,6 +111,10 @@
 
 }
 
+
+*/
+
+
 .tab {
   &__list {
     display: flex;
@@ -123,18 +127,18 @@
   }
 
   &__item {
-    padding: 7px 21px;
+    font-size: 20px;
+    color: rgba(75, 101, 83, 1);
     background: transparent;
     border-radius: 10px;
     cursor: pointer;
     @include transition(.5);
     @media (max-width: $breakpoint-lg) {
-      width: calc(50% - 25px);
-      text-align: center;
+
     }
 
     &.is--active {
-      background: #EFF3F1;
+      color: rgba(204, 195, 189, 1);
     }
   }
 
@@ -149,6 +153,7 @@
   }
 }
 
+/*
 .s-services-detail {
 
 }
@@ -645,3 +650,5 @@
     }
   }
 }
+
+*/

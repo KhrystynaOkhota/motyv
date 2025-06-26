@@ -80,6 +80,16 @@
       left: 50%;
       transform: translateX(-50%);
     }
+
+    & .column {
+      @media (max-width: $breakpoint-md) {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 11px;
+      }
+    }
   }
 
 
@@ -130,6 +140,9 @@
         @media (max-width: $breakpoint-md) {
           font-size: 14px;
         }
+        @media (max-width: 400px) {
+          font-size: 13px;
+        }
 
         & a[href^="mailto:"] {
           color: rgba(75, 101, 83, 1);
@@ -141,12 +154,16 @@
 
   &-links {
     gap: 50px;
-
+    @media (max-width: $breakpoint-md) {
+      gap: 30px;
+    }
     & li {
       & a {
-        font-size: 16px;
+        @include fontSize(13,16);
+
         font-weight: 300;
         color: rgba(75, 101, 83, 1);
+
       }
 
       &:nth-child(1) {
@@ -160,20 +177,23 @@
           position: absolute;
           right: -25px;
           top: 0;
+          @media (max-width: $breakpoint-md) {
+            right: -15px;
+          }
         }
       }
     }
   }
 
   & .copyright {
-    font-size: 16px;
+    @include fontSize(13,16);
     font-weight: 300;
     color: rgba(139, 117, 96, 1);
   }
 
   & .develop {
     &__link, &__text {
-      font-size: 16px;
+      @include fontSize(13,16);
       font-weight: 300;
 
     }
