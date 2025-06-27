@@ -1,7 +1,7 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-
+/*
 .tabs-entry, .tabs-title {
   display: none;
 }
@@ -13,7 +13,7 @@
 .tabs-toggle {
  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;*/
+  gap: 30px;*
 }
 
 .tabs-menu {
@@ -86,6 +86,66 @@
     padding: 9px 0;
     width: 100%;
     background: #F9F4EE;
-  }*/
+  }*
 }
+*/
 
+.tab {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 150px;
+
+    @media (max-width: $breakpoint-md) {
+      gap: 48px;
+      align-items: center;
+    }
+    border-radius: 10px;
+    background: #fff;
+    padding: 5px 6px;
+  }
+
+  &__item {
+    font-size: 20px;
+    color: rgba(75, 101, 83, 1);
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    @include transition(.5);
+    @include fontSize(15, 20);
+
+    &:not(&:last-child) {
+      &:after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: rgba(204, 195, 189, 1);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -80px;
+        @media (max-width: $breakpoint-md) {
+          width: 8px;
+          height: 8px;
+          right: -28px;
+        }
+      }
+    }
+
+    &.is--active {
+      color: rgba(204, 195, 189, 1);
+    }
+  }
+
+  &__content {
+    &-item {
+      display: none;
+
+      &.is--active {
+        display: block;
+      }
+    }
+  }
+}

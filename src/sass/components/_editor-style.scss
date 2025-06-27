@@ -21,7 +21,7 @@
   & p {
     @include fontSize(14, 17);
     line-height: 1.58;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     & + ul, & + ol {
       margin-top: 15px;
