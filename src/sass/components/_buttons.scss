@@ -18,7 +18,7 @@
   border-radius: 0;
   @include transition(.3);
   padding: 20px;
- // min-width: 223px;
+  // min-width: 223px;
 
   &:hover {
     & .btn__icon {
@@ -58,34 +58,23 @@
 
   }
 
-  &-white {
-    background: $white-color;
-    border-color: $white-color;
-
-    & .btn {
-      &__icon {
-        background: $accent-color;
-
-        & i {
-          color: $white-color;
-        }
-      }
-
-      &__text {
-        color: $accent-color;
+  &-transparent {
+    &, &__white {
+      background: transparent;
+      & i {
+        font-size: 13px;
+        padding-left: 15px;
       }
     }
   }
 
   &-transparent {
-    background: transparent;
-    border-color: rgba(75, 101, 83, 1);
+    border-color: $accent-color;
+    color: $accent-color;
 
-
-
-    &__white{
+    &__white {
       border-color: $white-color;
-
+      color: $white-color;
     }
   }
 }

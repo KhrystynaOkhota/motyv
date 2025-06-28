@@ -14,10 +14,16 @@
     width: 10000px;
     height: calc(100vh - 124px);
     top: 124px;
-
+    @media (max-width: $breakpoint-lg) {
+      top: 84px;
+      height: calc(100vh - 84px);
+    }
     @media (max-width: $breakpoint-md) {
-      padding: 185px 0 135px 0;
-      height: 470px;
+      display: flex;
+      width: 100%;
+      height: auto;
+      TOP: 0;
+      padding: 250PX 0 135PX 0;
     }
   }
 
@@ -30,22 +36,19 @@
     position: relative;
     color: $white-color;
 
-    & .btn-primary {
-
-      &:not(&:hover) {
-        border-color: $whiteColor;
-        color: $whiteColor;
-      }
+    & .btn-transparent__white {
+      min-width: 244px;
     }
 
     &:after {
-      // content:'';
-      background: rgba(0, 0, 0, 0.35);
+       content:'';
+     // background: transparent;
       position: absolute;
       top: -20px;
       left: -20px;
       height: calc(100% + 40px);
       width: calc(100% + 40px);
+      backdrop-filter: blur(3px)
 
     }
   }
@@ -59,10 +62,10 @@
   }
 
   &__description {
-    font-size: 40px;
+    @include fontSize(25, 40);
+    line-height: 1.4;
     margin-bottom: 38px;
     @media (max-width: $breakpoint-md) {
-      font-size: 25px;
       margin-bottom: 13px;
     }
   }
@@ -142,7 +145,8 @@
       z-index: 3;
       color: $whiteColor;
       @media (max-width: $breakpoint-md) {
-        bottom: 100px;
+        bottom: 23px;
+        left: 15px;
       }
     }
 
@@ -218,10 +222,14 @@
 
     div {
       //width: 20px;
+      &.custom-current, &.custom-total {
+        font-family: 'VinnytsiaSerif', serif;
+      }
 
       &.custom-current {
         text-align: right;
         font-size: 25px;
+        line-height: 0.7;
       }
 
       &.custom-total {
@@ -234,6 +242,7 @@
       font-size: 16px;
       color: $white-color;
       padding: 0 4px;
+      font-family: 'VinnytsiaSerif', serif;
     }
   }
 }
@@ -250,9 +259,42 @@
 
 .s-recommended-product {
   padding-bottom: 96px;
+  @media (max-width: $breakpoint-lg) {
+    padding-bottom: 45px;
+  }
 
-  & .tab__list {
-    margin-bottom: 44px;
+  & .tab {
+    &__list {
+      margin-bottom: 44px;
+      @media (max-width: $breakpoint-lg) {
+        margin-bottom: 24px;
+        width: calc(100% + 30px);
+        left: -15px;
+        position: relative;
+      }
+      @media (max-width: 400px) {
+
+        gap: 30px;
+      }
+    }
+
+    &__item {
+      @media (max-width: 400px) {
+        font-size: 13px;
+      }
+
+      &:not(&:last-child) {
+        &:after {
+
+          @media (max-width: 400px) {
+            width: 6px;
+            height: 6px;
+            right: -18px;
+          }
+        }
+      }
+
+    }
   }
 }
 
@@ -267,6 +309,9 @@
     &-pagination {
       padding: 5px 0;
       margin-top: 50px;
+      @media (max-width: $breakpoint-lg) {
+        margin-top: 20px;
+      }
     }
 
     &-slide {
