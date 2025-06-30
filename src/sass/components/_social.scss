@@ -33,6 +33,19 @@
     &:hover {
 
     }
+
+
+    &.telegram {
+      background: rgba(39, 166, 229, 1);
+    }
+
+    &.facebook {
+      background: rgba(11, 132, 238, 1);
+    }
+
+    &.viber {
+      background: rgba(124, 80, 154, 1);
+    }
   }
 }
 

@@ -1,6 +1,90 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+
+.s-banner {
+  padding: 0 0 51px 0;
+  overflow: hidden;
+  margin-bottom: 44px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 24px;
+    padding: 0;
+  }
+
+  &__content {
+    padding: 178px 0;
+    max-width: 385px;
+    @media (max-width: $breakpoint-md) {
+      padding: 175px 0 75px 0;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50px;
+      height: 100%;
+      width: calc(100% + 100px);
+      filter: blur(100px);
+      background: rgba(26, 49, 33, 0.8);
+      z-index: 1;
+    }
+
+    & .title, & .description {
+      color: $white-color;
+    }
+
+    & .title {
+      margin-bottom: 25px;
+    }
+
+    & .description {
+
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & .kama_breadcrumbs {
+    & a {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    & .kb_sep {
+      &:has(+ .kb_title) {
+        & i {
+          color: rgba(156, 156, 156, 1);
+        }
+      }
+
+      & i {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    & .kb_title {
+      color: rgba(217, 217, 217, 1);
+
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
 /*
 .portfolio {
   display: grid;
@@ -412,3 +496,34 @@
 
   }
 }
+
+.s-collection-product {
+  padding: 45px 0 90px 0;
+  margin-bottom: 100px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 44px;
+    padding: 34px 0 50px 0;
+  }
+
+  & .btn-transparent {
+    margin-top: 45px;
+    @media (max-width: $breakpoint-md) {
+      margin-top: 24px;
+    }
+  }
+
+  &:after {
+
+    content: '';
+    width: 100%;
+    height: 1px;
+    max-width: 1296px;
+    position: absolute;
+    background: rgba(204, 195, 189, 0.5);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+}
+
