@@ -359,37 +359,10 @@ $(document).on('click', '.accordion-item', function () {
 
 
 if ($('.select-box').length) {
-    var btnText = $('.select-wrapp').data('btn-text');
+
     $('.default').SumoSelect();
-    $('.search').SumoSelect({
-        placeholder: '',
-        search: true,
-        searchText: ''
-    });
-    $('.extra-select').SumoSelect({
-        placeholder: '',
-        search: true,
-        searchText: '',
-        okCancelInMulti: true,
-        csvDispCount: 0,
-        nativeOnDevice: [],
-        is_floating: false
-    });
-    $('.btnOk').text(btnText);
-}
 
-
-// read more
-
-if (".details")
-    if ($('.details').length) {
-        $('.details').not('.animated').each(function () {
-
-            console.log($(this));
-
-        });
-    }
-;
+};
 
 
 $('.read-more-toggle').on('click', function () {

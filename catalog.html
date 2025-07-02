@@ -9,7 +9,8 @@
 
     <title>Motyv</title>
     <meta name="description" content=""/>
-
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+    <link rel="stylesheet" href="assets/css/sumoselect.min.css"/>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/css/app.css"/>
 
@@ -194,12 +195,12 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <a href="" class="category">
-                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                        <div class="category__img-wrap  --relative">
                                             <img src="assets/img/p-1.png" alt=""
                                                  class="category__img">
                                         </div>
                                         <div class="category__info">
-                                            <div class="category__title">
+                                            <div class="category__title heading-font">
                                                 Дивитись все <span>(123)</span>
                                             </div>
                                         </div>
@@ -207,12 +208,12 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="" class="category">
-                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                        <div class="category__img-wrap  --relative">
                                             <img src="assets/img/p-2.png" alt=""
                                                  class="category__img">
                                         </div>
                                         <div class="category__info">
-                                            <div class="category__title">
+                                            <div class="category__title heading-font">
                                                 Жінкам <span>(123)</span>
                                             </div>
                                         </div>
@@ -220,12 +221,12 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="" class="category">
-                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                        <div class="category__img-wrap  --relative">
                                             <img src="assets/img/p-3.png" alt=""
                                                  class="category__img">
                                         </div>
                                         <div class="category__info">
-                                            <div class="category__title">
+                                            <div class="category__title heading-font">
                                                 Чоловікам <span>(123)</span>
                                             </div>
                                         </div>
@@ -233,12 +234,12 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="" class="category">
-                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                        <div class="category__img-wrap  --relative">
                                             <img src="assets/img/category-3.png" alt=""
                                                  class="category__img">
                                         </div>
                                         <div class="category__info">
-                                            <div class="category__title">
+                                            <div class="category__title heading-font">
                                                 Дівчаткам <span>(123)</span>
                                             </div>
                                         </div>
@@ -246,12 +247,12 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="" class="category">
-                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                        <div class="category__img-wrap  --relative">
                                             <img src="assets/img/p-4.png" alt=""
                                                  class="category__img">
                                         </div>
                                         <div class="category__info">
-                                            <div class="category__title">
+                                            <div class="category__title heading-font">
                                                 Хлопчикам <span>(123)</span>
                                             </div>
                                         </div>
@@ -259,12 +260,12 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="" class="category">
-                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                        <div class="category__img-wrap  --relative">
                                             <img src="assets/img/category-3.png" alt=""
                                                  class="category__img">
                                         </div>
                                         <div class="category__info">
-                                            <div class="category__title">
+                                            <div class="category__title heading-font">
                                                 Парні комплекти <span>(123)</span>
                                             </div>
                                         </div>
@@ -276,23 +277,45 @@
 
                 </div>
             </div>
+            <div class="row m-row d-none">
+                <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column ">
+                    <div class="s-catalog__control d-flex align-justify align-middle">
+                        <div class="btn-filter heading-font --relative  d-flex d-md-none">
+                            Фільтр
+                        </div>
+                        <select name="orderby">
+                            <option value="default">Популярні</option>
+                            <option value="price_low">
+                                Ціна за зростанням
+                            </option>
+                            <option value="price_high" selected="selected">
+                                Ціна за спаданням
+                            </option>
+                            <option value="title_asc">
+                                Від А до Я
+                            </option>
+                            <option value="title_desc">
+                                Від Я до А
+                            </option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
             <div class="row m-row">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-16 col-xs-16 column">
 
                     <div class="fl-menu__wrap">
 
                         <div class="fl-menu__close"><i class="icon-close"></i></div>
-
+                        <div class="btn-filter heading-font --relative ">
+                            Фільтр
+                        </div>
                         <form id="filter">
-                            <div class="fl-menu__top d-flex align-middle align-justify">
-                                <div class="fl-menu__top-title heading-font">Фільтр</div>
-
-                            </div>
                             <div class="fl-menu">
                                 <div class="fl-menu-item">
-                                    <div class="fl-title">
-                                        <div class="text-regular">Стать</div>
-                                        <i class="icon-ar-bottom"></i>
+                                    <div class="fl-title text-regular heading-font text-uppercase">
+                                        Стать
                                     </div>
                                     <div class="fl-toggle">
                                         <div class="checkbox-entry__wrap">
@@ -320,9 +343,9 @@
                                     </div>
                                 </div>
                                 <div class="fl-menu-item">
-                                    <div class="fl-title">
-                                        <div class="text-medium">Розмір</div>
-                                        <i class="icon-ar-bottom"></i>
+                                    <div class="fl-title text-regular heading-font text-uppercase">
+                                       Розмір
+
                                     </div>
                                     <div class="fl-toggle">
                                         <div class="checkbox-entry__wrap">
@@ -363,9 +386,8 @@
                                     </div>
                                 </div>
                                 <div class="fl-menu-item">
-                                    <div class="fl-title">
-                                        <div class="text-medium">Колір</div>
-                                        <i class="icon-ar-bottom"></i>
+                                    <div class="fl-title text-regular heading-font text-uppercase">
+                                        Колір
                                     </div>
                                     <div class="fl-toggle">
                                         <div class="checkbox-entry__wrap">
@@ -417,13 +439,7 @@
                                     </div>
                                 </div>
                                 <div class="fl-menu-item">
-                                    <div class="fl-title">
-                                        <div class="text-medium">Стиль</div>
-
-                                        <i class="icon-ar-bottom"></i>
-
-
-                                    </div>
+                                    <div class="fl-title text-regular heading-font text-uppercase">Стиль</div>
                                     <div class="fl-toggle">
                                         <div class="checkbox-entry__wrap">
                                             <label class="checkbox-entry">
@@ -444,13 +460,7 @@
                                     </div>
                                 </div>
                                 <div class="fl-menu-item">
-                                    <div class="fl-title">
-                                        <div class="text-medium">Матеріал</div>
-
-                                        <i class="icon-ar-bottom"></i>
-
-
-                                    </div>
+                                    <div class="fl-title text-regular heading-font text-uppercase">Матеріал</div>
                                     <div class="fl-toggle">
                                         <div class="checkbox-entry__wrap">
                                             <label class="checkbox-entry">
@@ -481,12 +491,8 @@
                                     </div>
                                 </div>
                                 <div class="fl-menu-item">
-                                    <div class="fl-title">
-                                        <div class="text-medium">Матеріал</div>
-
-                                        <i class="icon-ar-bottom"></i>
-
-
+                                    <div class="fl-title text-regular heading-font text-uppercase">
+                                        Матеріал
                                     </div>
                                     <div class="fl-toggle">
                                         <div class="checkbox-entry__wrap">
@@ -519,20 +525,10 @@
                                 </div>
 
 
-
                                 <div class="fl-menu-item">
-                                    <div class="fl-title">
-                                        <div class="text-medium">ЦІна</div>
-
-                                        <i class="icon-ar-bottom"></i>
-                                    </div>
+                                    <div class="fl-title text-regular heading-font text-uppercase">ЦІна</div>
                                     <div class="fl-toggle">
-
-
                                         <div class="wrapper range__wrap">
-                                            <div class="slider-wrapper range__slider-wrap">
-                                                <div id="slider" class="range__slider"></div>
-                                            </div>
                                             <div class="range__label-wrap">
                                                 <label class="range__label">
                                                     <input class="input from" name="" type="text" value="8"
@@ -545,31 +541,45 @@
 
                                                 </label>
                                             </div>
+                                            <div class="slider-wrapper range__slider-wrap">
+                                                <div id="slider" class="range__slider"></div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="fl-menu__bottom d-flex align-middle">
-                                <button class="btn-search">Пошук</button>
-                                <button class="btn-clean ">Очистити</button>
+                            <div class="fl-menu__bottom d-flex align-center">
+                                <button class="btn-search heading-font">Пошук</button>
+                                <button class="btn-clean heading-font">Очистити</button>
                             </div>
                         </form>
                     </div>
                     <div class="fl-menu__overlay"></div>
                 </div>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-16 col-xs-16 column">
-
-                    <div class="s-catalog__control d-flex align-justify align-middle">
-                        <div class="btn-filter">
+                    <div class="s-catalog__control d-flex align-middle align-right ">
+                        <div class="btn-filter no-margin heading-font --relative  d-flex d-md-none">
                             Фільтр
                         </div>
-                        <div class="btn-view__wrap d-flex align-middle align-right">
-                            <button data-view="list" class="btn-view"><i class="icon-list"></i></button>
-                            <button data-view="grid" class="btn-view active"><i class="icon-grid"></i></button>
-
+                        <div class="select-box">
+                        <select name="orderby" class="default">
+                            <option value="default">Популярні</option>
+                            <option value="price_low">
+                                Ціна за зростанням
+                            </option>
+                            <option value="price_high" selected="selected">
+                                Ціна за спаданням
+                            </option>
+                            <option value="title_asc">
+                                Від А до Я
+                            </option>
+                            <option value="title_desc">
+                                Від Я до А
+                            </option>
+                        </select>
                         </div>
                     </div>
-
 
                     <div class="product__wrap-grid" id="itemsContainer">
 
@@ -644,11 +654,11 @@
                             <nav class="navigation pagination">
                                 <div class="nav-links d-flex">
                                     <a class="start page-numbers">
-                                        <img src="assets/img/start.svg" alt="">
+                                        <img src="assets/img/pagination-double-ar-left.svg" alt="">
                                     </a>
 
                                     <a class="prev page-numbers">
-                                        <img src="assets/img/prev.svg" alt="">
+                                        <img src="assets/img/pagination-ar-left.svg" alt="">
                                     </a>
                                     <a class="page-numbers">1</a>
                                     <span class="page-numbers current">2</span>
@@ -656,11 +666,11 @@
                                     <span class="page-numbers dots">…</span>
                                     <a class="page-numbers">7</a>
                                     <a class="next page-numbers">
-                                        <img src="assets/img/next.svg" alt="">
+                                        <img src="assets/img/pagination-ar-right.svg" alt="">
                                     </a>
 
                                     <a class="end page-numbers">
-                                        <img src="assets/img/end.svg" alt="">
+                                        <img src="assets/img/pagination-double-ar-right.svg" alt="">
                                     </a>
                                 </div>
                             </nav>
@@ -865,18 +875,17 @@
                 <div class="row m-row ">
                     <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column d-flex align-justify align-middle">
 
-                        <ul class="footer-links copyright">
-                            <li>© 2025 Усі права захищено</li>
-                        </ul>
+                        <div class="copyright">© 2025 Усі права захищено</div>
 
-                        <ul class="footer-links">
+
+                        <ul class="footer-links  d-flex align-middle align-center">
                             <li>
-                                <a href="">
+                                <a href="offer-contract.html">
                                     Договір оферта
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="privacy-policy.html">
                                     Політика конфіденційності
                                 </a>
                             </li>
@@ -897,7 +906,8 @@
 
 <script src="./assets/js/jquery-3.7.0.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
-
+<script src="assets/js/jquery.sumoselect.min.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
 <script src="assets/js/js_app.min.js"></script>
 
 
@@ -1090,6 +1100,8 @@
 
         $(document).on("click", ".fl-title", function () {
             $(this).toggleClass("is-active");
+          //  $(".fl-menu-item").removeClass("is-open");
+            $(this).closest(".fl-menu-item").toggleClass("is-open");
             $(this).closest(".fl-menu-item").find(".fl-toggle").first().slideToggle(300);
         });
 
