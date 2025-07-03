@@ -261,10 +261,13 @@
 
 
 .s-recommended-product {
-  padding-bottom: 96px;
-  @media (max-width: $breakpoint-lg) {
-    padding-bottom: 45px;
+  &.--home{
+    padding-bottom: 96px;
+    @media (max-width: $breakpoint-lg) {
+      padding-bottom: 45px;
+    }
   }
+
 
   & .tab {
     &__list {

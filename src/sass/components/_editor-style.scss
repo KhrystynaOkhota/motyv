@@ -130,8 +130,9 @@
     list-style-type: none;
 
     & li {
-      @include fontSize(17, 20);
+      @include fontSize(14, 17);
       line-height: normal;
+
       position: relative;
 
       &:not(&:last-child) {
@@ -182,8 +183,8 @@
 
     & p, & {
       position: relative;
-      font-size: 20px;
-      @include fontSize(16, 20);
+      @include fontSize(14, 17);
+      line-height: 1.58;
       @media (max-width: $breakpoint-lg) {
       }
 

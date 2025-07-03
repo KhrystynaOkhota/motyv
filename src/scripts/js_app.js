@@ -262,7 +262,9 @@ $(window).on('scroll', function () {
     scrollAnime();
 });
 
-
+// =============================
+// BURGER
+// =============================
 jQuery(function () {
     $(".burger__wrap").on("click", function () {
         $(this).toggleClass("active"),
@@ -286,6 +288,47 @@ jQuery(function () {
 });
 
 
+
+
+
+// =============================
+// ACCORDEON
+// =============================
+
+$(document).on('click', '.accordion-title', function () {
+    var accordeon = $(this).closest('.accordeon');
+    accordeon.find('.accordion-title.active').not(this).removeClass('active').next().slideUp();
+    $(this).toggleClass('active').next().slideToggle();
+});
+
+
+// =============================
+// SumoSelect
+// =============================
+
+if ($('.select-box').length) {
+
+    $('.default').SumoSelect();
+};
+
+
+// =============================
+// PLAY AND STOP VIDEO
+// =============================
+
+$(document).on('click', '.btn-play', function () {
+    let videoItem = $(this).closest('.video-with-control').find('video').get(0);
+
+    if (videoItem.paused) {
+        videoItem.play();
+        $(this).closest('.video-full').find('video').attr('controls', '');
+        $(this).closest('.btn-play').addClass('hide');
+    } else {
+        videoItem.pause();
+        $(this).closest('.video-full').find('video').removeAttr('controls');
+        $(this).closest('.btn-play').removeClass('hide');
+    }
+});
 // about page
 $('.preload__btn').on('click', function () {
     $(this).parents(".preload-entry").find(".preload").css({
@@ -307,118 +350,5 @@ $('.preload__btn').on('click', function () {
         video.play();
         $(this).parents(".preload-entry").find('.--play').removeClass("d-block").addClass("d-none");
         $(this).parents(".preload-entry").find('.--pause').removeClass("d-none").addClass("d-block");
-    }
-});
-
-
-// =============================
-// ACCORDEON
-// =============================
-/*$(document).on('click', '.accordeon-title', function () {
-    alert("rtyui");
-    $(this).parent().siblings('.accordeon-item.active').toggleClass('active').find('.accordeon-content').slideToggle();
-    $(this).parent().toggleClass('active').find('.accordeon-content').slideToggle();
-});*/
-
-$(document).on('click', '.accordeon-title', function () {
-    var accordeon = $(this).closest('.accordeon');
-    accordeon.find('.accordeon-title.active').not(this).removeClass('active').next().slideUp();
-    $(this).toggleClass('active').next().slideToggle();
-});
-
-/* Scroll to Content */
-$(document).on("click", ".scroll-to-content", function () {
-    var nextSec = $(this).closest('.section__wrap').next(),
-        section = $(this).closest('main');
-
-    $('html, body').animate({
-        scrollTop: section.scrollTop() + nextSec.offset().top - $("header").outerHeight()
-    }, 700);
-});
-
-
-// accordion
-$(document).on('click', '.accordion-item', function () {
-    const $title = $(this).find('.accordion-title');
-    const $content = $(this);
-    if ($title.hasClass('is-active')) {
-        $title.removeClass('is-active').next().slideUp();
-        $content.removeClass('is-active');
-    } else {
-        $title
-            .closest('.accordion')
-            .find('.accordion-title')
-            .not($title)
-            .removeClass('is-active')
-            .next()
-            .slideUp();
-        $title.addClass('is-active').next().slideDown();
-        $content.addClass('is-active');
-    }
-});
-
-
-if ($('.select-box').length) {
-
-    $('.default').SumoSelect();
-
-};
-
-
-$('.read-more-toggle').on('click', function () {
-    var $tp = $(this).parent();
-    if ($(this).hasClass('active')) {
-        $tp.find('.read-more-text-wrapper').animate({'height': 330});
-        $('.read-more-text').animate({height: 0}, 600).removeClass('active');
-        setTimeout(function () {
-            if ($('.portfolio-wrapper').length) {
-                $('html, body').animate({scrollTop: $('.portfolio-wrapper').offset().top - $('header').outerHeight()}, 700);
-            }
-            if ($('.read-more-text').length) {
-                $('html, body').animate({scrollTop: $('.read-more-text').closest('.sect-spacer').offset().top - $('header').outerHeight() - 30}, 700);
-            }
-        }, 700);
-    } else {
-        $tp.find('.read-more-text-wrapper').animate({'height': $tp.find('.read-more-text-content').height()}, function () {
-            $(this).css({'height': 'auto'});
-        });
-        $('.read-more-text').animate({height: $('.read-more-text-content').height()}, 600).addClass('active');
-    }
-    $(this).toggleClass('active');
-});
-
-
-// Accordion for Footer Links
-
-$(document).on("click", ".footer-info__heading", function () {
-    if ($(this).hasClass("active")) {
-        $(this).removeClass("active").next().slideUp();
-    } else {
-        $(this)
-            .closest(".footer-info__wrap")
-            .find(".footer-info__heading")
-            .not(this)
-            .removeClass("active")
-            .next()
-            .slideUp();
-        $(this).addClass("active").next().slideDown();
-    }
-});
-
-
-
-
-//play & stop Video
-$(document).on('click', '.btn-play', function () {
-    let videoItem = $(this).closest('.video-with-control').find('video').get(0);
-
-    if (videoItem.paused) {
-        videoItem.play();
-        $(this).closest('.video-full').find('video').attr('controls', '');
-        $(this).closest('.btn-play').addClass('hide');
-    } else {
-        videoItem.pause();
-        $(this).closest('.video-full').find('video').removeAttr('controls');
-        $(this).closest('.btn-play').removeClass('hide');
     }
 });
