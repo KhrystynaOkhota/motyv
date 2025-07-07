@@ -20,7 +20,7 @@ jQuery(function ($) {
     }
 
     /*new slider*/
-    _functions.getSwOptions = function (swiper) {
+  /*  _functions.getSwOptions = function (swiper) {
         var options = swiper.data('options');
         options = (!options || typeof options !== 'object') ? {} : options;
         var $p = swiper.closest('.swiper-entry'),
@@ -55,7 +55,7 @@ jQuery(function ($) {
         options.observeParents = true;
         options.watchOverflow = true;
         options.speed = 500;
-        options.direction = "horizontal";
+
         options.roundLengths = false;
         if (!options.centerInsufficientSlides)
             options.centerInsufficientSlides = false;
@@ -101,14 +101,31 @@ jQuery(function ($) {
         });
     });
 
-
+/*
     $('.swiper-thumbs').each(function () {
         var top = $(this).find('.swiper-container.swiper-thumbs-top')[0].swiper
             , bottom = $(this).find('.swiper-container.swiper-thumbs-bottom')[0].swiper;
         top.thumbs.swiper = bottom;
         top.thumbs.init();
         top.thumbs.update();
+    });*
+
+    // Thumbs Swiper
+    $(".swiper-thumbs").each(function () {
+        if ($(".swiper-thumbs-top").length && $(".swiper-thumbs-bottom").length) {
+            let t = $(this);
+            let top = t.find(".swiper-thumbs-top>.swiper-container")[0].swiper,
+                bottom = t.find(".swiper-thumbs-bottom>.swiper-container")[0].swiper;
+            top.thumbs.swiper = bottom;
+            top.thumbs.init();
+            top.thumbs.update();
+
+            if (top.slides.length < 2) {
+                t.addClass("hide-bottom");
+            }
+        }
     });
+
     $('.swiper-control').each(function () {
         var top = $(this).find('.swiper-container')[0].swiper
             , bottom = $(this).find('.swiper-container')[1].swiper;
@@ -131,7 +148,7 @@ jQuery(function ($) {
     $(window).on('resize', function () {
         slideLength();
     });
-
+*/
 
     /*new slider*/
 

@@ -47,16 +47,16 @@ input, button {
       background: transparent;
       border: none;
       border: 1px solid rgba(255, 255, 255, .3);
-      border-radius: 10px;
+      border-radius: 0;
       cursor: pointer;
       display: block;
       width: 100%;
-      font-size: 18px;
+      font-size: 16px;
 
       line-height: 1;
-      font-family: 'FuturaPT', sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-weight: 400;
-      color: $white-color;
+      color: rgba(151, 151, 151, 1);
 
       resize: none;
       padding: 12px 20px;
@@ -76,33 +76,33 @@ input, button {
 }
 
 ::-webkit-input-placeholder {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
-  font-family: 'FuturaPT', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   font-weight: 400;
-  color: $white-color;
+  color: rgba(151, 151, 151, 1);
 
   opacity: 1;
   transition: opacity 0.5s;
 }
 
 ::-moz-placeholder {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
-  font-family: 'FuturaPT', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   font-weight: 400;
-  color: $white-color;
+  color: rgba(151, 151, 151, 1);
 
   opacity: 1;
   transition: opacity 0.5s;
 }
 
 :-ms-input-placeholder {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
-  font-family: 'FuturaPT', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   font-weight: 400;
-  color: $white-color;
+  color: rgba(151, 151, 151, 1);
 
   opacity: 1;
   transition: opacity 0.5s;

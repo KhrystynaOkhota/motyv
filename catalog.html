@@ -344,7 +344,7 @@
                                 </div>
                                 <div class="fl-menu-item">
                                     <div class="fl-title text-regular heading-font text-uppercase">
-                                       Розмір
+                                        Розмір
 
                                     </div>
                                     <div class="fl-toggle">
@@ -563,21 +563,21 @@
                             Фільтр
                         </div>
                         <div class="select-box">
-                        <select name="orderby" class="default">
-                            <option value="default">Популярні</option>
-                            <option value="price_low">
-                                Ціна за зростанням
-                            </option>
-                            <option value="price_high" selected="selected">
-                                Ціна за спаданням
-                            </option>
-                            <option value="title_asc">
-                                Від А до Я
-                            </option>
-                            <option value="title_desc">
-                                Від Я до А
-                            </option>
-                        </select>
+                            <select name="orderby" class="default">
+                                <option value="default">Популярні</option>
+                                <option value="price_low">
+                                    Ціна за зростанням
+                                </option>
+                                <option value="price_high" selected="selected">
+                                    Ціна за спаданням
+                                </option>
+                                <option value="title_asc">
+                                    Від А до Я
+                                </option>
+                                <option value="title_desc">
+                                    Від Я до А
+                                </option>
+                            </select>
                         </div>
                     </div>
 
@@ -908,6 +908,7 @@
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/jquery.sumoselect.min.js"></script>
 <script src="assets/js/jquery-ui.min.js"></script>
+<script src="src/scripts/app-swiper.js"></script>
 <script src="assets/js/js_app.min.js"></script>
 
 
@@ -1100,7 +1101,7 @@
 
         $(document).on("click", ".fl-title", function () {
             $(this).toggleClass("is-active");
-          //  $(".fl-menu-item").removeClass("is-open");
+            //  $(".fl-menu-item").removeClass("is-open");
             $(this).closest(".fl-menu-item").toggleClass("is-open");
             $(this).closest(".fl-menu-item").find(".fl-toggle").first().slideToggle(300);
         });
