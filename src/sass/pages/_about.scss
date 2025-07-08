@@ -53,11 +53,13 @@
       position: absolute;
       bottom: 54px;
       right: 54px;
-      width: 43px;
-      height: 47px;
+      width: 77px;
+      height: 77px;
+      border-radius: 100%;
+      background: rgba(255, 255, 255, 1);
       @media (max-width: $breakpoint-md) {
-        width: 27px;
-        height: 30px;
+        width: 43px;
+        height: 43px;
         bottom: 20px;
         right: 20px;
       }

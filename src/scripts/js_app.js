@@ -20,135 +20,135 @@ jQuery(function ($) {
     }
 
     /*new slider*/
-  /*  _functions.getSwOptions = function (swiper) {
-        var options = swiper.data('options');
-        options = (!options || typeof options !== 'object') ? {} : options;
-        var $p = swiper.closest('.swiper-entry'),
-            slidesLength = swiper.find('>.swiper-wrapper>.swiper-slide').length;
-        if (options.progressbar)
-            options.pagination = {
-                el: $p.find('.swiper-pagination')[0],
-                type: 'progressbar',
-                clickable: true
-            };
+    /*  _functions.getSwOptions = function (swiper) {
+          var options = swiper.data('options');
+          options = (!options || typeof options !== 'object') ? {} : options;
+          var $p = swiper.closest('.swiper-entry'),
+              slidesLength = swiper.find('>.swiper-wrapper>.swiper-slide').length;
+          if (options.progressbar)
+              options.pagination = {
+                  el: $p.find('.swiper-pagination')[0],
+                  type: 'progressbar',
+                  clickable: true
+              };
 
-        if (!options.pagination)
-            options.pagination = {
-                el: $p.find('.swiper-pagination')[0],
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
-
-
-                },
-            };
-        if (!options.navigation)
-            options.navigation = {
-                nextEl: $p.find('.swiper-button-next')[0],
-                prevEl: $p.find('.swiper-button-prev')[0]
-            };
-        options.preloadImages = false;
-        options.lazy = {
-            loadPrevNext: true
-        };
-        options.observer = true;
-        options.observeParents = true;
-        options.watchOverflow = true;
-        options.speed = 500;
-
-        options.roundLengths = false;
-        if (!options.centerInsufficientSlides)
-            options.centerInsufficientSlides = false;
-        if (isTouchScreen)
-            options.direction = "horizontal";
-        if (options.customFraction) {
-            $p.addClass('custom-fraction');
-            if (slidesLength > 1 && slidesLength < 10) {
-                $p.find('.custom-current').text('01');
-                $p.find('.custom-total').text('0' + slidesLength);
-            } else if (slidesLength > 1) {
-                $p.find('.custom-current').text('01');
-                $p.find('.custom-total').text('0' + slidesLength);
-            }
-        }
-        return options;
-    }
-    ;
-    _functions.initSwiper = function (el) {
-        var swiper = new Swiper(el[0], _functions.getSwOptions(el));
-    };
-    $('.swiper-entry .swiper-container').each(function () {
-        _functions.initSwiper($(this));
-    });
+          if (!options.pagination)
+              options.pagination = {
+                  el: $p.find('.swiper-pagination')[0],
+                  clickable: true,
+                  renderBullet: function (index, className) {
+                      return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
 
 
-    //custom fraction
-    $('.custom-fraction').each(function () {
-        var $this = $(this),
-            $thisSwiper = $this.find('.swiper-container')[0].swiper,
-            currentSlide = $thisSwiper.realIndex + 1;
-        $thisSwiper.on('slideChange', function () {
-            $this.find('.custom-current').text(
-                function () {
-                    currentSlide = $thisSwiper.realIndex + 1;
-                    if ($thisSwiper.realIndex < 9) {
-                        return ('0' + currentSlide)
-                    } else {
-                        return '0' + currentSlide
-                    }
-                }
-            )
-        });
-    });
+                  },
+              };
+          if (!options.navigation)
+              options.navigation = {
+                  nextEl: $p.find('.swiper-button-next')[0],
+                  prevEl: $p.find('.swiper-button-prev')[0]
+              };
+          options.preloadImages = false;
+          options.lazy = {
+              loadPrevNext: true
+          };
+          options.observer = true;
+          options.observeParents = true;
+          options.watchOverflow = true;
+          options.speed = 500;
 
-/*
-    $('.swiper-thumbs').each(function () {
-        var top = $(this).find('.swiper-container.swiper-thumbs-top')[0].swiper
-            , bottom = $(this).find('.swiper-container.swiper-thumbs-bottom')[0].swiper;
-        top.thumbs.swiper = bottom;
-        top.thumbs.init();
-        top.thumbs.update();
-    });*
+          options.roundLengths = false;
+          if (!options.centerInsufficientSlides)
+              options.centerInsufficientSlides = false;
+          if (isTouchScreen)
+              options.direction = "horizontal";
+          if (options.customFraction) {
+              $p.addClass('custom-fraction');
+              if (slidesLength > 1 && slidesLength < 10) {
+                  $p.find('.custom-current').text('01');
+                  $p.find('.custom-total').text('0' + slidesLength);
+              } else if (slidesLength > 1) {
+                  $p.find('.custom-current').text('01');
+                  $p.find('.custom-total').text('0' + slidesLength);
+              }
+          }
+          return options;
+      }
+      ;
+      _functions.initSwiper = function (el) {
+          var swiper = new Swiper(el[0], _functions.getSwOptions(el));
+      };
+      $('.swiper-entry .swiper-container').each(function () {
+          _functions.initSwiper($(this));
+      });
 
-    // Thumbs Swiper
-    $(".swiper-thumbs").each(function () {
-        if ($(".swiper-thumbs-top").length && $(".swiper-thumbs-bottom").length) {
-            let t = $(this);
-            let top = t.find(".swiper-thumbs-top>.swiper-container")[0].swiper,
-                bottom = t.find(".swiper-thumbs-bottom>.swiper-container")[0].swiper;
-            top.thumbs.swiper = bottom;
-            top.thumbs.init();
-            top.thumbs.update();
 
-            if (top.slides.length < 2) {
-                t.addClass("hide-bottom");
-            }
-        }
-    });
+      //custom fraction
+      $('.custom-fraction').each(function () {
+          var $this = $(this),
+              $thisSwiper = $this.find('.swiper-container')[0].swiper,
+              currentSlide = $thisSwiper.realIndex + 1;
+          $thisSwiper.on('slideChange', function () {
+              $this.find('.custom-current').text(
+                  function () {
+                      currentSlide = $thisSwiper.realIndex + 1;
+                      if ($thisSwiper.realIndex < 9) {
+                          return ('0' + currentSlide)
+                      } else {
+                          return '0' + currentSlide
+                      }
+                  }
+              )
+          });
+      });
 
-    $('.swiper-control').each(function () {
-        var top = $(this).find('.swiper-container')[0].swiper
-            , bottom = $(this).find('.swiper-container')[1].swiper;
-        top.controller.control = bottom;
-        bottom.controller.control = top;
-    });
+  /*
+      $('.swiper-thumbs').each(function () {
+          var top = $(this).find('.swiper-container.swiper-thumbs-top')[0].swiper
+              , bottom = $(this).find('.swiper-container.swiper-thumbs-bottom')[0].swiper;
+          top.thumbs.swiper = bottom;
+          top.thumbs.init();
+          top.thumbs.update();
+      });*
 
-    function slideLength() {
-        $('.swiper-entry .swiper-container').each(function () {
-            var th = $(this)
-                , slidesLength = $(this).find('.swiper-slide').length
-                , visibleSlidesLength = $(this).find('.swiper-slide-visible').length;
-            if (slidesLength <= visibleSlidesLength) {
-                th.addClass('swiper-no');
-            }
-        });
-    }
+      // Thumbs Swiper
+      $(".swiper-thumbs").each(function () {
+          if ($(".swiper-thumbs-top").length && $(".swiper-thumbs-bottom").length) {
+              let t = $(this);
+              let top = t.find(".swiper-thumbs-top>.swiper-container")[0].swiper,
+                  bottom = t.find(".swiper-thumbs-bottom>.swiper-container")[0].swiper;
+              top.thumbs.swiper = bottom;
+              top.thumbs.init();
+              top.thumbs.update();
 
-    slideLength();
-    $(window).on('resize', function () {
-        slideLength();
-    });
-*/
+              if (top.slides.length < 2) {
+                  t.addClass("hide-bottom");
+              }
+          }
+      });
+
+      $('.swiper-control').each(function () {
+          var top = $(this).find('.swiper-container')[0].swiper
+              , bottom = $(this).find('.swiper-container')[1].swiper;
+          top.controller.control = bottom;
+          bottom.controller.control = top;
+      });
+
+      function slideLength() {
+          $('.swiper-entry .swiper-container').each(function () {
+              var th = $(this)
+                  , slidesLength = $(this).find('.swiper-slide').length
+                  , visibleSlidesLength = $(this).find('.swiper-slide-visible').length;
+              if (slidesLength <= visibleSlidesLength) {
+                  th.addClass('swiper-no');
+              }
+          });
+      }
+
+      slideLength();
+      $(window).on('resize', function () {
+          slideLength();
+      });
+  */
 
     /*new slider*/
 
@@ -226,12 +226,6 @@ jQuery(function ($) {
     _functions.scrollCall();
 
 
-
-
-
-
-
-
     // search
     $(document).on("click", ".js-open-search", function () {
 
@@ -305,9 +299,6 @@ jQuery(function () {
 });
 
 
-
-
-
 // =============================
 // ACCORDEON
 // =============================
@@ -326,7 +317,8 @@ $(document).on('click', '.accordion-title', function () {
 if ($('.select-box').length) {
 
     $('.default').SumoSelect();
-};
+}
+;
 
 
 // =============================
@@ -369,3 +361,75 @@ $('.preload__btn').on('click', function () {
         $(this).parents(".preload-entry").find('.--pause').removeClass("d-none").addClass("d-block");
     }
 });
+
+// =============================
+// FILTER
+// =============================
+
+$(document).on("click", ".fl-title", function () {
+    $(this).toggleClass("is-active");
+    //  $(".fl-menu-item").removeClass("is-open");
+    $(this).closest(".fl-menu-item").toggleClass("is-open");
+    $(this).closest(".fl-menu-item").find(".fl-toggle").first().slideToggle(300);
+});
+//open filters on mobile
+$(document).on("click", ".btn-filter", function () {
+    $("body,html").toggleClass("overflow-hidden");
+    $(this).toggleClass("is-open");
+    $(".fl-menu__wrap").toggleClass("is-open");
+    $(".fl-menu__overlay").toggleClass("is-active");
+});
+$(document).on("click", ".fl-menu__overlay, .fl-menu__close", function () {
+    $(this).hasClass("is-active")
+        ? $(this).removeClass("is-active")
+        : $(this).addClass("is-active");
+
+    $(".fl-menu__wrap").removeClass("is-open"),
+        $("body,html").toggleClass("overflow-hidden");
+
+});
+
+// =============================
+// LIGHTGALLERY
+// =============================
+$('.lightgallery').not('.animated').each(function () {
+    $(this).lightGallery();
+});
+
+// =============================
+// TAB
+// =============================
+const tabs = document.querySelectorAll(".tab");
+
+function tabify(tab) {
+    const tabList = tab.querySelector(".tab__list");
+
+    if (tabList) {
+        const tabItems = [...tabList.children];
+        const tabContent = tab.querySelector(".tab__content");
+        const tabContentItems = [...tabContent.children];
+        let tabIndex = 0;
+
+        tabIndex = tabItems.findIndex((item, index) => {
+            return [...item.classList].indexOf("is--active") > -1;
+        });
+
+        tabIndex > -1 ? (tabIndex = tabIndex) : (tabIndex = 0);
+
+        function setTab(index) {
+            tabItems.forEach((x, index) => x.classList.remove("is--active"));
+            tabContentItems.forEach((x, index) => x.classList.remove("is--active"));
+
+            tabItems[index].classList.add("is--active");
+            tabContentItems[index].classList.add("is--active");
+        }
+
+        tabItems.forEach((x, index) =>
+            x.addEventListener("click", () => setTab(index))
+        );
+        setTab(tabIndex);
+        tab.querySelectorAll(".tab").forEach((tabContent) => tabify(tabContent));
+    }
+}
+
+tabs.forEach(tabify);

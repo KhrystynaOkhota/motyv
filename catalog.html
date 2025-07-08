@@ -911,7 +911,7 @@
 <script src="src/scripts/app-swiper.js"></script>
 <script src="assets/js/js_app.min.js"></script>
 
-
+<!--
 <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key="
         type="text/javascript"></script>
 <script async defer>
@@ -1248,7 +1248,33 @@
             $("body,html").toggleClass("overflow-hidden");
 
     });
-</script>
+</script>--
+<script>
+
+
+        $(document).on("click", ".fl-title", function () {
+            $(this).toggleClass("is-active");
+            //  $(".fl-menu-item").removeClass("is-open");
+            $(this).closest(".fl-menu-item").toggleClass("is-open");
+            $(this).closest(".fl-menu-item").find(".fl-toggle").first().slideToggle(300);
+        });
+    //open filters on mobile
+    $(document).on("click", ".btn-filter", function () {
+        $("body,html").toggleClass("overflow-hidden");
+        $(this).toggleClass("is-open");
+        $(".fl-menu__wrap").toggleClass("is-open");
+        $(".fl-menu__overlay").toggleClass("is-active");
+    });
+    $(document).on("click", ".fl-menu__overlay, .fl-menu__close", function () {
+        $(this).hasClass("is-active")
+            ? $(this).removeClass("is-active")
+            : $(this).addClass("is-active");
+
+        $(".fl-menu__wrap").removeClass("is-open"),
+            $("body,html").toggleClass("overflow-hidden");
+
+    });
+</script>-->
 </body>
 </html>
 

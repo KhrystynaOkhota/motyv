@@ -1505,84 +1505,14 @@
         </div>
     </div>
 </div>
-<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key="
-        type="text/javascript"></script>
+
+
 <script src="./assets/js/jquery-3.7.0.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/jquery.sumoselect.min.js"></script>
 <script src="assets/js/app-swiper.js"></script>
 <script src="assets/js/js_app.min.js"></script>
 
-
-<script>
-    jQuery(function ($) {
-        const obsCounter = new IntersectionObserver(function (entries, observer) {
-            entries.forEach((entry) => {
-                    if (!entry.isIntersecting)
-                        return;
-                    entry.target.classList.add("|", "animated");
-                    $(entry.target).find(".number__value").each(function () {
-                        $(this).prop("Counter", 0).animate({
-                            Counter: $(this).text(),
-                        }, {
-                            duration: 1500,
-                            easing: "swing",
-                            step: function (now) {
-                                $(this).text(Math.ceil(now));
-                            },
-                        });
-                    });
-                    observer.unobserve(entry.target);
-                }
-            );
-        });
-
-        document.querySelectorAll(".number__item").forEach((block) => {
-            obsCounter.observe(block);
-        });
-
-    });
-
-
-</script>
-
-<script>
-    const tabs = document.querySelectorAll(".tab");
-
-    function tabify(tab) {
-        const tabList = tab.querySelector(".tab__list");
-
-        if (tabList) {
-            const tabItems = [...tabList.children];
-            const tabContent = tab.querySelector(".tab__content");
-            const tabContentItems = [...tabContent.children];
-            let tabIndex = 0;
-
-            tabIndex = tabItems.findIndex((item, index) => {
-                return [...item.classList].indexOf("is--active") > -1;
-            });
-
-            tabIndex > -1 ? (tabIndex = tabIndex) : (tabIndex = 0);
-
-            function setTab(index) {
-                tabItems.forEach((x, index) => x.classList.remove("is--active"));
-                tabContentItems.forEach((x, index) => x.classList.remove("is--active"));
-
-                tabItems[index].classList.add("is--active");
-                tabContentItems[index].classList.add("is--active");
-            }
-
-            tabItems.forEach((x, index) =>
-                x.addEventListener("click", () => setTab(index))
-            );
-            setTab(tabIndex);
-            tab.querySelectorAll(".tab").forEach((tabContent) => tabify(tabContent));
-        }
-    }
-
-    tabs.forEach(tabify);
-
-</script>
 
 
 </body>
