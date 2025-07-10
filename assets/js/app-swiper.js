@@ -8,7 +8,7 @@ jQuery(function ($) {
     let options = swiper.data("options");
     options = !options || typeof options !== "object" ? {} : options;
     const $p = swiper.closest(".swiper-entry"),
-      slidesLength = swiper.find(".swiper-wrapper>.swiper-slide").length;
+        slidesLength = swiper.find(".swiper-wrapper>.swiper-slide").length;
 
     if (!options.pagination)
       options.pagination = {
@@ -16,6 +16,17 @@ jQuery(function ($) {
         clickable: true,
         dynamicBullets: slidesLength > 6 ? true : false,
       };
+    if (options.customFraction) {
+
+      $p.addClass('custom-fraction');
+      if (slidesLength > 1 && slidesLength < 10) {
+        $p.find('.custom-current').text('01');
+        $p.find('.custom-total').text('0' + slidesLength);
+      } else if (slidesLength > 1) {
+        $p.find('.custom-current').text('01');
+        $p.find('.custom-total').text('0' + slidesLength);
+      }
+    };
     if (!options.navigation)
       options.navigation = {
         nextEl: $p.find(".swiper-button-next")[0],
@@ -45,6 +56,7 @@ jQuery(function ($) {
     if (slidesLength <= 1) {
       options.loop = false;
     }
+
     return options;
   };
 
@@ -61,7 +73,7 @@ jQuery(function ($) {
     if ($(".swiper-thumbs-top").length && $(".swiper-thumbs-bottom").length) {
       let t = $(this);
       let top = t.find(".swiper-thumbs-top>.swiper-container")[0].swiper,
-        bottom = t.find(".swiper-thumbs-bottom>.swiper-container")[0].swiper;
+          bottom = t.find(".swiper-thumbs-bottom>.swiper-container")[0].swiper;
       top.thumbs.swiper = bottom;
       top.thumbs.init();
       top.thumbs.update();
@@ -72,57 +84,24 @@ jQuery(function ($) {
     }
   });
 
-  // Banner Video Play/Pause
-  $(".banner-slider").each(function () {
-    let $thisSwiper = $(this).find(".swiper-container")[0].swiper;
-
-    // Custom Controls Hide/Show
-    if ($thisSwiper.slides.length <= 2) {
-      $(".swiper-controls-wrap").addClass("custom-btn-lock");
-    } else {
-      $(".swiper-controls-wrap").removeClass("custom-btn-lock");
-    }
-
-    $thisSwiper.on("slideChange", function () {
-      _functions.updateCustomPagination($thisSwiper);
-    });
-
-    $thisSwiper.on("slideChangeTransitionEnd", function () {
-      var $cSlides = $(".swiper-container").find(".swiper-slide");
-      _functions.customSlide($thisSwiper, $cSlides);
-    });
-
-    $(".banner-btn").on("click", function () {
-      const slideIndex = $(this).data("index");
-      $thisSwiper.slideToLoop(slideIndex);
-      $thisSwiper.autoplay.start();
+  //custom fraction
+  $('.custom-fraction').each(function () {
+    let $this = $(this),
+        $thisSwiper = $(this).find('.swiper-container')[0].swiper,
+        currentSlide = $thisSwiper.realIndex + 1;
+    $thisSwiper.on('slideChange', function () {
+      $this.find('.custom-current').text(
+          function () {
+            currentSlide = $thisSwiper.realIndex + 1;
+            if ($thisSwiper.realIndex < 9) {
+              return ('0' + currentSlide)
+            } else {
+              return '0' + currentSlide
+            }
+          }
+      )
     });
   });
 
-  _functions.customSlide = function (swiperObj, $customSlides) {
-    var slideTo = $customSlides.eq(swiperObj.activeIndex),
-      slideFrom = $customSlides.eq(swiperObj.previousIndex);
 
-    var prevSlideVideo = slideFrom.find("video")[0],
-      activeSlideVideo = slideTo.find("video")[0];
-
-    if (prevSlideVideo && !prevSlideVideo.paused) {
-      prevSlideVideo.pause();
-      prevSlideVideo.currentTime = 0;
-    }
-    if (activeSlideVideo) {
-      setTimeout(() => {
-        activeSlideVideo
-          .play()
-          .catch((error) => console.error("Play interrupted:", error));
-      }, 100);
-    }
-  };
-
-  _functions.updateCustomPagination = function (swiperObj) {
-    $(".banner-btn").removeClass("active");
-    $(".banner-btn-progress").removeClass("active");
-    $(".banner-btn").eq(swiperObj.realIndex).addClass("active");
-    $(".banner-btn-progress").eq(swiperObj.realIndex).addClass("active");
-  };
 });
