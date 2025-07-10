@@ -447,13 +447,16 @@ $(document).on("click", ".menu-item-has-children > a", function (e) {
 // PRICE
 // =============================
 
-$("#slider").slider({
-    range: true,
-    min: 0,
-    max: 7000,
-    values: [8, 6666],
-    slide: function (event, ui) {
-        $(".from").val(ui.values[0]);
-        $(".to").val(ui.values[1]);
-    }
-});
+
+if ($('#slider').length) {
+    $("#slider").slider({
+        range: true,
+        min: 0,
+        max: 7000,
+        values: [8, 6666],
+        slide: function (event, ui) {
+            $(".from").val(ui.values[0]);
+            $(".to").val(ui.values[1]);
+        }
+    });
+};

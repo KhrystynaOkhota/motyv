@@ -132,7 +132,21 @@
       }
 
       &__date {
-
+        position: relative;
+        &:before {
+          content: '';
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background: url("../img/clock.svg");
+          @media (max-width: $breakpoint-xl) {
+            width: 20px;
+            height: 20px
+          }
+        }
       }
     }
 
