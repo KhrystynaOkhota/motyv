@@ -433,3 +433,27 @@ function tabify(tab) {
 }
 
 tabs.forEach(tabify);
+
+// =============================
+// OPEN SUBMENU
+// =============================
+
+$(document).on("click", ".menu-item-has-children > a", function (e) {
+    e.preventDefault();
+    $(this).closest(".menu-item").find(".sub-menu").first().slideToggle(300);
+});
+
+// =============================
+// PRICE
+// =============================
+
+$("#slider").slider({
+    range: true,
+    min: 0,
+    max: 7000,
+    values: [8, 6666],
+    slide: function (event, ui) {
+        $(".from").val(ui.values[0]);
+        $(".to").val(ui.values[1]);
+    }
+});

@@ -73,7 +73,9 @@
           line-height: 1;
           font-weight: 300;
           @include transition(.5);
-
+          @media (min-width: $breakpoint-lg) {
+            pointer-events: none;
+          }
           &:hover {
             color: rgba(139, 117, 96, 1);
           }
@@ -81,7 +83,6 @@
 
         &-has-children {
           position: relative;
-          padding-right: 18px;
 
           &:before {
             content: '';
@@ -95,38 +96,50 @@
             @include transition(.4);
           }
 
-          &:after {
-            content: "\e900";
-            font-family: 'icomoon' !important;
-            width: 9px;
-            height: 5px;
-            font-size: 6px;
-            position: absolute;
-            top: calc(50% - 3px);
-            right: 0;
+          & > a {
+            position: relative;
+            padding-right: 18px;
 
-            @include transition(.4);
+            &:after {
+              content: "\e900";
+              font-family: 'icomoon' !important;
+              width: 9px;
+              height: 5px;
+              font-size: 6px;
+              position: absolute;
+              top: calc(50% - 3px);
+              right: 0;
+
+              @include transition(.4);
+            }
           }
 
+
           & .sub-menu {
+            @media (min-width: $breakpoint-lg) {
+              position: absolute;
+              width: auto;
+              min-width: 250px;
+              left: -15px;
+              height: auto;
+              padding: 15px;
 
-            position: absolute;
-            width: auto;
-            min-width: 250px;
-            left: -15px;
-            height: auto;
-            padding: 15px;
-
-            outline: none;
-            z-index: 5;
-            opacity: 0;
-            visibility: hidden;
-            background: #fff;
-            border: 1px solid rgba(204, 195, 189, 0.3);
-            -webkit-transition: all .5s ease-in-out;
-            -o-transition: all .5s ease-in-out;
-            transition: all .5s ease-in-out;
-            transform: translateY(20px);
+              outline: none;
+              z-index: 5;
+              opacity: 0;
+              visibility: hidden;
+              background: #fff;
+              border: 1px solid rgba(204, 195, 189, 0.3);
+              -webkit-transition: all .5s ease-in-out;
+              -o-transition: all .5s ease-in-out;
+              transition: all .5s ease-in-out;
+              transform: translateY(20px);
+            }
+            @media (max-width: $breakpoint-lg) {
+              display: none;
+              padding-top: 30px;
+              padding-left: 30px;
+            }
 
             & .menu-item {
               & a {
@@ -141,22 +154,24 @@
           }
 
           &:hover {
-            //  background: rgba(245, 243, 242, 1);
-            color: rgba(139, 117, 96, 1);
+            @media (min-width: $breakpoint-lg) {
+              //  background: rgba(245, 243, 242, 1);
+              color: rgba(139, 117, 96, 1);
 
-            &:before {
-              background: rgba(245, 243, 242, 1);
-            }
+              &:before {
+                background: rgba(245, 243, 242, 1);
+              }
 
-            &:after {
-              transform: rotate(180deg);
-            }
+              &:after {
+                transform: rotate(180deg);
+              }
 
-            & .sub-menu {
-              opacity: 1;
-              visibility: visible;
-              transform: translateY(0);
-              z-index: 500;
+              & .sub-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                z-index: 500;
+              }
             }
           }
         }

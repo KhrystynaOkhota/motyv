@@ -187,8 +187,8 @@
 
     <section class="s-checkout">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-16 column">
+            <div class="row m-row">
+                <div class="col-xl-10 col-lg-9 col-md-16 col-sm-16 col-xs-16 column">
                     <div class="heading heading-font text-regular h2 mb-45">
                         Оформити замовлення
                     </div>
@@ -260,62 +260,96 @@
 
                             <div class="row m-row">
                                 <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
-                                    <div class="form-control">
+                                    <div class="form-control no-margin">
+                                        <textarea class="form-control__textarea" placeholder="Примітки до замовлення " rows="1"></textarea>
 
-                                        <input class="form-control__input" id="b-card-name" type="number"
-                                               placeholder="Card Number">
                                     </div>
                                 </div>
                             </div>
                         </form>
+
+                        <div class="text-regular text-s checkout-item__notification">
+                            Міжнародна доставка обговорюється окремо після оформлення.
+                        </div>
                     </div>
                     <div class="checkout-item">
                         <div class="checkout-item__heading heading-font">
                             2. Спосіб доставки
                         </div>
-                        <div class="order-item__description">Відправка замовлень здійснюється щодня в будні (з понеділка
+                        <div class="checkout-item__description text-regular text-s">Відправка замовлень здійснюється щодня в будні (з понеділка
                             по п’ятницю)
                         </div>
 
-                        <div class="delivery__wrap">
+                        <div class="delivery-information">
+                            <div class="d-flex align-justify delivery">
+                                <label class="radio-btn --relative d-flex align-middle align-left">
+                                    <input type="radio" name="payment" class="radio-btn__input">
 
-                            <label class="radio-entry --relative">
-                                <input type="radio" name="payment" class="radio-entry__input">
+                                    <span class="radio-btn__icon circle"></span>
 
-                                <span class="radio-entry__custom"></span>
-
-                                <div class="">
-                                    <div class=" img__wrap">
-                                        <img src="assets/img/d-1.png" alt="payment" class="img">
+                                    <div class="radio-btn__content d-flex align-middle align-left">
+                                        <div class="radio-btn__img-wrap is-border">
+                                            <img src="assets/img/d-1.png" alt="payment" class="radio-btn__img">
+                                        </div>
+                                        <div class="radio-btn__text text-s text-regular">Отримання в відділенні Нова ПОШТА
+                                        </div>
                                     </div>
-                                    Отримання в відділенні Нова ПОШТА
-                                </div>
-                            </label>
+                                </label>
 
-                            <label class="radio-entry --relative">
-                                <input type="radio" name="payment" class="radio-entry__input">
-
-                                <span class="radio-entry__custom"></span>
-                                <div class="">
-                                    <div class=" img__wrap">
-                                        <img src="assets/img/d-2.png" alt="payment" class="img">
+                                <div class="delivery__info d-flex align-justify align-middle">
+                                    <div class="delivery__info-time text-s text-regular">
+                                        2 - 3 днiв
                                     </div>
-                                    Отримання в відділенніу Укрпошта
+                                    <div class="delivery__info-payment"><b>БЕЗКОШТОВНО</b></div>
                                 </div>
+                            </div>
+                            <div class="d-flex align-justify delivery">
 
-                            </label>
+                                <label class="radio-btn --relative d-flex align-middle align-left">
+                                    <input type="radio" name="payment" class="radio-btn__input">
 
-                            <label class="radio-entry --relative">
-                                <input type="radio" name="payment" class="radio-entry__input">
+                                    <span class="radio-btn__icon circle"></span>
 
-                                <span class="radio-entry__custom"></span>
-                                <div class="">
-                                    <div class=" img__wrap">
-                                        <img src="assets/img/d-4.png" alt="payment" class="img">
+                                    <div class="radio-btn__content d-flex align-middle align-left">
+                                        <div class="radio-btn__img-wrap is-border">
+                                            <img src="assets/img/d-2.png" alt="payment" class="radio-btn__img">
+                                        </div>
+                                        <div class="radio-btn__text text-s text-regular">Отримання в відділенніу Укрпошта
+                                        </div>
                                     </div>
-                                    Самовивіз
+                                </label>
+
+                                <div class="delivery__info d-flex align-justify align-middle">
+                                    <div class="delivery__info-time text-s text-regular">
+                                        7 - 9 днiв
+                                    </div>
+                                    <div class="delivery__info-payment"><b>БЕЗКОШТОВНО</b></div>
                                 </div>
-                            </label>
+                            </div>
+
+
+                            <div class="d-flex align-justify delivery">
+                                <label class="radio-btn --relative d-flex align-middle align-left">
+                                    <input type="radio" name="payment" class="radio-btn__input">
+
+                                    <span class="radio-btn__icon circle"></span>
+
+                                    <div class="radio-btn__content d-flex align-middle align-left">
+                                        <div class="radio-btn__img-wrap is-border">
+                                            <img src="assets/img/d-4.png" alt="payment" class="radio-btn__img">
+                                        </div>
+                                        <div class="radio-btn__text text-s text-regular">Самовивіз
+                                        </div>
+                                    </div>
+                                </label>
+                                <div class="delivery__info d-flex align-justify align-middle">
+                                    <div class="delivery__info-time text-s text-regular">
+                                        7 - 9 днiв
+                                    </div>
+                                    <div class="delivery__info-payment"><b>БЕЗКОШТОВНО</b></div>
+                                </div>
+                            </div>
+
 
                         </div>
 
@@ -325,170 +359,188 @@
                             3. Спосіб оплати
                         </div>
 
-                        <div class="payment__wrap">
+                        <div class="payment-information">
 
-                            <label class="radio-entry --relative">
-                                <input type="radio" name="payment" class="radio-entry__input">
+                            <label class="radio-btn --relative d-flex align-left align-middle">
+                                <input type="radio" name="payment" class="radio-btn__input">
 
-                                <span class="radio-entry__custom"></span>
-                                <div class=" img__wrap">
-                                    <img src="assets/img/1.png" alt="payment" class="img">
+                                <span class="radio-btn__icon circle"></span>
+                                <div class="radio-btn__img-wrap is-border">
+                                    <img src="assets/img/1.png" alt="payment" class="radio-btn__img">
                                 </div>
 
                             </label>
 
-                            <label class="radio-entry --relative">
-                                <input type="radio" name="payment" class="radio-entry__input">
+                            <label class="radio-btn --relative d-flex align-left align-middle">
+                                <input type="radio" name="payment" class="radio-btn__input">
 
-                                <span class="radio-entry__custom"></span>
-                                <div class=" img__wrap">
-                                    <img src="assets/img/2.png" alt="payment" class="img">
+                                <span class="radio-btn__icon circle"></span>
+                                <div class="radio-btn__img-wrap is-border">
+                                    <img src="assets/img/2.png" alt="payment" class="radio-btn__img">
+                                </div>
+
+                            </label>
+                            <label class="radio-btn --relative d-flex align-left align-middle">
+                                <input type="radio" name="payment" class="radio-btn__input">
+
+                                <span class="radio-btn__icon circle"></span>
+                                <div class="radio-btn__img-wrap is-border">
+                                    <img src="assets/img/3.png" alt="payment" class="radio-btn__img">
                                 </div>
 
                             </label>
 
-                            <label class="radio-entry --relative">
-                                <input type="radio" name="payment" class="radio-entry__input">
+                            <label class="radio-btn --relative d-flex align-left align-middle">
+                                <input type="radio" name="payment" class="radio-btn__input">
 
-                                <span class="radio-entry__custom"></span>
-                                <div class=" img__wrap">
-                                    <img src="assets/img/3.png" alt="payment" class="img">
+                                <span class="radio-btn__icon circle"></span>
+                                <div class="radio-btn__img-wrap is-border">
+                                    <img src="assets/img/4.png" alt="payment" class="radio-btn__img">
                                 </div>
 
                             </label>
 
 
-                            <label class="radio-entry --relative">
-                                <input type="radio" name="payment" class="radio-entry__input">
+                            <label class="radio-btn --relative d-flex align-left align-middle">
+                                <input type="radio" name="payment" class="radio-btn__input">
 
-                                <span class="radio-entry__custom"></span>
-                                <div class=" img__wrap">
-                                    <img src="assets/img/4.png" alt="payment" class="img">
-                                </div>
-
-                            </label>
-
-
-                            <label class="radio-entry --relative">
-                                <input type="radio" name="payment" class="radio-entry__input">
-
-                                <span class="radio-entry__custom"></span>
-                                <div class=" img__wrap">
-                                    <img src="assets/img/5.png" alt="payment" class="img">
+                                <span class="radio-btn__icon circle"></span>
+                                <div class="radio-btn__img-wrap is-border">
+                                    <img src="assets/img/5.png" alt="payment" class="radio-btn__img">
                                 </div>
 
                             </label>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-16 col-xs-16 column">
-                    <div class="checkout-products">
-                        <div class="product-horiz --relative">
-                            <a href="" class="product__img-wrap d-block">
-                                <img src="assets/img/p-1.png" alt="" class="product__img">
-                            </a>
-                            <div class="product__content">
-                                <div class="">
+                <div class="col-xl-6 col-lg-7 col-md-16 col-sm-16 col-xs-16 column">
+                    <div class="s-checkout__right">
+                        <div class="checkout-products">
+                            <div class="product-horiz --relative">
+                                <a href="" class="product__img-wrap d-block">
+                                    <img src="assets/img/p-1.png" alt="" class="product__img">
+                                </a>
+                                <div class="product__content">
+
                                     <a href="" class="product__title text-bold">Жіноча вишита блуза Мотив Символіка</a>
                                     <ul class="product__characteristic">
                                         <li><b>Колір:</b> червоний</li>
                                         <li><b>Розмір:</b> XS | UA 42</li>
                                     </ul>
-                                </div>
-                                <div class="d-flex align-middle align-justify">
-                                    <div class="product__count">
-                                        1х
-                                    </div>
-                                    <div class="product__price">
-                                        <div class="product__price-current text-bold">5 690 грн.</div>
-                                    </div>
-                                </div>
 
+                                    <div class="product__control d-flex align-middle align-justify">
+                                        <div class="product__count">
+                                            1х
+                                        </div>
+                                        <div class="product__price">
+                                            <div class="product__price-current text-bold">5 690 грн.</div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="product-horiz --relative">
-                            <a href="" class="product__img-wrap d-block">
-                                <img src="assets/img/p-1.png" alt="" class="product__img">
-                            </a>
-                            <div class="product__content">
-                                <div class="">
+                            <div class="product-horiz --relative">
+                                <a href="" class="product__img-wrap d-block">
+                                    <img src="assets/img/p-1.png" alt="" class="product__img">
+                                </a>
+                                <div class="product__content">
+
                                     <a href="" class="product__title text-bold">Жіноча вишита блуза Мотив Символіка</a>
                                     <ul class="product__characteristic">
                                         <li><b>Колір:</b> червоний</li>
                                         <li><b>Розмір:</b> XS | UA 42</li>
                                     </ul>
-                                </div>
-                                <div class="d-flex align-middle align-justify">
-                                    <div class="product__count">
-                                        1х
-                                    </div>
-                                    <div class="product__price">
-                                        <div class="product__price-current text-bold">5 690 грн.</div>
-                                    </div>
-                                </div>
 
+                                    <div class="product__control d-flex align-middle align-justify">
+                                        <div class="product__count">
+                                            1х
+                                        </div>
+                                        <div class="product__price">
+                                            <div class="product__price-current text-bold">5 690 грн.</div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="product-horiz --relative">
-                            <a href="" class="product__img-wrap d-block">
-                                <img src="assets/img/p-1.png" alt="" class="product__img">
-                            </a>
-                            <div class="product__content">
-                                <div class="">
+                            <div class="product-horiz --relative">
+                                <a href="" class="product__img-wrap d-block">
+                                    <img src="assets/img/p-1.png" alt="" class="product__img">
+                                </a>
+                                <div class="product__content">
+
                                     <a href="" class="product__title text-bold">Жіноча вишита блуза Мотив Символіка</a>
                                     <ul class="product__characteristic">
                                         <li><b>Колір:</b> червоний</li>
                                         <li><b>Розмір:</b> XS | UA 42</li>
                                     </ul>
-                                </div>
-                                <div class="d-flex align-middle align-justify">
-                                    <div class="product__count">
-                                        1х
+
+                                    <div class="product__control d-flex align-middle align-justify">
+                                        <div class="product__count">
+                                            1х
+                                        </div>
+                                        <div class="product__price">
+                                            <div class="product__price-current text-bold">5 690 грн.</div>
+                                        </div>
                                     </div>
-                                    <div class="product__price">
-                                        <div class="product__price-current text-bold">5 690 грн.</div>
-                                    </div>
+
                                 </div>
-
                             </div>
                         </div>
-                    </div>
 
-                    <div class="checkout-informer">
-                        sdfdghjkl;' szfdghjk
-                    </div>
+                        <div class="checkout-informer">
+                            <div class="packing-information">
 
-                    <div class="checkout-total__wrap">
-                        <div class="checkout-total d-flex align-justify align-middle">
-                            <div class="checkout-total__title">Ціна товарів:</div>
-                            <div class="checkout-total__value">9 580 грн.</div>
-                        </div>
-                        <div class="checkout-total d-flex align-justify align-middle">
-                            <div class="checkout-total__title">Доставка:</div>
-                            <div class="checkout-total__value">
-                                0 грн.
+                                <label class="radio-btn --relative d-flex align-middle  align-left">
+                                    <input type="radio" name="payment" class="radio-btn__input">
+                                    <div class="radio-btn__img-wrap">
+                                        <img src="assets/img/pack-1.png" alt="payment" class="radio-btn__img">
+                                    </div>
+                                    <span class="radio-btn__icon square"></span>
+
+                                    <div class="radio-btn__title">
+                                        Базове пакування (пакет) — <b>безкоштовно</b>
+                                    </div>
+                                </label>
+
+                                <label class="radio-btn --relative d-flex align-middle  align-left">
+                                    <input type="radio" name="payment" class="radio-btn__input">
+                                    <div class="radio-btn__img-wrap">
+                                        <img src="assets/img/pack-2.png" alt="payment" class="radio-btn__img">
+                                    </div>
+                                    <span class="radio-btn__icon square"></span>
+
+                                    <div class="radio-btn__title">
+                                        Подарункове пакування (коробка) — <b>за оплату додаткову (40 грн)</b>
+                                    </div>
+                                </label>
                             </div>
                         </div>
-                        <div class="checkout-total d-flex align-justify align-middle">
-                            <div class="checkout-total__title">Закальна сума:</div>
-                            <div class="checkout-total__value">
-                                9 589 грн.
+
+                        <div class="checkout-total__wrap">
+                            <div class="checkout-total d-flex align-justify align-middle">
+                                <div class="checkout-total__title">Ціна товарів:</div>
+                                <div class="checkout-total__value">9 580 грн.</div>
+                            </div>
+                            <div class="checkout-total d-flex align-justify align-middle">
+                                <div class="checkout-total__title">Доставка:</div>
+                                <div class="checkout-total__value">
+                                    0 грн.
+                                </div>
+                            </div>
+                            <div class="checkout-total d-flex align-justify align-middle">
+                                <div class="checkout-total__title">Закальна сума:</div>
+                                <div class="checkout-total__value">
+                                    9 589 грн.
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
 
-            <div class="row ">
-                <div class="col-xl-16 col-lg-16 col-md-16 col-sm-126 col-xs-16 text-center">
-
-                    <a href="" class="btn btn-primary">
-                        Продовжити
-                    </a>
-                </div>
-            </div>
         </div>
     </section>
 </main>

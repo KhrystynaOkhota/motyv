@@ -37,10 +37,14 @@ input, button {
 
   &-control {
     position: relative;
-    margin-bottom: 30px;
-    @media (max-width: $breakpoint-md) {
-      margin-bottom: 20px;
+
+    &:not(&.no-margin){
+      margin-bottom: 30px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 20px;
+      }
     }
+
 
     &__input, &__textarea {
 
