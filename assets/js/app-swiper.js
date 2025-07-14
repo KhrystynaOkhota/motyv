@@ -14,7 +14,7 @@ jQuery(function ($) {
       options.pagination = {
         el: $p.find(".swiper-pagination")[0],
         clickable: true,
-        dynamicBullets: slidesLength > 6 ? true : false,
+       // dynamicBullets: slidesLength > 6 ? true : false,
       };
     if (options.customFraction) {
 
