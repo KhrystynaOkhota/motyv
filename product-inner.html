@@ -166,7 +166,6 @@
 <main class="main">
 
 
-
     <div class="container">
         <div class="row breadcrumbs__wrap">
             <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16">
@@ -328,17 +327,20 @@
                         <div class="select-box">
                             <select name="orderby" class="default">
                                 <option selected="selected">Вибрати розмір</option>
-                                <option value="2">
-                                    XS
+                                <option value="2" data-stock="1">
+                                    XS <i class="sold-info"></i>
                                 </option>
-                                <option value="3" >
+                                <option value="3" data-stock="5" class="sold">
                                     S
+
+                                    <i class="sold-info"></i>
+
                                 </option>
-                                <option value="4">
-                                    M
+                                <option value="4" data-stock="6">
+                                    M <i class="sold-info"></i>
                                 </option>
-                                <option value="5">
-                                    L
+                                <option value="5" data-stock="7">
+                                    L <i class="sold-info"></i>
                                 </option>
                             </select>
                         </div>
