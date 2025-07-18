@@ -545,6 +545,26 @@
           font-size: 17px;
         }
       }
+
+
+      & > label {
+        width: 15px;
+        height: 15px;
+        top: calc(50% - 7px);
+        transform: rotate(90deg);
+        & i {
+          background: transparent;
+          opacity: 1;
+          font-style: normal;
+          background: url(../img/triangle.svg) no-repeat center;
+          background-size: contain;
+          -webkit-transition: all .5s ease-out;
+          -moz-transition: all .5s ease-out;
+          -o-transition: all .5s ease-out;
+          transition: all .5s ease-out;
+        }
+
+      }
     }
 
     &.open, &:focus, &:hover {
