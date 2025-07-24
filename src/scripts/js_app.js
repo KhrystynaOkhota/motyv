@@ -250,7 +250,7 @@ jQuery(function ($) {
 
 
 
-    function Marquee(selector, speed) {
+  /*  function Marquee(selector, speed) {
         const parentSelector = document.querySelector(selector);
         const clone = parentSelector.innerHTML;
         const firstElement = parentSelector.children[0];
@@ -274,7 +274,7 @@ jQuery(function ($) {
         window.addEventListener('load', Marquee('.marquee', 0.2));
     }
 
-
+*/
 });
 
 function scrollAnime() {

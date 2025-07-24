@@ -181,8 +181,11 @@
                                         <div class="opacity"></div>
                                         <div class="banner__content container">
                                             <h1 class="banner__title h1 heading-font overlap">“Горицвіт”</h1>
-                                            <div class="banner__description heading-font overlap">- весняна капсульна колекція MOTYV</div>
-                                            <a href="catalog.html" class="btn btn-transparent__white overlap">До каталогу <i class="icon-ar-right"></i> </a>
+                                            <div class="banner__description heading-font overlap">- весняна капсульна
+                                                колекція MOTYV
+                                            </div>
+                                            <a href="catalog.html" class="btn btn-transparent__white overlap">До
+                                                каталогу <i class="icon-ar-right"></i> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -197,8 +200,11 @@
                                         <div class="opacity"></div>
                                         <div class="banner__content">
                                             <h1 class="banner__title h1 heading-font overlap">“Горицвіт”</h1>
-                                            <div class="banner__description heading-font overlap">- весняна капсульна колекція MOTYV</div>
-                                            <a href="catalog.html" class="btn btn-transparent__white overlap">До каталогу <i class="icon-ar-right"></i> </a>
+                                            <div class="banner__description heading-font overlap">- весняна капсульна
+                                                колекція MOTYV
+                                            </div>
+                                            <a href="catalog.html" class="btn btn-transparent__white overlap">До
+                                                каталогу <i class="icon-ar-right"></i> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -213,8 +219,11 @@
                                         <div class="opacity"></div>
                                         <div class="banner__content">
                                             <h1 class="banner__title h1 heading-font overlap">“Горицвіт”</h1>
-                                            <div class="banner__description heading-font overlap">- весняна капсульна колекція MOTYV</div>
-                                            <a href="catalog.html" class="btn btn-transparent__white overlap">До каталогу <i class="icon-ar-right"></i> </a>
+                                            <div class="banner__description heading-font overlap">- весняна капсульна
+                                                колекція MOTYV
+                                            </div>
+                                            <a href="catalog.html" class="btn btn-transparent__white overlap">До
+                                                каталогу <i class="icon-ar-right"></i> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -229,8 +238,11 @@
                                         <div class="opacity"></div>
                                         <div class="banner__content">
                                             <h1 class="banner__title heading-font overlap">“Горицвіт”</h1>
-                                            <div class="banner__description heading-font overlap">- весняна капсульна колекція MOTYV</div>
-                                            <a href="catalog.html" class="btn btn-transparent__white overlap">До каталогу <i class="icon-ar-right"></i> </a>
+                                            <div class="banner__description heading-font overlap">- весняна капсульна
+                                                колекція MOTYV
+                                            </div>
+                                            <a href="catalog.html" class="btn btn-transparent__white overlap">До
+                                                каталогу <i class="icon-ar-right"></i> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -245,8 +257,11 @@
                                         <div class="opacity"></div>
                                         <div class="banner__content">
                                             <h1 class="banner__title heading-font overlap">“Горицвіт”</h1>
-                                            <div class="banner__description heading-font overlap">- весняна капсульна колекція MOTYV</div>
-                                            <a href="catalog.html" class="btn btn-transparent__white overlap">До каталогу <i class="icon-ar-right"></i> </a>
+                                            <div class="banner__description heading-font overlap">- весняна капсульна
+                                                колекція MOTYV
+                                            </div>
+                                            <a href="catalog.html" class="btn btn-transparent__white overlap">До
+                                                каталогу <i class="icon-ar-right"></i> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1187,6 +1202,8 @@
     </section>
 
 </main>
+
+<!--
 <style>
     .marquee2 {
         width: 100%;
@@ -1276,6 +1293,100 @@
         </div>
     </div>
 </div>
+
+-->
+
+<style>
+    /*---------------------*/
+    /*   MARQUEE           */
+    /*---------------------*/
+    .marquee {
+        --marquee-gap: max(1rem, 3.125vw);
+        --marquee-font: max(16px, 20px);
+        background: #4b6553;
+
+    }
+
+    .marquee .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: #fff;
+    }
+
+    .marquee-line {
+        position: relative;
+        height: calc(var(--marquee-font) * 3);
+        width: 140vw;
+        margin-left: -20vw;
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .marquee-item {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate3d(var(--x), -50%, 0);
+        transform: translate3d(var(--x), -50%, 0);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+    }
+
+    .marquee-content {
+        gap: var(--marquee-gap);
+        font-size: var(--marquee-font);
+        line-height: 1;
+        font-weight: 700;
+        color: #fff;
+
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-inline: calc(var(--marquee-gap) / 2);
+    }
+
+    .marquee-content > * {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
+
+    .marquee-content img {
+        max-width: 100%;
+        height: var(--marquee-gap);
+    }
+
+    @media (max-width: 575px) {
+        .marquee-line {
+            height: calc(var(--marquee-font) * 2.2);
+        }
+    }
+
+</style>
+<div class="marquee">
+
+    <div class="marquee-line" data-speed="0.02" data-direction="true">
+        <div class="marquee-item">
+            <div class="marquee-content">
+                <span>Слідкуй за нами</span>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
 <footer class="footer">
     <div class="footer__inner overlap">
         <div class="footer__top overlap">
@@ -1575,6 +1686,88 @@
 <script src="assets/js/js_app.min.js"></script>
 
 
+<script>
+
+    //*  MARQUEE
+    class LoopingElement {
+        constructor(e, t, a, o) {
+            this.element = e,
+                this.currentTranslation = t,
+                this.speed = a,
+                this.direction = !0,
+                this.scrollTop = 0,
+                this.metric = 100,
+                this.lerp = {
+                    current: this.currentTranslation,
+                    target: this.currentTranslation,
+                    factor: .2
+                },
+                this.events(),
+                this.render(),
+                this.go = o
+        }
+
+        events() {
+            window.addEventListener("scroll", e => {
+                let t = window.pageYOffset || document.documentElement.scrollTop;
+                this.go ? (this.direction = !0,
+                    this.lerp.target += 2 * this.speed) : (this.direction = !1,
+                    this.lerp.target -= 2 * this.speed),
+                    this.scrollTop = t <= 0 ? 0 : t
+            })
+        }
+
+        lerpFunc(e, t, a) {
+            this.lerp.current = e * (1 - a) + t * a
+        }
+
+        goForward() {
+            this.lerp.target += this.speed,
+            this.lerp.target > this.metric && (this.lerp.current -= 2 * this.metric,
+                this.lerp.target -= 2 * this.metric)
+        }
+
+        goBackward() {
+            this.lerp.target -= this.speed,
+            this.lerp.target < -this.metric && (this.lerp.current -= 2 * -this.metric,
+                this.lerp.target -= 2 * -this.metric)
+        }
+
+        animate() {
+            this.direction ? this.goForward() : this.goBackward(),
+                this.lerpFunc(this.lerp.current, this.lerp.target, this.lerp.factor),
+                this.element.style.setProperty("--x", this.lerp.current + "%")
+        }
+
+        render() {
+            this.animate(),
+                window.requestAnimationFrame(() => this.render())
+        }
+    }
+
+    document.querySelectorAll(".marquee-line").forEach(el => {
+        const spd = Number(el.dataset.speed);
+        const dir = el.dataset.direction === "false" ? "" : "false";
+
+        const firstItem = el.querySelector(".marquee-item");
+        const content = firstItem.querySelector(`:scope ${'.marquee-content'}`);
+
+        let eq = Math.ceil(el.offsetWidth / content.offsetWidth);
+
+        for (let i = 0; i < eq; i++) {
+            firstItem.appendChild(content.cloneNode(true));
+        }
+
+        el.appendChild(firstItem.cloneNode(true));
+
+        let item = el.querySelectorAll(".marquee-item");
+
+        new LoopingElement(item[0], 0, spd, dir);
+        new LoopingElement(item[1], -100, spd, dir)
+    });
+
+
+</script>
 
 </body>
 </html>
