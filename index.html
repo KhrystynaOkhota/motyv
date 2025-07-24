@@ -1296,86 +1296,10 @@
 
 -->
 
-<style>
-    /*---------------------*/
-    /*   MARQUEE           */
-    /*---------------------*/
-    .marquee {
-        --marquee-gap: max(1rem, 3.125vw);
-        --marquee-font: max(16px, 20px);
-        background: #4b6553;
 
-    }
-
-    .marquee .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        background: #fff;
-    }
-
-    .marquee-line {
-        position: relative;
-        height: calc(var(--marquee-font) * 3);
-        width: 140vw;
-        margin-left: -20vw;
-        will-change: transform;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-
-    .marquee-item {
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translate3d(var(--x), -50%, 0);
-        transform: translate3d(var(--x), -50%, 0);
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
-    }
-
-    .marquee-content {
-        gap: var(--marquee-gap);
-        font-size: var(--marquee-font);
-        line-height: 1;
-        font-weight: 700;
-        color: #fff;
-
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-inline: calc(var(--marquee-gap) / 2);
-    }
-
-    .marquee-content > * {
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-    }
-
-    .marquee-content img {
-        max-width: 100%;
-        height: var(--marquee-gap);
-    }
-
-    @media (max-width: 575px) {
-        .marquee-line {
-            height: calc(var(--marquee-font) * 2.2);
-        }
-    }
-
-</style>
 <div class="marquee">
 
-    <div class="marquee-line" data-speed="0.02" data-direction="true">
+    <div class="marquee-line" data-speed="0.02" data-direction="false">
         <div class="marquee-item">
             <div class="marquee-content">
                 <span>Слідкуй за нами</span>
