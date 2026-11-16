@@ -126,9 +126,14 @@
                         <div class="btn-search js-open-search">
                             <i class="icon-search"></i>Пошук
                         </div>
-                        <div class="btn-cart">
-                            <i class="icon-card"></i>Кошик (0)
+                        <div class="btn-cart js_cart_open">
+                            <i class="icon-card"></i>Кошик (1)
                         </div>
+
+                        <button type="button" class="header__action d-none" data-action="open-cart" aria-label="Кошик">
+                            <i class="icon-card"></i>
+                            <span class="badge" data-cart-badge="" hidden="">0</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -941,6 +946,287 @@
         </div>
     </footer>
 
+
+
+    <div class="cart js_cart">
+        <div class="cart-overlay js_cart_close"></div>
+        <div class="cart-inner">
+            <div class="cart-top">
+                <div class="title">
+                    Кошик(4)
+                </div>
+                <div class="btn-close js_cart_close">Закрити</div>
+            </div>
+
+            <div class="cart-inner-scroll">
+                <div class="cart-products">
+                    <div class="checkout-products">
+                        <div class="product-horiz --relative">
+                            <a href="" class="product__img-wrap d-block">
+                                <img src="assets/img/p-1.png" alt="" class="product__img">
+                            </a>
+                            <div class="product__content">
+
+                                <a href="" class="product__title text-bold">Жіноча вишита блуза Мотив Символіка</a>
+                                <ul class="product__characteristic">
+                                    <li><b>Колір:</b> червоний</li>
+                                    <li><b>Розмір:</b> XS | UA 42</li>
+                                </ul>
+
+                                <div class="product__control d-flex align-middle align-justify">
+                                    <div class="product__count">
+                                        1х
+                                    </div>
+                                    <div class="product__price">
+                                        <div class="product__price-current text-bold">5 690 грн.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="product-horiz --relative">
+                            <a href="" class="product__img-wrap d-block">
+                                <img src="assets/img/p-1.png" alt="" class="product__img">
+                            </a>
+                            <div class="product__content">
+
+                                <a href="" class="product__title text-bold">Жіноча вишита блуза Мотив Символіка</a>
+                                <ul class="product__characteristic">
+                                    <li><b>Колір:</b> червоний</li>
+                                    <li><b>Розмір:</b> XS | UA 42</li>
+                                </ul>
+
+                                <div class="product__control d-flex align-middle align-justify">
+                                    <div class="product__count">
+                                        1х
+                                    </div>
+                                    <div class="product__price">
+                                        <div class="product__price-current text-bold">5 690 грн.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="product-horiz --relative">
+                            <a href="" class="product__img-wrap d-block">
+                                <img src="assets/img/p-1.png" alt="" class="product__img">
+                            </a>
+                            <div class="product__content">
+
+                                <a href="" class="product__title text-bold">Жіноча вишита блуза Мотив Символіка</a>
+                                <ul class="product__characteristic">
+                                    <li><b>Колір:</b> червоний</li>
+                                    <li><b>Розмір:</b> XS | UA 42</li>
+                                </ul>
+
+                                <div class="product__control d-flex align-middle align-justify">
+                                    <div class="product__count">
+                                        1х
+                                    </div>
+                                    <div class="product__price">
+                                        <div class="product__price-current text-bold">5 690 грн.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="recomended-products">
+                    <h4 class="recomended-products__title">Доповніть образ</h4>
+                    <div class="swiper-entry">
+                        <div class="swiper-container" data-options='{"loop":true,"slidesPerView": 2, "spaceBetween": 15,"centeredSlides": false,
+                         "breakpoints": {
+
+                        "600": {"slidesPerView":2},
+
+
+                         "767": {"slidesPerView": 2, "spaceBetween": 10,"centeredSlides": false,"loop":false},
+                         "1200": {"slidesPerView": 2,"centeredSlides": false,"loop":true, "spaceBetween": 10}}}'>
+
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="product">
+                                        <div class="product__img-wrap">
+                                            <img src="assets/img/p-4.png" alt="" class="product__img">
+                                            <div class="btn-add-to-cart d-flex align-center align-middle"><i
+                                                    class="icon-card"></i></div>
+                                        </div>
+
+
+                                        <div class="product__info">
+
+                                            <div class="product__title  text-bold">
+                                                Жіноча вишита блуза Мотив Символіка
+                                            </div>
+                                            <div class="product__price text-bold">
+                                                5 690 грн.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product">
+                                        <div class="product__img-wrap">
+                                            <img src="assets/img/p-1.png" alt="" class="product__img">
+                                            <div class="btn-add-to-cart d-flex align-center align-middle"><i
+                                                    class="icon-card"></i></div>
+                                        </div>
+                                        <div class="btn-fav d-flex align-center align-middle"><i class="icon-heart"></i>
+                                        </div>
+                                        <div class="product__info">
+
+                                            <div class="product__title  text-bold">
+                                                Жіноча вишита блуза Мотив Символіка
+                                            </div>
+                                            <div class="product__price text-bold">
+                                                5 690 грн.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product">
+                                        <div class="product__img-wrap">
+                                            <img src="assets/img/p-2.png" alt="" class="product__img">
+                                            <div class="btn-add-to-cart d-flex align-center align-middle"><i
+                                                    class="icon-card"></i></div>
+                                        </div>
+                                        <div class="btn-fav d-flex align-center align-middle"><i class="icon-heart"></i>
+                                        </div>
+                                        <div class="product__info">
+
+                                            <div class="product__title  text-bold">
+                                                Жіноча вишита блуза Мотив Символіка
+                                            </div>
+                                            <div class="product__price text-bold">
+                                                5 690 грн.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product">
+                                        <div class="product__img-wrap">
+                                            <img src="assets/img/p-4.png" alt="" class="product__img">
+                                            <div class="btn-add-to-cart d-flex align-center align-middle"><i
+                                                    class="icon-card"></i></div>
+                                        </div>
+                                        <div class="btn-fav d-flex align-center align-middle"><i class="icon-heart"></i>
+                                        </div>
+                                        <div class="product__info">
+
+                                            <div class="product__title  text-bold">
+                                                Жіноча вишита блуза Мотив Символіка
+                                            </div>
+                                            <div class="product__price text-bold">
+                                                5 690 грн.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product">
+                                        <div class="product__img-wrap">
+                                            <img src="assets/img/p-3.png" alt="" class="product__img">
+                                            <div class="btn-add-to-cart d-flex align-center align-middle"><i
+                                                    class="icon-card"></i></div>
+                                        </div>
+                                        <div class="btn-fav d-flex align-center align-middle"><i class="icon-heart"></i>
+                                        </div>
+                                        <div class="product__info">
+
+                                            <div class="product__title  text-bold">
+                                                Жіноча вишита блуза Мотив Символіка
+                                            </div>
+                                            <div class="product__price text-bold">
+                                                5 690 грн.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product">
+                                        <div class="product__img-wrap">
+                                            <img src="assets/img/p-4.png" alt="" class="product__img">
+                                            <div class="btn-add-to-cart d-flex align-center align-middle"><i
+                                                    class="icon-card"></i></div>
+                                        </div>
+                                        <div class="btn-fav d-flex align-center align-middle"><i class="icon-heart"></i>
+                                        </div>
+                                        <div class="product__info">
+
+                                            <div class="product__title  text-bold">
+                                                Жіноча вишита блуза Мотив Символіка
+                                            </div>
+                                            <div class="product__price text-bold">
+                                                5 690 грн.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cart-bottom">
+                <div class="cart-controls">
+                    <div class="promo-code">
+                        <!--<label class="promo-code__label ield__label" for="promocode">Промокод/сертифікат</label>-->
+                        <div class="promo-code__group">
+                            <input class="form-control__input promo-code__input" id="promocode" type="text"
+                                name="promocode" placeholder="Промокод/сертифікат">
+                            <button class="btn btn-primary promo-code__btn" type="button">Застосувати</button>
+                        </div>
+                    </div>
+                    <div class="checkout-total__wrap">
+                        <div class="checkout-total d-flex align-justify align-middle">
+                            <div class="checkout-total__title">Ціна товарів:</div>
+                            <div class="checkout-total__value">9 580 грн.</div>
+                        </div>
+                        <div class="checkout-total d-flex align-justify align-middle">
+                            <div class="checkout-total__title">Доставка:</div>
+                            <div class="checkout-total__value">
+                                0 грн.
+                            </div>
+                        </div>
+                        <div class="checkout-total d-flex align-justify align-middle">
+                            <div class="checkout-total__title">Закальна сума:</div>
+                            <div class="checkout-total__value">
+                                9 589 грн.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+
+                    <a class="btn" href="https://hinaus.art/checkout/" aria-label="Link to: Checkout page">
+                        <b data-txt="перейти до оформлення">перейти до оформлення</b>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cart-empty">
+                <img src="https://hinaus.art/wp-content/themes/rs-hinaus/img/icons/empty-cart.svg" alt="" width="75"
+                    height="75" loading="lazy">
+                <div class="title h4 upper">Ваш кошик порожній</div>
+                <div class="text text-sm">Тут поки що нічого немає, але ви можете перейти до<br> товарів, щоб почати
+                    покупки</div>
+                <a class="btn" href="https://hinaus.art/shop/" aria-label="Link to: Shop page">
+                    <b data-txt="Перейти до товарів">Перейти до товарів</b>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
     <script src="./assets/js/jquery-3.7.0.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/jquery.sumoselect.min.js"></script>
@@ -1312,6 +1598,20 @@
 
     });
 </script>-->
+    <script>
+        $(document).on("click", ".js_cart_open", async function (e) {
+            e.preventDefault();
+
+            $("html").addClass("cart-is-open");
+        });
+
+        // Cart close
+        $(document).on("click", ".js_cart_close", function () {
+            $("html").removeClass("cart-is-open");
+
+        });
+    </script>
+
 </body>
 
 </html>
