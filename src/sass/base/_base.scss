@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .decor-line {
   height: 70px;
@@ -29,16 +29,19 @@
 }
 
 
-html:not(.touch-screen)::-webkit-scrollbar, html:not(.touch-screen) *::-webkit-scrollbar {
+html:not(.touch-screen)::-webkit-scrollbar,
+html:not(.touch-screen) *::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
-html:not(.touch-screen)::-webkit-scrollbar-track, html:not(.touch-screen) *::-webkit-scrollbar-track {
+html:not(.touch-screen)::-webkit-scrollbar-track,
+html:not(.touch-screen) *::-webkit-scrollbar-track {
   background-color: #eee;
 }
 
-html:not(.touch-screen)::-webkit-scrollbar-thumb, html:not(.touch-screen) *::-webkit-scrollbar-thumb {
+html:not(.touch-screen)::-webkit-scrollbar-thumb,
+html:not(.touch-screen) *::-webkit-scrollbar-thumb {
   background-color: $accent-color !important;
 }
 
@@ -47,11 +50,13 @@ html {
   overflow-y: scroll;
 }
 
-body .hide-scrollbar, html .hide-scrollbar {
+body .hide-scrollbar,
+html .hide-scrollbar {
   scrollbar-width: none
 }
 
-body .hide-scrollbar::-webkit-scrollbar, html .hide-scrollbar::-webkit-scrollbar {
+body .hide-scrollbar::-webkit-scrollbar,
+html .hide-scrollbar::-webkit-scrollbar {
   display: none
 }
 
@@ -92,7 +97,8 @@ img {
   z-index: 3;
 }
 
-body, html {
+body,
+html {
   &.overflow-hidden {
     // padding-left: calc(100vw - 100%);
     overflow: hidden;
@@ -109,8 +115,10 @@ img {
 
 img {
   user-drag: none;
-  -webkit-user-drag: none; /* Safari/Chrome */
-  pointer-events: auto; /* keep interactions like clicks */
+  -webkit-user-drag: none;
+  /* Safari/Chrome */
+  pointer-events: auto;
+  /* keep interactions like clicks */
 }
 
 .lg-img-wrap img {
@@ -120,6 +128,7 @@ img {
 
 .body-padding {
   height: 124px;
+
   @media (max-width: $breakpoint-lg) {
     height: 84px;
   }
@@ -130,9 +139,7 @@ img {
   overflow: hidden;
   position: relative;
 
-  & .heading {
-
-  }
+  & .heading {}
 }
 
 
@@ -188,6 +195,7 @@ img {
     display: flex;
     margin-top: 30px;
     gap: 14px;
+
     @media (max-width: $breakpoint-md) {
       gap: 15px;
     }
@@ -213,9 +221,7 @@ img {
     }
   }
 
-  &-controls {
-
-  }
+  &-controls {}
 
   &-button {
     &__wrap {
@@ -227,6 +233,7 @@ img {
           top: 3%;
           right: 15px;
         }
+
         @media (max-width: $breakpoint-md) {
           position: relative;
           width: 100%;
@@ -239,7 +246,9 @@ img {
 
 
         & .swiper-button {
-          &-next, &-prev {
+
+          &-next,
+          &-prev {
             color: #000000;
 
             & i {
@@ -265,6 +274,7 @@ img {
               top: 50%;
               right: 0;
               transform: translateY(-50%);
+
               @media (max-width: $breakpoint-md) {
                 display: none;
               }
@@ -274,7 +284,8 @@ img {
       }
     }
 
-    &-next, &-prev {
+    &-next,
+    &-prev {
       border: none;
 
       &:after {
@@ -288,5 +299,3 @@ img {
     }
   }
 }
-
-

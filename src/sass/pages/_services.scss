@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 /*
 .service {
@@ -133,9 +133,8 @@
     border-radius: 10px;
     cursor: pointer;
     @include transition(.5);
-    @media (max-width: $breakpoint-lg) {
 
-    }
+    @media (max-width: $breakpoint-lg) {}
 
     &.is--active {
       color: rgba(204, 195, 189, 1);

@@ -1,11 +1,11 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .radio-btn {
   &__input {
     display: none;
 
-    &:checked + .radio-btn__icon:before {
+    &:checked+.radio-btn__icon:before {
       opacity: 1;
     }
   }
@@ -65,6 +65,7 @@
 
 .s-checkout {
   padding: 50px 0 100px 0;
+
   @media (max-width: $breakpoint-md) {
     padding: 40px 0 70px 0;
   }
@@ -79,9 +80,7 @@
       @include fontSize(20, 30);
     }
 
-    &__description {
-
-    }
+    &__description {}
 
     &__notification {
       margin: 13px 0 0 0;
@@ -93,7 +92,8 @@
       margin-bottom: 20px;
     }
 
-    &__input, &__textarea {
+    &__input,
+    &__textarea {
       padding: 16px 20px 15px 20px;
       border: 1px solid rgba(204, 195, 189, 0.5);
     }
@@ -110,7 +110,8 @@
 
     }
 
-    &__title, &__value {
+    &__title,
+    &__value {
       font-size: 17px;
     }
 
@@ -118,9 +119,7 @@
       font-weight: bold;
     }
 
-    &__value {
-
-    }
+    &__value {}
 
     &:not(&:last-child) {
       margin-bottom: 20px;
@@ -128,7 +127,9 @@
 
     &:last-child {
       & .checkout-total {
-        &__title, &__value {
+
+        &__title,
+        &__value {
           font-size: 20px;
         }
       }
@@ -161,6 +162,7 @@
 
 .s-checkout-confirmation {
   padding: 80px 0 90px 0;
+
   @media (max-width: $breakpoint-md) {
     padding: 40px 0 70px 0;
   }
@@ -173,6 +175,7 @@
     margin-bottom: 45px;
     @include fontSize(20, 40);
     line-height: 1.5;
+
     @media (max-width: $breakpoint-md) {
       margin-bottom: 30px;
     }
@@ -214,6 +217,7 @@
 
       &:not(&:last-child) {
         margin-bottom: 25px;
+
         @media (max-width: $breakpoint-md) {
           margin-bottom: 20px;
         }
@@ -229,6 +233,7 @@
     &-total {
       margin-top: 36px;
       max-width: 80%;
+
       @media (max-width: $breakpoint-md) {
         margin-top: 18px;
         max-width: 100%;
@@ -248,7 +253,7 @@
   &__input {
     display: none;
 
-    &:checked + .radio-entry__custom:before {
+    &:checked+.radio-entry__custom:before {
       opacity: 1;
     }
   }
@@ -264,6 +269,7 @@
       border-radius: 100%;
       border: 1px solid rgba(204, 195, 189, 0.5);
       margin-right: 20px;
+
       /*  position: absolute;
         top: calc(50% - 10px);
         left: 0;
@@ -313,9 +319,11 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+
   @media (max-width: $breakpoint-lg) {
     grid-template-columns: repeat(3, 1fr);
   }
+
   @media (max-width: $breakpoint-sm) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -325,6 +333,7 @@
   margin-top: 32px;
   display: grid;
   gap: 30px;
+
   @media (max-width: $breakpoint-md) {
     gap: 15px;
   }
@@ -362,9 +371,7 @@
       margin-right: 36px;
     }
 
-    &-payment {
-
-    }
+    &-payment {}
   }
 }
 
@@ -400,5 +407,3 @@
     }
   }
 }
-
-

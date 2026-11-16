@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .SumoSelect {
   width: 100%;
@@ -24,18 +24,19 @@
     transition: var(--transition);
     inset: 0;
 
-   // clip-path: polygon(0 8px, 8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px, 1px calc(8px + 0.41px), 1px calc(100% - 8px - 0.41px), calc(8px + 0.41px) calc(100% - 1px), calc(100% - 8px - 0.41px) calc(100% - 1px), calc(100% - 1px) calc(100% - 8px - 0.41px), calc(100% - 1px) calc(8px + 0.41px), calc(100% - 8px - 0.41px) 1px, calc(8px + 0.41px) 1px, 1px calc(8px + 0.41px));
-    clip-path: polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px),0 4px,1px  calc(4px + 0.41px),1px calc(100% - 4px - 0.41px),calc(4px + 0.41px) calc(100% - 1px),calc(100% - 4px - 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 4px - 0.41px),calc(100% - 1px) calc(4px + 0.41px),calc(100% - 4px - 0.41px) 1px,calc(4px + 0.41px) 1px,1px calc(4px + 0.41px));
+    // clip-path: polygon(0 8px, 8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px, 1px calc(8px + 0.41px), 1px calc(100% - 8px - 0.41px), calc(8px + 0.41px) calc(100% - 1px), calc(100% - 8px - 0.41px) calc(100% - 1px), calc(100% - 1px) calc(100% - 8px - 0.41px), calc(100% - 1px) calc(8px + 0.41px), calc(100% - 8px - 0.41px) 1px, calc(8px + 0.41px) 1px, 1px calc(8px + 0.41px));
+    clip-path: polygon(0 4px, 4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px, 1px calc(4px + 0.41px), 1px calc(100% - 4px - 0.41px), calc(4px + 0.41px) calc(100% - 1px), calc(100% - 4px - 0.41px) calc(100% - 1px), calc(100% - 1px) calc(100% - 4px - 0.41px), calc(100% - 1px) calc(4px + 0.41px), calc(100% - 4px - 0.41px) 1px, calc(4px + 0.41px) 1px, 1px calc(4px + 0.41px));
   }
 
-  & > .CaptionCont {
+  &>.CaptionCont {
     background: transparent;
     border: none;
     min-height: 14px;
     border-radius: 0;
     padding: 0;
 
-    & span, & span.placeholder {
+    & span,
+    & span.placeholder {
       font-style: normal;
       font-size: 16px;
       font-weight: 300;
@@ -45,11 +46,11 @@
       @include transition(.4);
     }
 
-    & > label {
+    &>label {
       cursor: pointer;
       width: 18px;
 
-      & > i {
+      &>i {
         background: transparent;
         opacity: 1;
         width: 10px;
@@ -67,7 +68,7 @@
     }
   }
 
-  & > .optWrapper {
+  &>.optWrapper {
     min-width: 247px;
     pointer-events: none;
     visibility: hidden;
@@ -91,7 +92,7 @@
     display: block;
     text-align: right;
 
-    & > .options {
+    &>.options {
       border-radius: 0;
 
       & li.opt {
@@ -114,7 +115,8 @@
           margin-bottom: 6px;
         }
 
-        &:hover, &.selected {
+        &:hover,
+        &.selected {
           background: transparent;
 
           & label {
@@ -123,28 +125,28 @@
           }
         }
 
-        &.selected {
-
-        }
+        &.selected {}
       }
     }
   }
 
-  &:hover, &:focus, &.open {
-    & > .CaptionCont {
+  &:hover,
+  &:focus,
+  &.open {
+    &>.CaptionCont {
       box-shadow: none;
       border: none;
     }
   }
 
   &.open {
-    & > .CaptionCont {
+    &>.CaptionCont {
       & span {
         color: #b46650;
       }
 
-      & > label {
-        & > i {
+      &>label {
+        &>i {
           &:before {
             color: #b46650;
           }
@@ -152,7 +154,7 @@
       }
     }
 
-    & > .optWrapper {
+    &>.optWrapper {
       top: 100%;
       pointer-events: all;
       visibility: visible;
@@ -164,4 +166,3 @@
   }
 
 }
-

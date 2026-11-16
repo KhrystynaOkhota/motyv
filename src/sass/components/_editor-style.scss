@@ -1,18 +1,20 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 
-.editor-style, .cms-content {
+.editor-style,
+.cms-content {
   font-family: 'OpenSans', sans-serif;
   font-weight: 400;
   line-height: normal;
   color: $primary-color;
 
-  & b, & strong {
+  & b,
+  & strong {
     font-weight: bold;
   }
 
-  & > * {
+  &>* {
     &:last-child {
       margin-bottom: 0;
     }
@@ -23,13 +25,18 @@
     line-height: 1.58;
     margin-bottom: 20px;
 
-    & + ul, & + ol {
+    &+ul,
+    &+ol {
       margin-top: 15px;
     }
   }
 
 
-  & h2, & h3, & h4, & h5, & h6 {
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
     font-weight: bold;
     margin-bottom: 18px;
     line-height: 1.25;
@@ -85,9 +92,9 @@
 
   & img {
     margin: 0 auto;
-    @media (min-width: $breakpoint-lg) {
 
-    }
+    @media (min-width: $breakpoint-lg) {}
+
     @media (max-width: $breakpoint-lg) {
       height: 100%;
       max-height: 400px;
@@ -124,7 +131,8 @@
     }
   }
 
-  & ul, & ol {
+  & ul,
+  & ol {
     margin-bottom: 30px;
 
     list-style-type: none;
@@ -137,6 +145,7 @@
 
       &:not(&:last-child) {
         margin-bottom: 20px;
+
         @media (max-width: $breakpoint-md) {
           margin-bottom: 15px;
         }
@@ -176,19 +185,22 @@
     padding: 34px 20px;
     margin-bottom: 30px;
     position: relative;
+
     @media (max-width: $breakpoint-lg) {
       padding: 15px;
       margin: 50px 0;
     }
 
-    & p, & {
+    & p,
+    & {
       position: relative;
       @include fontSize(14, 17);
       line-height: 1.58;
-      @media (max-width: $breakpoint-lg) {
-      }
 
-      & b, & strong {
+      @media (max-width: $breakpoint-lg) {}
+
+      & b,
+      & strong {
         font-weight: bold;
       }
     }
@@ -214,6 +226,7 @@
         &:nth-child(1) {
           font-weight: 600;
           width: 40%;
+
           @media (max-width: $breakpoint-md) {
             width: 70%;
           }
@@ -223,4 +236,3 @@
   }
 
 }
-

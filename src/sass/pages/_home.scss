@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 
 .banner {
@@ -14,10 +14,12 @@
     width: 10000px;
     height: calc(100vh - 124px);
     top: 124px;
+
     @media (max-width: $breakpoint-lg) {
       top: 84px;
       height: calc(100vh - 84px);
     }
+
     @media (max-width: $breakpoint-md) {
       display: flex;
       width: 100%;
@@ -56,6 +58,7 @@
   &__title {
     color: $whiteColor;
     margin-bottom: 38px;
+
     @media (max-width: $breakpoint-md) {
       margin-bottom: 13px;
     }
@@ -65,6 +68,7 @@
     @include fontSize(25, 40);
     line-height: 1.4;
     margin-bottom: 38px;
+
     @media (max-width: $breakpoint-md) {
       margin-bottom: 13px;
     }
@@ -146,6 +150,7 @@
       color: #fff;
       width: 100%;
       max-width: 1286px;
+
       @media (max-width: $breakpoint-md) {
         bottom: 23px;
         left: 15px;
@@ -187,6 +192,7 @@
     &-container {
       height: 100vh;
       padding-bottom: 0;
+
       @media (max-width: $breakpoint-md) {
         height: auto;
       }
@@ -197,6 +203,7 @@
     width: 50%;
     height: 100%;
     object-fit: cover;
+
     @media (max-width: $breakpoint-md) {
       width: 100%;
     }
@@ -224,8 +231,10 @@
     line-height: 1;
 
     div {
+
       //width: 20px;
-      &.custom-current, &.custom-total {
+      &.custom-current,
+      &.custom-total {
         font-family: 'VinnytsiaSerif', serif;
       }
 
@@ -261,8 +270,9 @@
 
 
 .s-recommended-product {
-  &.--home{
+  &.--home {
     padding-bottom: 96px;
+
     @media (max-width: $breakpoint-lg) {
       padding-bottom: 45px;
     }
@@ -272,12 +282,14 @@
   & .tab {
     &__list {
       margin-bottom: 44px;
+
       @media (max-width: $breakpoint-lg) {
         margin-bottom: 24px;
         width: calc(100% + 30px);
         left: -15px;
         position: relative;
       }
+
       @media (max-width: 400px) {
 
         gap: 30px;
@@ -315,6 +327,7 @@
     &-pagination {
       padding: 5px 0;
       margin-top: 50px;
+
       @media (max-width: $breakpoint-lg) {
         margin-top: 20px;
       }
@@ -328,7 +341,8 @@
 
       //  opacity: 0.3;
       // @include transition(.6);
-      &-active, &-next {
+      &-active,
+      &-next {
         & .review {
           opacity: 1;
           @include transition(.6);
@@ -340,6 +354,7 @@
   & .review {
     padding: 30px 20px;
     background: rgba(246, 244, 242, 1);
+
     @media (max-width: $breakpoint-lg) {
       padding: 20px;
     }
@@ -362,6 +377,7 @@
       color: rgba(139, 117, 96, 1);
       padding-left: 39px;
       position: relative;
+
       &:before {
         content: '';
         width: 24px;
@@ -371,6 +387,7 @@
         top: 50%;
         transform: translateY(-50%);
         background: url("../img/clock.svg");
+
         @media (max-width: $breakpoint-xl) {
           width: 20px;
           height: 20px
@@ -396,6 +413,7 @@
     font-family: "CenturyGothic", sans-serif;
     font-size: 35px;
     margin-bottom: 28px;
+
     @media (max-width: $breakpoint-md) {
       font-size: 22px;
       margin-bottom: 18px;
@@ -406,6 +424,7 @@
     font-size: 20px;
     line-height: 1.75;
     margin-bottom: 56px;
+
     @media (max-width: $breakpoint-md) {
       font-size: 16px;
       margin-bottom: 20px;

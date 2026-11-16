@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .footer {
   overflow: hidden;
@@ -7,6 +7,7 @@
 
   &__top {
     padding: 43px 0 36px 0;
+
     @media (max-width: $breakpoint-md) {
       padding: 29px 0 0 0;
     }
@@ -19,6 +20,7 @@
       &__link {
         display: block;
         margin-bottom: 25px;
+
         @media (max-width: $breakpoint-md) {
           margin-bottom: 12px;
         }
@@ -27,6 +29,7 @@
       &__description {
         font-size: 16px;
         margin-bottom: 37px;
+
         @media (max-width: $breakpoint-md) {
           font-size: 14px;
           text-align: center;
@@ -55,6 +58,7 @@
       @media (max-width: $breakpoint-lg) {
         margin-bottom: 30px;
       }
+
       @media (max-width: $breakpoint-md) {
 
         margin: 0 auto 25px auto;
@@ -94,14 +98,16 @@
 
 
   &-info {
-&__wrap{
-  @media (max-width: $breakpoint-md) {
-    padding: 0 0 30px 0;
-  }
-}
+    &__wrap {
+      @media (max-width: $breakpoint-md) {
+        padding: 0 0 30px 0;
+      }
+    }
+
     &__heading {
       margin-bottom: 15px;
       font-size: 20px;
+
       @media (max-width: $breakpoint-md) {
         font-size: 17px;
       }
@@ -110,6 +116,7 @@
     & .menu {
       gap: 15px;
       display: grid;
+
       @media (max-width: $breakpoint-md) {
         gap: 10px;
       }
@@ -119,6 +126,7 @@
           font-size: 16px;
           font-weight: 300;
           @include transition(.4);
+
           @media (max-width: $breakpoint-md) {
             font-size: 14px;
           }
@@ -134,6 +142,7 @@
     & .contact {
       gap: 15px;
       display: grid;
+
       @media (max-width: $breakpoint-md) {
         gap: 10px;
       }
@@ -141,9 +150,11 @@
       &-item {
         font-size: 16px;
         font-weight: 300;
+
         @media (max-width: $breakpoint-md) {
           font-size: 14px;
         }
+
         @media (max-width: 400px) {
           font-size: 13px;
         }
@@ -158,13 +169,15 @@
 
   &-links {
     gap: 50px;
+
     @media (max-width: $breakpoint-md) {
       gap: 30px;
       width: 100%;
     }
+
     & li {
       & a {
-        @include fontSize(13,16);
+        @include fontSize(13, 16);
 
         font-weight: 300;
         color: rgba(75, 101, 83, 1);
@@ -182,6 +195,7 @@
           position: absolute;
           right: -25px;
           top: 0;
+
           @media (max-width: $breakpoint-md) {
             right: -15px;
           }
@@ -191,14 +205,16 @@
   }
 
   & .copyright {
-    @include fontSize(13,16);
+    @include fontSize(13, 16);
     font-weight: 300;
     color: rgba(139, 117, 96, 1);
   }
 
   & .develop {
-    &__link, &__text {
-      @include fontSize(13,16);
+
+    &__link,
+    &__text {
+      @include fontSize(13, 16);
       font-weight: 300;
 
     }
@@ -218,8 +234,6 @@
 /*======================*/
 /*  Marquee Partners    */
 /*======================*/
-
-/*
 .marquee {
   --marquee-width: 100vw;
   //--marquee-height: 60px;
@@ -302,6 +316,7 @@
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   100% {
     -webkit-transform: translateX(calc(var(--marquee-el-width) * var(--marquee-el)));
     transform: translateX(calc(var(--marquee-el-width) * var(--marquee-el)));
@@ -313,6 +328,7 @@
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   100% {
     -webkit-transform: translateX(calc(var(--marquee-el-width) * var(--marquee-el)));
     transform: translateX(calc(var(--marquee-el-width) * var(--marquee-el)));
@@ -324,6 +340,7 @@
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   100% {
     -webkit-transform: translateX(calc(-1 * var(--marquee-el-width) * var(--marquee-el)));
     transform: translateX(calc(-1 * var(--marquee-el-width) * var(--marquee-el)));
@@ -335,6 +352,7 @@
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   100% {
     -webkit-transform: translateX(calc(-1 * var(--marquee-el-width) * var(--marquee-el)));
     transform: translateX(calc(-1 * var(--marquee-el-width) * var(--marquee-el)));
@@ -352,11 +370,9 @@
     --marquee-el-displayed: 3;
     --marquee-animation-duration: calc(var(--marquee-el) * 2s);
   }
+
   .marquee-content .logo-item img {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
   }
 }
-
-
-*/

@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .event {
   &__img {
@@ -24,6 +24,7 @@
     color: #797979;
     margin-bottom: 9px;
     padding-left: 39px;
+
     @media (max-width: $breakpoint-xl) {
       padding-left: 29px;
       font-size: 14px;
@@ -38,6 +39,7 @@
       top: 50%;
       transform: translateY(-50%);
       background: url("../img/clock.svg");
+
       @media (max-width: $breakpoint-xl) {
         width: 20px;
         height: 20px
@@ -48,6 +50,7 @@
   &__title {
     color: rgba(75, 101, 83, 1);
     font-size: 20px;
+
     @media (max-width: $breakpoint-xl) {
       font-size: 14px;
     }
@@ -56,8 +59,10 @@
 
 .s-recommended-news {
   padding: 92px 0;
+
   @media (max-width: $breakpoint-xl) {
     padding: 43px 0 50px 0;
+
     & .heading {
       text-align: center;
     }
@@ -108,6 +113,7 @@
 
 .s-blog {
   padding: 44px 0 150px 0;
+
   @media (max-width: $breakpoint-md) {
     padding: 25px 0 100px 0;
   }
@@ -119,9 +125,11 @@
         display: flex;
         justify-content: right;
         gap: 150px;
+
         @media (max-width: $breakpoint-xl) {
           gap: 100px;
         }
+
         @media (max-width: $breakpoint-lg) {
           gap: 42px;
           justify-content: left;
@@ -134,9 +142,11 @@
           flex: 0 0 auto;
 
           position: relative;
+
           @media (min-width: $breakpoint-sm) {
             white-space: nowrap;
           }
+
           @media (max-width: 520px) {
             max-width: 75px;
             text-align: center
@@ -145,6 +155,7 @@
           & a {
             color: rgba(61, 63, 61, 1);
             font-size: 20px;
+
             @media (max-width: $breakpoint-lg) {
               display: inline-block;
 
@@ -168,9 +179,11 @@
               right: -70px;
               top: 50%;
               transform: translateY(-50%);
+
               @media (max-width: $breakpoint-xl) {
                 right: -40px;
               }
+
               @media (max-width: $breakpoint-lg) {
                 width: 8px;
                 height: 8px;
@@ -209,10 +222,12 @@
     @media (max-width: $breakpoint-xl) {
       grid-template-columns: repeat(3, 1fr);
     }
+
     @media (max-width: $breakpoint-md) {
       gap: 30px 15px;
       grid-template-columns: repeat(2, 1fr);
     }
+
     @media (max-width: $breakpoint-sm) {
       padding-bottom: 48px;
       gap: 38px 15px;
@@ -226,9 +241,11 @@
 
   &__bottom {
     padding-top: 50px;
+
     @media (min-width: $breakpoint-md) {
       flex-direction: row-reverse;
     }
+
     @media (max-width: $breakpoint-md) {
       padding-top: 30px;
     }
@@ -237,11 +254,13 @@
 
   & .block-text-img {
     margin-bottom: 44px;
+
     & .img {
       position: absolute;
 
       &__wrap {
         padding-bottom: 107%;
+
         @media (max-width: $breakpoint-md) {
           padding-bottom: 100%;
           margin-top: 19px;
@@ -252,7 +271,9 @@
 
 
   & .date {
-    &__title, &__value {
+
+    &__title,
+    &__value {
       @include fontSize(16, 20);
     }
 
@@ -274,6 +295,7 @@
       color: rgba(61, 63, 61, 1);
       @include fontSize(16, 20);
       margin-right: 20px;
+
       @media (max-width: $breakpoint-md) {
         margin-right: 10px;
 
@@ -288,9 +310,11 @@
         width: 40px;
         height: 40px;
         color: $white-color;
+
         @media (max-width: $breakpoint-md) {
           width: 30px;
           height: 30px;
+
           & i {
             font-size: 15px;
           }
@@ -333,6 +357,7 @@
 
 .s-post-content {
   padding: 14px 0 100px 0;
+
   @media (max-width: $breakpoint-md) {
     padding-bottom: 50px;
   }
@@ -342,6 +367,7 @@
     overflow: hidden;
     padding-bottom: 54%;
     margin-bottom: 40px;
+
     @media (max-width: $breakpoint-lg) {
       margin-bottom: 22px;
     }
@@ -375,6 +401,7 @@
       right: 54px;
       width: 43px;
       height: 47px;
+
       @media (max-width: $breakpoint-md) {
         width: 27px;
         height: 30px;

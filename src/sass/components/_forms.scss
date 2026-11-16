@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -27,7 +27,8 @@ input {
   -webkit-border-radius: 0;
 }
 
-input, button {
+input,
+button {
   &:focus {
     outline: none;
   }
@@ -38,15 +39,17 @@ input, button {
   &-control {
     position: relative;
 
-    &:not(&.no-margin){
+    &:not(&.no-margin) {
       margin-bottom: 30px;
+
       @media (max-width: $breakpoint-md) {
         margin-bottom: 20px;
       }
     }
 
 
-    &__input, &__textarea {
+    &__input,
+    &__textarea {
 
       background: transparent;
       border: none;
@@ -72,6 +75,7 @@ input, button {
       margin: 0 auto;
       padding: 15px 33px 17px 33px;
       line-height: 100%;
+
       @media (max-width: $breakpoint-md) {
         margin-top: 10px;
       }

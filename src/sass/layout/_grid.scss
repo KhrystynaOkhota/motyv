@@ -1,6 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
-
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .d-none {
   display: none !important;
@@ -19,12 +18,15 @@
   .d-sm-block {
     display: block !important;
   }
+
   .d-sm-none {
     display: none !important;
   }
+
   .d-sm-flex {
     display: flex !important;
   }
+
   .d-sm-inline-block {
     display: inline-block !important;
   }
@@ -35,9 +37,11 @@
   .d-md-block {
     display: block !important;
   }
+
   .d-md-none {
     display: none !important;
   }
+
   .d-md-flex {
     display: flex !important;
 
@@ -48,6 +52,7 @@
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
   }
+
   .d-md-inline-block {
     display: inline-block !important;
   }
@@ -57,12 +62,15 @@
   .d-lg-block {
     display: block !important;
   }
+
   .d-lg-none {
     display: none !important;
   }
+
   .d-lg-flex {
     display: flex !important;
   }
+
   .d-lg-inline-block {
     display: inline-block !important;
   }
@@ -72,12 +80,15 @@
   .d-xl-block {
     display: block !important;
   }
+
   .d-xl-none {
     display: none !important;
   }
+
   .d-xl-flex {
     display: flex !important;
   }
+
   .d-xl-inline-block {
     display: inline-block !important;
   }
@@ -89,6 +100,7 @@
   max-width: 1316px;
   margin: auto;
   padding: 0 10px;
+
   @media (max-width: $breakpoint-lg) {
     padding: 0 10px;
   }
@@ -132,6 +144,7 @@
 
 .p-0 {
   padding: 0;
+
   @media (max-width: $breakpoint-sm) {
     // padding: 0 15px;
   }
@@ -372,6 +385,7 @@
 
 .mb-45 {
   margin-bottom: 45px;
+
   @media (max-width: $breakpoint-md) {
     margin-bottom: 15px;
   }

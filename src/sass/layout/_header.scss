@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 
 .header {
@@ -14,10 +14,12 @@
   opacity: 1;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
+
   @media (max-width: $breakpoint-lg) {
     padding: 20px 0;
 
   }
+
   @media (max-width: $breakpoint-md) {
     height: auto;
   }
@@ -27,6 +29,7 @@
     transition: all ease-out .5s;
     padding: 15px 0;
     position: relative;
+
     @media (max-width: $breakpoint-lg) {
       padding: 0;
       order: 2;
@@ -42,6 +45,7 @@
       bottom: 0;
       left: calc(-1 * (100vw - 100%) / 2);
       position: absolute;
+
       @media (max-width: $breakpoint-lg) {
         display: none;
       }
@@ -56,9 +60,11 @@
       visibility: visible;
       opacity: 1;
       gap: 35px;
+
       @media (max-width: $breakpoint-xl) {
         gap: 15px;
       }
+
       @media (max-width: $breakpoint-lg) {
         display: grid;
         width: 100%;
@@ -73,9 +79,11 @@
           line-height: 1;
           font-weight: 300;
           @include transition(.5);
+
           @media (min-width: $breakpoint-lg) {
             pointer-events: none;
           }
+
           &:hover {
             color: rgba(139, 117, 96, 1);
           }
@@ -96,7 +104,7 @@
             @include transition(.4);
           }
 
-          & > a {
+          &>a {
             position: relative;
             padding-right: 18px;
 
@@ -135,6 +143,7 @@
               transition: all .5s ease-in-out;
               transform: translateY(20px);
             }
+
             @media (max-width: $breakpoint-lg) {
               display: none;
               padding-top: 30px;
@@ -182,6 +191,7 @@
       display: flex;
       gap: 30px;
       align-items: start;
+
       @media (max-width: $breakpoint-lg) {
         width: 100%;
 
@@ -236,20 +246,23 @@
 
           &:after {
             content: '';
-            background-color: rgba(139, 117, 96, 1);;
+            background-color: rgba(139, 117, 96, 1);
+            ;
             height: 13px;
             width: 0.5px;
             position: absolute;
             right: -14px;
             top: 50%;
             transform: translateY(-50%);
+
             @media (max-width: $breakpoint-lg) {
               display: none;
             }
           }
         }
 
-        & .title, & a {
+        & .title,
+        & a {
           transition: color ease-out .3s;
           font-weight: 300;
           font-size: 16px;
@@ -259,9 +272,11 @@
 
         & .title {
           padding-right: 8px;
+
           @media (max-width: 1300px) {
             display: none;
           }
+
           @media (max-width: $breakpoint-lg) {
             display: inline-block;
           }
@@ -278,6 +293,7 @@
 
   &__bottom {
     padding: 20px 0;
+
     @media (max-width: $breakpoint-lg) {
       padding: 0;
       order: 1;
@@ -303,6 +319,7 @@
       transition: .4s all;
       visibility: visible;
       opacity: 1;
+
       @media (max-width: 1300px) {
         gap: 30px;
       }
@@ -332,6 +349,7 @@
               transform: translateY(-50%);
               right: -26px;
             }
+
             @media (max-width: 1300px) {
               right: -17px;
               width: 4px;
@@ -348,9 +366,7 @@
           color: rgba(0, 0, 0, 1);
           @include transition(.5);
 
-          &:hover {
-
-          }
+          &:hover {}
         }
       }
     }
@@ -365,13 +381,16 @@
       height: 32px;
       transform: scale(1);
       transition: transform ease-out .5s;
+
       @media (min-width: 1400px) {
         width: 223px;
       }
+
       @media (max-width: $breakpoint-xl) {
         width: 130px;
         height: auto;
       }
+
       @media (max-width: $breakpoint-lg) {
         width: 178px;
         height: 44px;
@@ -386,16 +405,19 @@
 
   & .controls {
     gap: 70px;
+
     @media (max-width: $breakpoint-lg) {
       margin-right: 57px;
       gap: 32px;
     }
+
     @media (max-width: 450px) {
       margin-right: 40px;
       gap: 15px;
     }
 
-    & .btn-search, & .btn-cart {
+    & .btn-search,
+    & .btn-cart {
       color: rgba(139, 117, 96, 1);
       cursor: pointer;
 
@@ -425,7 +447,7 @@
     @include transition(.3);
 
 
-    & > span {
+    &>span {
 
       height: 1px;
       background-color: rgba(139, 117, 96, 1);
@@ -438,6 +460,7 @@
 
     &__wrap {
       display: none;
+
       @media (max-width: $breakpoint-lg) {
         display: block;
         position: absolute;
@@ -536,7 +559,7 @@
     opacity: 1;
     visibility: visible;
 
-    & ~ .h-overlay {
+    &~.h-overlay {
       opacity: 1;
       visibility: visible;
       z-index: 100;
@@ -546,7 +569,7 @@
 }
 
 
-.h-search-form > * {
+.h-search-form>* {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -566,7 +589,7 @@
   margin-top: 51px;
   background: #fff;
 
-  & > * {
+  &>* {
     -ms-flex-negative: 0;
     flex-shrink: 0;
   }
@@ -621,4 +644,3 @@
     }
   }
 }
-

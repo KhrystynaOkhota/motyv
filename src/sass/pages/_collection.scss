@@ -1,10 +1,8 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .collection {
-  & .heading {
-
-  }
+  & .heading {}
 
   & .description {
     font-size: 17px;
@@ -19,9 +17,7 @@
     width: 100%;
     object-fit: cover;
 
-    &__wrap {
-
-    }
+    &__wrap {}
   }
 
   &:not(&.--accent) {
@@ -53,6 +49,7 @@
         & span {
           display: none;
         }
+
         & i {
           padding-left: 0;
         }
@@ -62,24 +59,26 @@
 
   &.--accent {
     margin-bottom: 50px;
+
     @media (min-width: $breakpoint-md) {
       flex-direction: row-reverse;
     }
 
-    & .heading, & .description {
+    & .heading,
+    & .description {
       margin-bottom: 33px;
+
       @media (max-width: $breakpoint-md) {
         margin-bottom: 24px;
       }
     }
 
-    & .heading {
-
-    }
+    & .heading {}
 
     & .img {
       &__wrap {
         padding-bottom: 67%;
+
         @media (max-width: $breakpoint-md) {
           margin-bottom: 24px;
         }
@@ -91,6 +90,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px 20px;
+
     @media (max-width: $breakpoint-md) {
       grid-template-columns: repeat(2, 1fr);
       gap: 40px 10px;
@@ -101,6 +101,7 @@
 .s-collection {
   padding: 50px 0 90px 0;
   margin-bottom: 100px;
+
   @media (max-width: $breakpoint-md) {
     margin-bottom: 44px;
     padding: 20px 0 50px 0;
@@ -118,9 +119,11 @@
     transform: translateX(-50%);
 
   }
+
   &-product {
     padding: 45px 0 90px 0;
     margin-bottom: 100px;
+
     @media (max-width: $breakpoint-md) {
       margin-bottom: 44px;
       padding: 34px 0 50px 0;
@@ -128,6 +131,7 @@
 
     & .btn-transparent {
       margin-top: 45px;
+
       @media (max-width: $breakpoint-md) {
         margin-top: 24px;
       }
@@ -148,5 +152,3 @@
     }
   }
 }
-
-

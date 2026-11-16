@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .btn {
   position: relative;
@@ -59,8 +59,11 @@
   }
 
   &-transparent {
-    &, &__white {
+
+    &,
+    &__white {
       background: transparent;
+
       & i {
         font-size: 13px;
         padding-left: 15px;
@@ -78,5 +81,3 @@
     }
   }
 }
-
-

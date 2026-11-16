@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 
 .pagination {
@@ -7,6 +7,7 @@
   background-color: transparent;
 
   &-container {
+
     //  padding: 100px 0 150px 0;
     @media (max-width: $breakpoint-lg) {
       //   padding-bottom: 100px;
@@ -62,16 +63,21 @@
       @include transition(.4);
 
       margin: 0 5px;
+
       @media (max-width: $breakpoint-md) {
         width: 25px;
         height: 25px;
-       margin: 0 2px;
+        margin: 0 2px;
       }
+
       & i {
         @include fontSize(12, 14);
       }
 
-      &.end, &.start, &.next, &.prev {
+      &.end,
+      &.start,
+      &.next,
+      &.prev {
         background: rgba(240, 235, 232, 1);
 
 
@@ -82,8 +88,9 @@
         color: $white-color;
       }
 
-      &:not(.next,.prev ,.end, .start,):hover {
-        background: rgba(68, 105, 61, 1);;
+      &:not(.next, .prev, .end, .start):hover {
+        background: rgba(68, 105, 61, 1);
+        ;
         color: $white-color;
       }
     }

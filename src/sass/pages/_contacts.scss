@@ -1,24 +1,25 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .s-contacts {
 
   &:not(&.--home) {
     padding-top: 50px;
     padding-bottom: 100px;
+
     @media (max-width: $breakpoint-md) {
       padding-top: 20px;
       padding-bottom: 50px;
     }
   }
 
-  & .heading {
-  }
+  & .heading {}
 
   & .description {
     font-size: 25px;
     margin-bottom: 30px;
     line-height: 1.35;
+
     @media (max-width: $breakpoint-md) {
       font-size: 20px;
       margin-bottom: 20px;
@@ -32,6 +33,7 @@
 
   & .social {
     margin-top: 33px;
+
     @media (max-width: $breakpoint-md) {
       margin-top: 25px;
     }
@@ -39,9 +41,7 @@
     &-item {
 
 
-      & i {
-
-      }
+      & i {}
 
       &:hover i {
         color: #192D24;
@@ -81,6 +81,7 @@
     &-form {
       background: rgba(246, 244, 242, 1);
       padding: 40px 35px;
+
       @media (max-width: $breakpoint-md) {
         padding: 28px 10px 41px 10px;
         margin-top: 40px;
@@ -90,6 +91,7 @@
         margin-bottom: 26px;
         font-size: 35px;
         text-align: center;
+
         @media (max-width: $breakpoint-md) {
           font-size: 30px;
 
@@ -106,7 +108,8 @@
       & .form-control {
         margin-bottom: 20px;
 
-        &__input, &__textarea {
+        &__input,
+        &__textarea {
           background: $white-color;
           border-radius: 0;
           padding: 20px 20px 13px 20px;
@@ -115,6 +118,7 @@
           font-family: 'OpenSans', sans-serif;
           font-weight: 400;
           color: rgba(151, 151, 151, 1);
+
           @media (max-width: $breakpoint-md) {
             padding: 17px 20px 16px 20px;
           }

@@ -1,5 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 
 .s-catalog {
@@ -12,6 +12,7 @@
 
   & .heading {
     margin-bottom: 22px;
+
     @media (max-width: $breakpoint-md) {
       margin-bottom: 18px;
     }
@@ -46,10 +47,12 @@
 
       &.no-margin {
         margin-bottom: 0;
+
         @media (max-width: $breakpoint-md) {
           font-size: 25px;
           pointer-events: all;
           padding: 0 0 0 30px;
+
           &:before {
             width: 19px;
             height: 19px;
@@ -192,6 +195,7 @@
 
       &__bottom {
         padding-top: 30px;
+
         @media (max-width: $breakpoint-md) {
           -webkit-box-pack: justify;
           -webkit-justify-content: space-between;
@@ -200,7 +204,9 @@
         }
 
         & .btn {
-          &-clean, &-search {
+
+          &-clean,
+          &-search {
             width: 100%;
             font-size: 20px;
 
@@ -257,6 +263,7 @@
         right: 15px;
         cursor: pointer;
         display: none;
+
         @media (max-width: $breakpoint-md) {
           display: block;
         }
@@ -316,7 +323,7 @@
       display: none;
 
       &:checked {
-        & + span {
+        &+span {
           &:before {
             background: rgba(204, 195, 189, 1);
 
@@ -336,7 +343,8 @@
       line-height: normal;
 
 
-      &:before, &:after {
+      &:before,
+      &:after {
         content: "";
         position: absolute;
         left: 0;
@@ -404,8 +412,7 @@
   }
 
   & .range {
-    &__wrap {
-    }
+    &__wrap {}
 
     &__label {
       position: relative;
@@ -462,6 +469,7 @@
         overflow: hidden;
         margin-bottom: 19px;
         padding-bottom: 100%;
+
         @media (max-width: $breakpoint-md) {
           height: 124px;
         }
@@ -471,6 +479,7 @@
     &__title {
       font-size: 16px;
       color: rgba(75, 101, 83, 1);
+
       @media (max-width: $breakpoint-md) {
         font-size: 14px;
       }
@@ -480,12 +489,11 @@
       }
     }
 
-    &__slider {
-
-    }
+    &__slider {}
 
     &__wrap {
       margin-bottom: 20px;
+
       @media (max-width: $breakpoint-md) {
         padding-bottom: 30px;
         margin-bottom: 30px;
@@ -501,9 +509,11 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 45px;
+
         @media (max-width: $breakpoint-md) {
           grid-template-columns: repeat(2, 1fr);
         }
+
         @media (max-width: 400px) {
           grid-template-columns: repeat(1, 1fr);
         }
@@ -527,48 +537,32 @@
   .SumoSelect {
     width: auto;
     min-width: 250px;
+
     @media (max-width: $breakpoint-sm) {
       min-width: 190px;
       max-width: 190px;
     }
 
-    & > .CaptionCont {
+    &>.CaptionCont {
       border: none;
       border-radius: 0;
       padding: 0;
 
-      & > span {
+      &>span {
         font-size: 20px;
         color: rgba(139, 117, 96, 1);
         font-family: 'VinnytsiaSerif', serif;
+
         @media (max-width: $breakpoint-sm) {
           font-size: 17px;
         }
       }
-
-
-      & > label {
-        width: 15px;
-        height: 15px;
-        top: calc(50% - 7px);
-        transform: rotate(90deg);
-        & i {
-          background: transparent;
-          opacity: 1;
-          font-style: normal;
-          background: url(../img/triangle.svg) no-repeat center;
-          background-size: contain;
-          -webkit-transition: all .5s ease-out;
-          -moz-transition: all .5s ease-out;
-          -o-transition: all .5s ease-out;
-          transition: all .5s ease-out;
-        }
-
-      }
     }
 
-    &.open, &:focus, &:hover {
-      & > .CaptionCont {
+    &.open,
+    &:focus,
+    &:hover {
+      &>.CaptionCont {
         box-shadow: none;
         border: none;
       }
@@ -579,6 +573,7 @@
 
 .s-category {
   padding: 100px 0 90px 0;
+
   @media (max-width: $breakpoint-lg) {
     padding: 48px 0 38px 0;
   }
@@ -612,9 +607,11 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+
       @media (max-width: $breakpoint-lg) {
         grid-template-columns: repeat(2, 1fr);
       }
+
       @media (max-width: $breakpoint-sm) {
         grid-template-columns: repeat(1, 1fr);
 
@@ -660,4 +657,3 @@
 
 
 }
-
