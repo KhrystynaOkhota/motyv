@@ -243,3 +243,17 @@
     }
   }
 }
+
+.open-popup {
+  &[data-rel="no-size"] {
+    margin-bottom: 20px;
+    color: rgb(75, 101, 83);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-out .3s;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}

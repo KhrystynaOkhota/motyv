@@ -635,6 +635,46 @@
       }
     }
   }
+
+  .product-trust {
+    min-width: 8rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #3D3F3D;
+    font-size: 1.2rem;
+    line-height: 1.35;
+    flex: 1 1 0px;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      gap: 1.2rem 0.8rem;
+      border-top: 1px solid rgba(178, 178, 178, 0.3);
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      margin-bottom: 0.6rem;
+      color: #3D3F3D;
+    }
+
+    &__text {
+      max-width: 12rem;
+      font-size: 14px;
+    }
+  }
 }
 
 .s-similar-products {

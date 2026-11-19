@@ -512,3 +512,49 @@
     }
   }
 }
+
+.s-accent {
+  & .heading {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  & .description {
+    line-height: 1.5;
+    font-size: 20px;
+    font-size: calc(14px + (20 - 14) * (100vw - 300px) / 1620);
+  }
+
+  &__slider {
+    padding: 50px 0;
+
+    @media (max-width: $breakpoint-md) {
+      padding-top: 20px;
+    }
+  }
+
+  & .category {
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+
+      &-wrap {
+        aspect-ratio: 1/1.2;
+        position: relative;
+      }
+    }
+
+    & .btn-more {
+      font-size: 16px;
+      margin-top: 7px;
+      color: rgb(75, 101, 83);
+      margin-bottom: 10px;
+    }
+  }
+}
